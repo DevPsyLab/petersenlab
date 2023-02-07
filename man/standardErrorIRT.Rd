@@ -39,6 +39,7 @@ standardErrorIRT(items$testInformation)
 \url{https://journals.sagepub.com/doi/full/10.1177/0146621613475471}
 
 Other IRT: 
+\code{\link{discriminationToFactorLoading}()},
 \code{\link{fourPL}()},
 \code{\link{itemInformation}()},
 \code{\link{reliabilityIRT}()}

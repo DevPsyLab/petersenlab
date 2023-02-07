@@ -38,6 +38,7 @@ itemInformation(b = 2, a = 1.5, c = 0.10, d = 0.95, theta = -4:4) #4PL
 \url{https://journals.sagepub.com/doi/full/10.1177/0146621613475471}
 
 Other IRT: 
+\code{\link{discriminationToFactorLoading}()},
 \code{\link{fourPL}()},
 \code{\link{reliabilityIRT}()},
 \code{\link{standardErrorIRT}()}
