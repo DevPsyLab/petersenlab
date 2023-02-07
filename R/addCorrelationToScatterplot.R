@@ -28,7 +28,7 @@
 #' @family correlations
 #'
 #' @importFrom graphics text
-#' @importFrom stats na.omit
+#' @importFrom stats na.omit median cor.test
 #'
 #' @export
 #'

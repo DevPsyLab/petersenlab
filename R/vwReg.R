@@ -99,7 +99,7 @@
 #' @importFrom RColorBrewer brewer.pal
 #' @importFrom utils flush.console
 #' @importFrom viridisLite viridis
-#' @importFrom stats predict lm quantile na.omit loess.control pnorm density rnorm
+#' @importFrom stats predict lm quantile na.omit loess.control pnorm density rnorm loess
 #'
 #' @export
 #'

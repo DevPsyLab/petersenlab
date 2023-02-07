@@ -16,7 +16,7 @@
 #' @family multipleImputation
 #'
 #' @importFrom mix mi.inference
-#' @importFrom stats vcov lm
+#' @importFrom stats vcov lm coef
 #'
 #' @export
 #'

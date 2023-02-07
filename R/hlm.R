@@ -18,6 +18,7 @@
 #' @family mixedModel
 #'
 #' @importFrom nlme lme intervals getResponse
+#' @importFrom stats cor
 #'
 #' @export
 #'

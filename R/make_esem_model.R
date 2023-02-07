@@ -24,7 +24,7 @@
 #'
 #' @family lavaan
 #'
-#' @importFrom dplyr %>% filter select rename
+#' @importFrom dplyr filter select rename
 #' @importFrom lavaan sem parameterEstimates
 #'
 #' @export
@@ -65,10 +65,10 @@
 #' esem_loadings <- lavaan::parameterEstimates(
 #'   efa_fit,
 #'   standardized = TRUE
-#' ) %>%
-#'   filter(efa == "efa1") %>%
-#'   select(lhs, rhs, est) %>%
-#'   rename(item = rhs, latent = lhs, loading = est)
+#' ) |>
+#'   dplyr::filter(efa == "efa1") |>
+#'   dplyr::select(lhs, rhs, est) |>
+#'   dplyr::rename(item = rhs, latent = lhs, loading = est)
 #'
 #' # Specify Anchor Item for Each Latent Factor
 #' anchors <- c(f1 = "x3", f2 = "x5", f3 = "x7")

@@ -58,7 +58,7 @@
 #' @family plot
 #'
 #' @importFrom graphics lines text legend
-#' @importFrom stats lm na.omit qnorm sd rnorm
+#' @importFrom stats lm na.omit qnorm sd rnorm as.formula pt na.exclude
 #'
 #' @export
 #'

@@ -19,6 +19,8 @@
 #'
 #' @family multipleImputation
 #'
+#' @importFrom stats logLik
+#'
 #' @export
 #'
 #' @examples

@@ -17,7 +17,7 @@
 #'
 #' @importFrom nlme fixef
 #' @importFrom mix mi.inference
-#' @importFrom stats na.omit
+#' @importFrom stats na.omit cor
 #'
 #' @export
 #'

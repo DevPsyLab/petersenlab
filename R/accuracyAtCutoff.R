@@ -78,7 +78,7 @@
 #'
 #' @family accuracy
 #'
-#' @importFrom dplyr %>% mutate group_by summarise
+#' @importFrom dplyr mutate group_by summarise
 #' @importFrom ggplot2 cut_number
 #' @importFrom stringr str_replace_all str_split
 #' @importFrom stats qnorm na.omit
@@ -169,8 +169,8 @@ accuracyAtCutoff <- function(predicted, actual, cutoff, UH = NULL, UM = NULL, UC
 
     bin <- NULL
 
-    calibrationTable <- mutate(data, bin = cut_number(predicted, n = bins)) %>%
-      group_by(bin) %>%
+    calibrationTable <- mutate(data, bin = cut_number(predicted, n = bins)) |>
+      group_by(bin) |>
       summarise(n = length(predicted),
                 meanPredicted = mean(predicted, na.rm = TRUE),
                 meanObserved = mean(actual, na.rm = TRUE),
