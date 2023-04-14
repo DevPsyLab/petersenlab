@@ -133,14 +133,13 @@ accuracyOverall <- function(predicted, actual, dropUndefined = FALSE){
 
   #Root Mean Squared Log Error
   rootMeanSquaredLogError <- function(predicted, actual, dropUndefined = dropUndefined){
-    accuracyRatio <- (predicted + 1) / (actual + 1)
-    logAccuracyRatio <- log(accuracyRatio)
+    logError <- log(predicted + 1) - log(actual + 1)
 
     if(dropUndefined == TRUE){
-      logAccuracyRatio[!is.finite(logAccuracyRatio)] <- NA
+      logError[!is.finite(logError)] <- NA
     }
 
-    value <- sqrt(mean(logAccuracyRatio^2, na.rm = TRUE))
+    value <- sqrt(mean(logError^2, na.rm = TRUE))
 
     return(value)
   }
