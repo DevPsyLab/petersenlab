@@ -24,8 +24,7 @@ any undefined values calculated with the accuracy indices.}
   \item \code{MAPE} = mean absolute percentage error
   \item \code{sMAPE} = symmetric mean absolute percentage error
   \item \code{MASE} = mean absolute scaled error
-  \item \code{rmsLogAccuracyRatio} = root mean squared log of the accuracy
-ratio
+  \item \code{RMSLE} = root mean squared log error
   \item \code{rsquared} = \emph{R}-squared
   \item \code{rsquaredAdj} = adjusted \emph{R}-squared
   \item \code{rsquaredPredictive} = predictive \emph{R}-squared

@@ -27,8 +27,7 @@
 #'   \item \code{MAPE} = mean absolute percentage error
 #'   \item \code{sMAPE} = symmetric mean absolute percentage error
 #'   \item \code{MASE} = mean absolute scaled error
-#'   \item \code{rmsLogAccuracyRatio} = root mean squared log of the accuracy
-#' ratio
+#'   \item \code{RMSLE} = root mean squared log error
 #'   \item \code{rsquared} = \emph{R}-squared
 #'   \item \code{rsquaredAdj} = adjusted \emph{R}-squared
 #'   \item \code{rsquaredPredictive} = predictive \emph{R}-squared
@@ -132,9 +131,10 @@ accuracyOverall <- function(predicted, actual, dropUndefined = FALSE){
     return(value)
   }
 
-  #Root Mean Squared Log of the Accuracy Ratio
-  rootMeanSquaredLogAccuracyRatio <- function(predicted, actual, dropUndefined = dropUndefined){
-    logAccuracyRatio <- log(predicted / actual)
+  #Root Mean Squared Log Error
+  rootMeanSquaredLogError <- function(predicted, actual, dropUndefined = dropUndefined){
+    accuracyRatio <- (predicted + 1) / (actual + 1)
+    logAccuracyRatio <- log(accuracyRatio)
 
     if(dropUndefined == TRUE){
       logAccuracyRatio[!is.finite(logAccuracyRatio)] <- NA
@@ -196,8 +196,8 @@ accuracyOverall <- function(predicted, actual, dropUndefined = FALSE){
   #Mean Absolute Scaled Error
   MASE <- meanAbsoluteScaledError(predicted = predicted, actual = actual)
 
-  #Root Mean Squared Log of the Accuracy Ratio
-  rmsLogAccuracyRatio <- rootMeanSquaredLogAccuracyRatio(predicted = predicted, actual = actual, dropUndefined = dropUndefined)
+  #Root Mean Squared Log Error
+  RMSLE <- rootMeanSquaredLogError(predicted = predicted, actual = actual, dropUndefined = dropUndefined)
 
   #Coefficient of Determination (R-squared)
   rsquared <- summary(lm(actual ~ predicted))$r.squared
@@ -208,7 +208,7 @@ accuracyOverall <- function(predicted, actual, dropUndefined = FALSE){
   #Predictive R-squared
   rsquaredPredictive <- predictiveRSquared(predicted = predicted, actual = actual)
 
-  accuracyTable <- data.frame(cbind(ME, MAE, MSE, RMSE, MPE, MAPE, sMAPE, MASE, rmsLogAccuracyRatio, rsquared, rsquaredAdj, rsquaredPredictive))
+  accuracyTable <- data.frame(cbind(ME, MAE, MSE, RMSE, MPE, MAPE, sMAPE, MASE, RMSLE, rsquared, rsquaredAdj, rsquaredPredictive))
 
   return(accuracyTable)
 }
