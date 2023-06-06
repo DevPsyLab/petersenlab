@@ -21,8 +21,6 @@
 #'
 #' @return sequence of numbers for the progress bar in REDCap.
 #'
-#' @importFrom stats pchisq
-#'
 #' @export
 #'
 #' @examples
