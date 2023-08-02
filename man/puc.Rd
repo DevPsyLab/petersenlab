@@ -20,7 +20,8 @@ Percent of uncontaminated correlations (PUC) from bifactor model.
 \details{
 Estimates the percent of uncontaminated correlations (PUC) from a bifactor
 model. The PUC represents the percentage of covariance terms that reflect
-variance from only the general factor.
+variance from only the general factor (i.e., not variance from a specific
+factor).
 }
 \examples{
 puc(
