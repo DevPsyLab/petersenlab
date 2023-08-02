@@ -6,9 +6,10 @@
 #'
 #' @details
 #' Estimates the percent of uncontaminated correlations (PUC) from a bifactor
-#' model. The PUC represents the percentage of covariance terms that reflect
-#' variance from only the general factor (i.e., not variance from a specific
-#' factor).
+#' model. The PUC represents the percentage of correlations (i.e., covariance
+#' terms) that reflect variance from only the general factor (i.e., not
+#' variance from a specific factor). Correlations that are explained by the
+#' specific factors are considered "contaminated" by multidimensionality.
 #'
 #' @param numItems Number of items (or indicators).
 #' @param numSpecificFactors Number of specific factors.
