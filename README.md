@@ -24,7 +24,7 @@ A `BibTeX` entry for `LaTeX` users is:
   url = {https://github.com/DevPsyLab/petersenlab},
   doi = {10.5281/zenodo.7602890},
   version = {0.1.2-9019},
-  date = {2022-03-23}
+  year = {2023}
 }
 ```
 
