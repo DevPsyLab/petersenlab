@@ -23,7 +23,7 @@
 #' @export
 #'
 #' @importFrom dplyr mutate across
-#' @importFrom tidyselect all_of
+#' @importFrom tidyselect everything()
 #'
 #' @examples
 #' mydata <- data.frame(
@@ -54,20 +54,22 @@
 #'   theoretical_min = 1)
 
 reverse_score <- function(data, variables, theoretical_max = NULL, theoretical_min = NULL, append_string = NULL) {
+  mydata <- data[variables]
+
   if (is.null(theoretical_max) && is.null(theoretical_min)) {
-    mydata <- data |>
-      mutate(across(all_of(variables), ~ ifelse(!is.na(.), max(., na.rm = TRUE) - ., NA)))
+    mydata_reversed <- mydata |>
+      mutate(across(everything(), ~ ifelse(!is.na(.), max(., na.rm = TRUE) - ., NA)))
   } else if (is.null(theoretical_min)) {
-    mydata <- data |>
-      mutate(across(all_of(variables), ~ ifelse(!is.na(.), theoretical_max - ., NA)))
+    mydata_reversed <- mydata |>
+      mutate(across(everything(), ~ ifelse(!is.na(.), theoretical_max - ., NA)))
   } else {
-    mydata <- data |>
-      mutate(across(all_of(variables), ~ ifelse(!is.na(.), theoretical_max + theoretical_min - ., NA)))
+    mydata_reversed <- mydata |>
+      mutate(across(everything(), ~ ifelse(!is.na(.), theoretical_max + theoretical_min - ., NA)))
   }
 
   if (!is.null(append_string)) {
-    colnames(mydata) <- paste(colnames(mydata), append_string, sep = "")
+    colnames(mydata_reversed) <- paste(colnames(mydata_reversed), append_string, sep = "")
   }
 
-  return(mydata)
+  return(mydata_reversed)
 }
