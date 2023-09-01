@@ -115,7 +115,7 @@ timesPerInterval <- function(num_occurrences = NULL, interval = NULL, duration =
 #' @export
 timesPerLifetime <- function(num_occurrences = NULL, never_occurred = NULL) {
   if(missing(num_occurrences) | is.null(num_occurrences)){
-    num_occurrences <- rep(NA, length(not_occurred_past_year))
+    num_occurrences <- rep(NA, length(never_occurred))
   }
 
   if(missing(never_occurred) | is.null(never_occurred)){
