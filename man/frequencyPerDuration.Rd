@@ -8,10 +8,10 @@
 \title{Frequency Per Duration.}
 \usage{
 timesPerInterval(
-  num_occurrences,
-  interval,
+  num_occurrences = NULL,
+  interval = NULL,
   duration = "month",
-  not_occurred_past_year
+  not_occurred_past_year = NULL
 )
 
 timesPerLifetime(num_occurrences = NULL, never_occurred = NULL)

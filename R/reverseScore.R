@@ -23,7 +23,7 @@
 #' @export
 #'
 #' @importFrom dplyr mutate across
-#' @importFrom tidyselect everything()
+#' @importFrom tidyselect everything
 #'
 #' @examples
 #' mydata <- data.frame(
