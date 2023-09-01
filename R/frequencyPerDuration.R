@@ -22,6 +22,9 @@
 #' }
 #' @param not_occurred_past_year Whether or not the behavior did NOT occur in
 #' the past year. If \code{yes}, the behavior did not occur in the past year.
+#' @param never_occurred Whether or not the behavior has NEVER occurred in
+#' the person's lifetime. If \code{yes}, the behavior has never occurred in the
+#' person's lifetime.
 #' @param item_names The names of the questionnaire items.
 #' @param data The data object.
 #' @param frequency_vars The name(s) of the variables corresponding to the
@@ -31,6 +34,9 @@
 #' @param not_in_past_year_vars The name(s) of the variables corresponding to
 #' whether the behavior did not occur in the past year
 #' (\code{not_occurred_past_year}).
+#' @param never_occurred_vars The name(s) of the variables corresponding to
+#' whether the behavior has never occurred during the person's lifetime
+#' (\code{never_occurred}).
 #'
 #' @return
 #' The frequency of the behavior for the specified duration.
@@ -44,10 +50,28 @@
 #'   duration = "month",
 #'   not_occurred_past_year = 0
 #' )
+#'
+#' timesPerInterval(
+#'   duration = "month",
+#'   not_occurred_past_year = 1
+#' )
+#'
+#' timesPerLifetime(
+#'   num_occurrences = 2,
+#'   never_occurred = 0
+#' )
+#'
+#' timesPerLifetime(
+#'   never_occurred = 1
+#' )
 
 #' @rdname frequencyPerDuration
 #' @export
 timesPerInterval <- function(num_occurrences, interval, duration = "month", not_occurred_past_year) {
+  num_occurrences <- ifelse(missing(num_occurrences), NA, ifelse(is.null(num_occurrences), NA, ifelse(is.na(num_occurrences), NA, num_occurrences)))
+  interval <- ifelse(missing(interval), NA, ifelse(is.null(interval), NA, ifelse(is.na(interval), NA, interval)))
+  not_occurred_past_year <- ifelse(missing(not_occurred_past_year), NA, ifelse(is.null(not_occurred_past_year), NA, ifelse(is.na(not_occurred_past_year), NA, not_occurred_past_year)))
+
   valid_intervals <- c(1, 2, 3, 4)
 
   ifelse_valid <- function(condition, yes, no) {
@@ -78,6 +102,21 @@ timesPerInterval <- function(num_occurrences, interval, duration = "month", not_
 
 #' @rdname frequencyPerDuration
 #' @export
+timesPerLifetime <- function(num_occurrences = NULL, never_occurred = NULL) {
+  num_occurrences <- ifelse(missing(num_occurrences), NA, ifelse(is.null(num_occurrences), NA, ifelse(is.na(num_occurrences), NA, num_occurrences)))
+  never_occurred <- ifelse(missing(never_occurred), NA, ifelse(is.null(never_occurred), NA, ifelse(is.na(never_occurred), NA, never_occurred)))
+
+  lifetime_occurrences <- ifelse(
+    is.na(num_occurrences) & never_occurred == 0,
+    NA,
+    ifelse(never_occurred == 1, 0, num_occurrences)
+  )
+
+  return(lifetime_occurrences)
+}
+
+#' @rdname frequencyPerDuration
+#' @export
 computeItemFrequencies <- function(item_names, data, duration = "month", frequency_vars, interval_vars, not_in_past_year_vars) {
   # Define a function to apply to each item
   processItem <- function(item_name, data, duration, frequency_var, interval_var, not_in_past_year_var) {
@@ -100,6 +139,36 @@ computeItemFrequencies <- function(item_names, data, duration = "month", frequen
     frequency_var = frequency_vars,
     interval_var = interval_vars,
     not_in_past_year_var = not_in_past_year_vars)
+
+  # Convert the list of results into a dataframe
+  results_df <- as.data.frame(results_list)
+
+  # Rename columns based on item names
+  colnames(results_df) <- item_names
+
+  return(results_df)
+}
+
+#' @rdname frequencyPerDuration
+#' @export
+computeLifetimeFrequencies <- function(item_names, data, frequency_vars, never_occurred_vars) {
+  # Define a function to apply to each item
+  processItem <- function(item_name, data, frequency_var, never_occurred_var) {
+    results <- timesPerLifetime(
+      num_occurrences = data[[frequency_var]],
+      never_occurred = data[[never_occurred_var]]
+    )
+
+    return(results)
+  }
+
+  # Use mapply to apply the processItem function to each item
+  results_list <- mapply(
+    processItem,
+    item_name = item_names,
+    data = list(data), # wrap data in a list
+    frequency_var = frequency_vars,
+    never_occurred_var = never_occurred_vars)
 
   # Convert the list of results into a dataframe
   results_df <- as.data.frame(results_list)

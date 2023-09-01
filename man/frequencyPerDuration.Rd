@@ -2,7 +2,9 @@
 % Please edit documentation in R/frequencyPerDuration.R
 \name{timesPerInterval}
 \alias{timesPerInterval}
+\alias{timesPerLifetime}
 \alias{computeItemFrequencies}
+\alias{computeLifetimeFrequencies}
 \title{Frequency Per Duration.}
 \usage{
 timesPerInterval(
@@ -12,6 +14,8 @@ timesPerInterval(
   not_occurred_past_year
 )
 
+timesPerLifetime(num_occurrences = NULL, never_occurred = NULL)
+
 computeItemFrequencies(
   item_names,
   data,
@@ -19,6 +23,13 @@ computeItemFrequencies(
   frequency_vars,
   interval_vars,
   not_in_past_year_vars
+)
+
+computeLifetimeFrequencies(
+  item_names,
+  data,
+  frequency_vars,
+  never_occurred_vars
 )
 }
 \arguments{
@@ -40,6 +51,10 @@ the behavior occurred:
 \item{not_occurred_past_year}{Whether or not the behavior did NOT occur in
 the past year. If \code{yes}, the behavior did not occur in the past year.}
 
+\item{never_occurred}{Whether or not the behavior has NEVER occurred in
+the person's lifetime. If \code{yes}, the behavior has never occurred in the
+person's lifetime.}
+
 \item{item_names}{The names of the questionnaire items.}
 
 \item{data}{The data object.}
@@ -53,6 +68,10 @@ intervals (\code{interval}).}
 \item{not_in_past_year_vars}{The name(s) of the variables corresponding to
 whether the behavior did not occur in the past year
 (\code{not_occurred_past_year}).}
+
+\item{never_occurred_vars}{The name(s) of the variables corresponding to
+whether the behavior has never occurred during the person's lifetime
+(\code{never_occurred}).}
 }
 \value{
 The frequency of the behavior for the specified duration.
@@ -70,6 +89,20 @@ timesPerInterval(
   interval = 3,
   duration = "month",
   not_occurred_past_year = 0
+)
+
+timesPerInterval(
+  duration = "month",
+  not_occurred_past_year = 1
+)
+
+timesPerLifetime(
+  num_occurrences = 2,
+  never_occurred = 0
+)
+
+timesPerLifetime(
+  never_occurred = 1
 )
 }
 \concept{behaviorFrequency}
