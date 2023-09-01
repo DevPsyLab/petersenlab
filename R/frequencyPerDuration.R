@@ -67,10 +67,18 @@
 
 #' @rdname frequencyPerDuration
 #' @export
-timesPerInterval <- function(num_occurrences, interval, duration = "month", not_occurred_past_year) {
-  num_occurrences <- ifelse(missing(num_occurrences), NA, ifelse(is.null(num_occurrences), NA, ifelse(is.na(num_occurrences), NA, num_occurrences)))
-  interval <- ifelse(missing(interval), NA, ifelse(is.null(interval), NA, ifelse(is.na(interval), NA, interval)))
-  not_occurred_past_year <- ifelse(missing(not_occurred_past_year), NA, ifelse(is.null(not_occurred_past_year), NA, ifelse(is.na(not_occurred_past_year), NA, not_occurred_past_year)))
+timesPerInterval <- function(num_occurrences = NULL, interval = NULL, duration = "month", not_occurred_past_year = NULL) {
+  if(missing(num_occurrences) | is.null(num_occurrences)){
+    num_occurrences <- rep(NA, length(not_occurred_past_year))
+  }
+
+  if(missing(interval) | is.null(interval)){
+    interval <- rep(NA, length(not_occurred_past_year))
+  }
+
+  if(missing(not_occurred_past_year) | is.null(not_occurred_past_year)){
+    not_occurred_past_year <- rep(NA, length(num_occurrences))
+  }
 
   valid_intervals <- c(1, 2, 3, 4)
 
@@ -92,10 +100,13 @@ timesPerInterval <- function(num_occurrences, interval, duration = "month", not_
   )
 
   interval_occurrences <- ifelse(
-    (is.na(num_occurrences) | is.na(interval)) & not_occurred_past_year == 0,
-    NA,
-    ifelse(not_occurred_past_year == 1, 0, num_occurrences * (duration_days / interval_days))
-  )
+    (is.na(num_occurrences) | is.na(interval)) & (not_occurred_past_year == 0 | is.na(not_occurred_past_year)), NA,
+    ifelse(
+      is.na(not_occurred_past_year), num_occurrences * (duration_days / interval_days),
+      ifelse(
+        not_occurred_past_year == 1, 0, num_occurrences * (duration_days / interval_days))))
+
+  interval_occurrences <- as.numeric(interval_occurrences)
 
   return(interval_occurrences)
 }
@@ -103,16 +114,23 @@ timesPerInterval <- function(num_occurrences, interval, duration = "month", not_
 #' @rdname frequencyPerDuration
 #' @export
 timesPerLifetime <- function(num_occurrences = NULL, never_occurred = NULL) {
-  num_occurrences <- ifelse(missing(num_occurrences), NA, ifelse(is.null(num_occurrences), NA, ifelse(is.na(num_occurrences), NA, num_occurrences)))
-  never_occurred <- ifelse(missing(never_occurred), NA, ifelse(is.null(never_occurred), NA, ifelse(is.na(never_occurred), NA, never_occurred)))
+  if(missing(num_occurrences) | is.null(num_occurrences)){
+    num_occurrences <- rep(NA, length(not_occurred_past_year))
+  }
+
+  if(missing(never_occurred) | is.null(never_occurred)){
+    never_occurred <- rep(NA, length(num_occurrences))
+  }
 
   lifetime_occurrences <- ifelse(
-    is.na(num_occurrences) & never_occurred == 0,
-    NA,
-    ifelse(never_occurred == 1, 0, num_occurrences)
-  )
+    is.na(num_occurrences) & never_occurred == 0, NA,
+    ifelse(
+      is.na(never_occurred), num_occurrences,
+      ifelse(never_occurred == 1, 0, num_occurrences)))
 
-  return(lifetime_occurrences)
+  lifetime_occurrences <- as.numeric(lifetime_occurrences)
+
+  return(as.numeric(lifetime_occurrences))
 }
 
 #' @rdname frequencyPerDuration
