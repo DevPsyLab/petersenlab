@@ -88,7 +88,7 @@ timesPerInterval <- function(num_occurrences = NULL, interval = NULL, duration =
 
   interval_days <- ifelse_valid(
     interval == 1, 1,
-    ifelse_valid(interval == 2, 7, ifelse_valid(interval == 3, 30, ifelse_valid(interval == 4, 365, NA)))
+    ifelse_valid(interval == 2, 7, ifelse_valid(interval == 3, 30, ifelse_valid(interval == 4, 365.25, NA)))
   )
 
   duration_days <- switch(
@@ -96,7 +96,7 @@ timesPerInterval <- function(num_occurrences = NULL, interval = NULL, duration =
     "day" = 1,
     "week" = 7,
     "month" = 30,
-    "year" = 365
+    "year" = 365.25
   )
 
   interval_occurrences <- ifelse(
