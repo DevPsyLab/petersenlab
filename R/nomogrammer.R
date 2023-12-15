@@ -46,6 +46,9 @@
 #'   Prevalence = .60,
 #'   Sens = 0.421,
 #'   Spec = 0.965)
+#'
+#' @seealso
+#' \url{https://github.com/achekroud/nomogrammer}
 
 ## Create simple Fagan nomograms as ggplot objects
 ##   Adapted from: https://github.com/achekroud/nomogrammer
