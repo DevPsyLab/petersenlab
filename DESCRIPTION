@@ -9,7 +9,7 @@ Authors@R: person("Isaac T.", "Petersen",
 Maintainer: Isaac T. Petersen <isaac-t-petersen@uiowa.edu>
 Imports: stats, graphics, utils, nlme, Hmisc, digest, dplyr, ggplot2, lavaan, 
     mitools, mix, mvtnorm, psych, stringr, xtable, grDevices, plyr, 
-    reshape2, RColorBrewer, viridisLite, tidyselect
+    reshape2, RColorBrewer, viridisLite, tidyselect, scales
 Description: This R package is a collection of functions that are widely used 
     in the Petersen Lab.
 URL: https://github.com/DevPsyLab/petersenlab
