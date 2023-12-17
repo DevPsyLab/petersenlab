@@ -5,11 +5,15 @@
 \title{Create Nomogram.}
 \usage{
 nomogrammer(
-  Prevalence,
-  Sens = NULL,
-  Spec = NULL,
-  Plr = NULL,
-  Nlr = NULL,
+  TP = NULL,
+  TN = NULL,
+  FP = NULL,
+  FN = NULL,
+  pretestProb = NULL,
+  SN = NULL,
+  SP = NULL,
+  PLR = NULL,
+  NLR = NULL,
   Detail = FALSE,
   NullLine = FALSE,
   LabelSize = (14/5),
@@ -17,18 +21,26 @@ nomogrammer(
 )
 }
 \arguments{
-\item{Prevalence}{Prevalence (base rate/prior probability) of characteristic,
-as a number between 0 and 1.}
+\item{TP}{Number of true positive cases.}
 
-\item{Sens}{Sensitivity of the test at a given cut point, as a number
+\item{TN}{Number of true negative cases.}
+
+\item{FP}{Number of false positive cases.}
+
+\item{FN}{Number of false negative cases.}
+
+\item{pretestProb}{Pretest probability (prevalence/base rate/prior
+probability) of characteristic, as a number between 0 and 1.}
+
+\item{SN}{Sensitivity of the test at a given cut point, as a number
 between 0 and 1.}
 
-\item{Spec}{Specificity of the test at a given cut point, as a number
+\item{SP}{Specificity of the test at a given cut point, as a number
 between 0 and 1.}
 
-\item{Plr}{Positive likelihood ratio of the test at a given cut point.}
+\item{PLR}{Positive likelihood ratio of the test at a given cut point.}
 
-\item{Nlr}{Positive likelihood ratio of the test at a given cut point.}
+\item{NLR}{Positive likelihood ratio of the test at a given cut point.}
 
 \item{Detail}{If \code{TRUE}, overlay key statistics onto the plot.}
 
@@ -39,7 +51,7 @@ between 0 and 1.}
 \item{Verbose}{Print out relevant metrics in the console.}
 }
 \value{
-ggplot object.
+ggplot object of nomogram plot.
 }
 \description{
 Create nomogram plot.
@@ -48,21 +60,31 @@ Create nomogram plot.
 Create nomogram plot from the following at a given cut point:
 
 \itemize{
-  \item 1) base rate, and either
-  \item 2) sensitivity and specificity, OR
-  \item 3) positive likelihood ratio and negative likelihood ratio
+  \item 1) true positives (TP), true negatives (TN), false positives (FP),
+  and false negatives (FN)
+  \item 2) pretest probability (pretestProb), sensitivity (SN), and
+  specificity (SP), OR
+  \item 3) pretest probability (pretestProb), positive likelihood ratio
+  (PLR), and negative likelihood ratio (NLR)
 }
 }
 \examples{
-nomogrammer(
-  Prevalence = .60,
-  Plr = 12,
-  Nlr = 0.6)
 
 nomogrammer(
-  Prevalence = .60,
-  Sens = 0.421,
-  Spec = 0.965)
+  TP = 253,
+  TN = 386,
+  FP = 14,
+  FN = 347)
+
+nomogrammer(
+  pretestProb = .60,
+  SN = 0.421,
+  SP = 0.965)
+
+nomogrammer(
+  pretestProb = .60,
+  PLR = 12,
+  NLR = 0.6)
 
 }
 \seealso{

@@ -8,26 +8,33 @@
 #' Create nomogram plot from the following at a given cut point:
 #'
 #' \itemize{
-#'   \item 1) base rate, and either
-#'   \item 2) sensitivity and specificity, OR
-#'   \item 3) positive likelihood ratio and negative likelihood ratio
+#'   \item 1) true positives (TP), true negatives (TN), false positives (FP),
+#'   and false negatives (FN)
+#'   \item 2) pretest probability (pretestProb), sensitivity (SN), and
+#'   specificity (SP), OR
+#'   \item 3) pretest probability (pretestProb), positive likelihood ratio
+#'   (PLR), and negative likelihood ratio (NLR)
 #' }
 #'
-#' @param Prevalence Prevalence (base rate/prior probability) of characteristic,
-#' as a number between 0 and 1.
-#' @param Sens Sensitivity of the test at a given cut point, as a number
+#' @param TP Number of true positive cases.
+#' @param TN Number of true negative cases.
+#' @param FP Number of false positive cases.
+#' @param FN Number of false negative cases.
+#' @param pretestProb Pretest probability (prevalence/base rate/prior
+#' probability) of characteristic, as a number between 0 and 1.
+#' @param SN Sensitivity of the test at a given cut point, as a number
 #' between 0 and 1.
-#' @param Spec Specificity of the test at a given cut point, as a number
+#' @param SP Specificity of the test at a given cut point, as a number
 #' between 0 and 1.
-#' @param Plr Positive likelihood ratio of the test at a given cut point.
-#' @param Nlr Positive likelihood ratio of the test at a given cut point.
+#' @param PLR Positive likelihood ratio of the test at a given cut point.
+#' @param NLR Positive likelihood ratio of the test at a given cut point.
 #' @param Detail If \code{TRUE}, overlay key statistics onto the plot.
 #' @param NullLine If \code{TRUE}, add a line from prior prob through LR = 1.
 #' @param LabelSize Label size.
 #' @param Verbose Print out relevant metrics in the console.
 #'
 #' @return
-#' ggplot object.
+#' ggplot object of nomogram plot.
 #'
 #' @export
 #'
@@ -37,34 +44,41 @@
 #' @importFrom scales percent
 #'
 #' @examples
-#' nomogrammer(
-#'   Prevalence = .60,
-#'   Plr = 12,
-#'   Nlr = 0.6)
 #'
 #' nomogrammer(
-#'   Prevalence = .60,
-#'   Sens = 0.421,
-#'   Spec = 0.965)
+#'   TP = 253,
+#'   TN = 386,
+#'   FP = 14,
+#'   FN = 347)
+#'
+#' nomogrammer(
+#'   pretestProb = .60,
+#'   SN = 0.421,
+#'   SP = 0.965)
+#'
+#' nomogrammer(
+#'   pretestProb = .60,
+#'   PLR = 12,
+#'   NLR = 0.6)
 #'
 #' @seealso
 #' \url{https://github.com/achekroud/nomogrammer}
 
 ## Create simple Fagan nomograms as ggplot objects
 ##   Adapted from: https://github.com/achekroud/nomogrammer
-##   Based on Perl web-implementation (https://araw.mede.uic.edu/cgi-bin/testcalc.pl)
+##   Based on Perl web-implementation (http://araw.mede.uic.edu/cgi-bin/testcalc.pl)
 ##   Authors: AM. Chekroud* & A. Schwartz (* adam dot chekroud at yale . edu)
 ##   December 2016
 
-nomogrammer <- function(Prevalence,
-                        Sens = NULL,
-                        Spec = NULL,
-                        Plr = NULL,
-                        Nlr = NULL,
-                        Detail = FALSE,
-                        NullLine = FALSE,
-                        LabelSize = (14/5),
-                        Verbose = FALSE){
+nomogrammer <- function(
+    TP = NULL, TN = NULL, FP = NULL, FN = NULL,
+    pretestProb = NULL,
+    SN = NULL, SP = NULL,
+    PLR = NULL, NLR = NULL,
+    Detail = FALSE,
+    NullLine = FALSE,
+    LabelSize = (14/5),
+    Verbose = FALSE){
 
   line <- lo_y <- x <- NULL
 
@@ -105,69 +119,83 @@ nomogrammer <- function(Prevalence,
 
   ## Checking inputs
 
-  ## Prevalence
-  # needs to exist
-  if(missing(Prevalence)){
-    stop("Prevalence is missing")
-  }
-  # needs to be numeric
-  if(!is.numeric(Prevalence)){stop("Prevalence should be numeric")}
-  # needs to be a prob not a percent
-  if((Prevalence > 1) | (Prevalence <= 0)){stop("Prevalence should be a probability (did you give a %?)")}
-
-  # Did user give sens & spec?
-  if(missing(Sens) | missing(Spec)){
-    sensspec <- FALSE
-  } else{ sensspec <- TRUE}
-  # if yes, make sure they are numbers
-  if(sensspec == TRUE){
-    if(!is.numeric(Sens)){stop("Sensitivity should be numeric")}
-    if(!is.numeric(Spec)){stop("Specificity should be numeric")}
-    # numbers that are probabilities not percentages
-    if((Sens > 1) | (Sens <= 0)){stop("Sensitivity should be a probability (did you give a %?)")}
-    if((Spec > 1) | (Spec <= 0)){stop("Specificity should be a probability (did you give a %?)")}
+  if(!missing(TP) & !missing(TN) & !missing(FP) & !missing(FN)){
+    TPTNFPFN <- TRUE
+  } else if (!missing(pretestProb) & !missing(SN) & !missing(SP)){
+    SNSP <- TRUE
+    TPTNFPFN <- FALSE
+  } else if (!missing(pretestProb) & !missing(PLR) & !missing(NLR)){
+    PLRNLR <- TRUE
+    TPTNFPFN <- FALSE
+    SNSP <- FALSE
+  } else{
+    stop("Missing arguments")
   }
 
+  ## If TP, TN, FP, and FN provided, we calculate posterior probabilities & odds using TP, TN, FP, and FN
+  ##  otherwise, if SN and SP are provided, we calculate posteriors using SN & SP
+  ##  otherwise, if PLR and NLR provided, we calculate posteriors using PLR & NLR
+  if(TPTNFPFN == TRUE){
+    # TP/TN/FP/FN needs to be numeric
+    if(!is.numeric(TP) | !is.numeric(TN) | !is.numeric(FP) | !is.numeric(FN)){stop("TP, TN, FP, and FN should be numeric")}
 
-  # Did user give PLR & NLR?
-  if(missing(Plr) | missing(Nlr)){
-    plrnlr <- FALSE
-  } else{plrnlr <- TRUE}
-  # if yes, make sure they are numbers
-  if(plrnlr == TRUE){
-    if(!is.numeric(Plr)){stop("PLR should be numeric")}
-    if(!is.numeric(Nlr)){stop("NLR should be numeric")}
-    # numbers that vaguely make sense
-    if(Plr < 1){stop("PLR shouldn't be less than 1")}
-    if(Nlr < 0){stop("NLR shouldn't be below zero")}
-    if(Nlr > 1){stop("NLR shouldn't be more than 1")}
-  }
+    # make sure STP, TN, FP, and FN are numbers
+    if(!is.numeric(TP)){stop("TP should be numeric")}
+    if(!is.numeric(TN)){stop("TN should be numeric")}
+    if(!is.numeric(FP)){stop("FP should be numeric")}
+    if(!is.numeric(FN)){stop("FN should be numeric")}
 
-  # Did they give a valid sensspec and plrnlr? If yes, ignore the LRs and tell them
-  if((sensspec == TRUE) && (plrnlr == TRUE) ){
-    warning("You provided sens/spec as well as likelihood ratios-- I ignored the LRs!")
-  }
-
-
-  ## If sens/spec provided, we calculate posterior probabilities & odds using sens & spec
-  ##  otherwise, if plr and nlr provided, we calculate posteriors using them
-  ##  if neither exist, then return an error
-  if(sensspec == TRUE){
-    prior_prob  <- Prevalence
+    prior_prob  <- (TP + FN)/(TP + TN + FP + FN)
     prior_odds  <- odds(prior_prob)
-    sensitivity <- Sens
-    specificity <- Spec
+    sensitivity <- TP/(TP + FN)
+    specificity <- TN/(TN + FP)
     PLR <- sensitivity/(1-specificity)
     NLR <- (1-sensitivity)/specificity
     post_odds_pos  <- prior_odds * PLR
     post_odds_neg  <- prior_odds * NLR
     post_prob_pos  <- post_odds_pos/(1+post_odds_pos)
     post_prob_neg  <- post_odds_neg/(1+post_odds_neg)
-  } else if(plrnlr == TRUE){
-    prior_prob  <- Prevalence
+  } else if(SNSP == TRUE){
+    # pretest prob needs to be numeric
+    if(!is.numeric(pretestProb)){stop("Pretest probability should be numeric")}
+    # pretest prob needs to be a prob not a percent
+    if((pretestProb > 1) | (pretestProb <= 0)){stop("Pretest probability should be a probability (did you give a %?)")}
+
+    # make sure SN and SP are numbers
+    if(!is.numeric(SN)){stop("Sensitivity should be numeric")}
+    if(!is.numeric(SP)){stop("Specificity should be numeric")}
+    # make sure SN and SP are numbers that are probabilities not percentages
+    if((SN > 1) | (SN <= 0)){stop("Sensitivity should be a probability (did you give a %?)")}
+    if((SP > 1) | (SP <= 0)){stop("Specificity should be a probability (did you give a %?)")}
+
+    prior_prob  <- pretestProb
     prior_odds  <- odds(prior_prob)
-    PLR <- Plr
-    NLR <- Nlr
+    sensitivity <- SN
+    specificity <- SP
+    PLR <- sensitivity/(1-specificity)
+    NLR <- (1-sensitivity)/specificity
+    post_odds_pos  <- prior_odds * PLR
+    post_odds_neg  <- prior_odds * NLR
+    post_prob_pos  <- post_odds_pos/(1+post_odds_pos)
+    post_prob_neg  <- post_odds_neg/(1+post_odds_neg)
+  } else if(PLRNLR == TRUE){
+    # pretest prob needs to be numeric
+    if(!is.numeric(pretestProb)){stop("Pretest probability should be numeric")}
+    # pretest prob needs to be a prob not a percent
+    if((pretestProb > 1) | (pretestProb <= 0)){stop("Pretest probability should be a probability (did you give a %?)")}
+
+    # make sure PLR and NLR are numbers
+    if(!is.numeric(PLR)){stop("PLR should be numeric")}
+    if(!is.numeric(NLR)){stop("NLR should be numeric")}
+    # make sure PLR and NLR are numbers that vaguely make sense
+    if(PLR < 1){stop("PLR shouldn't be less than 1")}
+    if(NLR < 0){stop("NLR shouldn't be below zero")}
+    if(NLR > 1){stop("NLR shouldn't be more than 1")}
+
+    prior_prob  <- pretestProb
+    prior_odds  <- odds(prior_prob)
+    PLR <- PLR
+    NLR <- NLR
     sensitivity <- (PLR*(1-NLR))/(PLR-NLR)    ## TODO: check Adam's math!
     specificity <- (1-PLR)/(NLR-PLR)          ## TODO: check Adam's math!
     post_odds_pos  <- prior_odds * PLR
@@ -175,7 +203,7 @@ nomogrammer <- function(Prevalence,
     post_prob_pos  <- post_odds_pos/(1+post_odds_pos)
     post_prob_neg  <- post_odds_neg/(1+post_odds_neg)
   } else{
-    stop("Couldn't find sens & spec, or positive & negative likelihood ratios")
+    stop("Couldn't find SN & SP, or positive & negative likelihood ratios")
   }
 
 
@@ -280,9 +308,9 @@ nomogrammer <- function(Prevalence,
                                            labels = ticks_prob,
                                            breaks = ticks_logodds))
 
-  ## Optional overlay text: prevalence, PLR/NLR, and posterior probabilities
+  ## Optional overlay text: pretestProb, PLR/NLR, and posterior probabilities
   detailedAnnotation <- paste(
-    paste0("prevalence = ", p2percent(prior_prob)),
+    paste0("base rate = ", p2percent(prior_prob)),
     paste("PLR =", signif(PLR, 3),", NLR =", signif(NLR, 3)),
     paste("post. pos =", p2percent(post_prob_pos),
           ", neg =", p2percent(post_prob_neg)),
@@ -318,7 +346,7 @@ nomogrammer <- function(Prevalence,
   if(Verbose == TRUE){
     writeLines(
       text = c(
-        paste0("prevalence = ", p2percent(prior_prob)),
+        paste0("base rate = ", p2percent(prior_prob)),
         paste("PLR =", signif(PLR, 3)),
         paste("NLR =", signif(NLR, 3)),
         paste("posterior probability (positive) =", p2percent(post_prob_pos)),
@@ -330,26 +358,6 @@ nomogrammer <- function(Prevalence,
     )
   }
 
-
   return(p)
 
 }
-
-
-
-
-
-
-### TODO:
-# Allow ppl to input the confusion matrix
-# input_TP
-# input_FP
-# input_FN
-# input_TN
-#                            Obs
-#                   present       absent
-#            +----------------+----------------+
-#      pos   | True Positive  | False Positive |
-# Pred       +----------------+----------------+
-#      neg   | False Negative | True Negative  |
-#            +----------------+----------------+
