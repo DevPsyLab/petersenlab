@@ -300,9 +300,8 @@ nomogrammer <- function(
              size = 1) +
     annotate(geom = "text",
              x = middle,
-             y = 0,
-             label = "likelihood ratio",
-             size = rel(LabelSize)) +
+             y = adj_max,
+             label = "likelihood ratio") +
     scale_x_continuous(expand = c(0,0)) +
     scale_y_continuous(expand = c(0,0),
                        limits = rescale,
