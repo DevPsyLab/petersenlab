@@ -222,7 +222,8 @@ nomogrammer <- function(
                     axis.title.y.right = element_text(angle = 0),
                     axis.line = element_blank(),
                     panel.grid = element_blank(),
-                    legend.position = "none"
+                    legend.title=element_blank()#,
+                    #legend.position = "none"
               )
   )
 
@@ -256,7 +257,7 @@ nomogrammer <- function(
   # Initially these are expressed as probabilities
   df <- data.frame(x=c(left, right, left, right),
                    y=c(prior_prob, post_prob_pos, prior_prob, post_prob_neg),
-                   line = c("pos", "pos", "neg", "neg"))
+                   line = c("positive test", "positive test", "negative test", "negative test"))
 
   adj_min      <- range(ticks_logodds)[1]
   adj_max      <- range(ticks_logodds)[2]
@@ -297,6 +298,11 @@ nomogrammer <- function(
              x = rep(middle, length(ticks_log_lrs)),
              y = (ticks_log_lrs-scale_factor)/2,
              size = 1) +
+    annotate(geom = "text",
+             x = middle,
+             y = 0,
+             label = "likelihood ratio",
+             size = rel(LabelSize)) +
     scale_x_continuous(expand = c(0,0)) +
     scale_y_continuous(expand = c(0,0),
                        limits = rescale,
