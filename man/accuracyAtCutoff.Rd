@@ -114,6 +114,7 @@ accuracyAtCutoff(predicted = USArrests$Assault,
 Other accuracy: 
 \code{\link{accuracyAtEachCutoff}()},
 \code{\link{accuracyOverall}()},
+\code{\link{nomogrammer}()},
 \code{\link{optimalCutoff}()}
 }
 \concept{accuracy}

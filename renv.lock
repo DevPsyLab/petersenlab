@@ -565,7 +565,7 @@
     },
     "lavaan": {
       "Package": "lavaan",
-      "Version": "0.6-16",
+      "Version": "0.6-17",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -581,7 +581,7 @@
         "stats4",
         "utils"
       ],
-      "Hash": "6dbce6012efbb98656aa0e924393632e"
+      "Hash": "993c0958431b2651438c360a070fd088"
     },
     "lifecycle": {
       "Package": "lifecycle",
@@ -781,7 +781,7 @@
     },
     "psych": {
       "Package": "psych",
-      "Version": "2.3.9",
+      "Version": "2.3.12",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -794,7 +794,7 @@
         "parallel",
         "stats"
       ],
-      "Hash": "4c7165bb5b5342f39bcfdb52db26f163"
+      "Hash": "3be0b93e14bede70d41d3d8f9dce13d6"
     },
     "quadprog": {
       "Package": "quadprog",

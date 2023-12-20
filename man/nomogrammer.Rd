@@ -89,4 +89,11 @@ nomogrammer(
 }
 \seealso{
 \url{https://github.com/achekroud/nomogrammer}
+
+Other accuracy: 
+\code{\link{accuracyAtCutoff}()},
+\code{\link{accuracyAtEachCutoff}()},
+\code{\link{accuracyOverall}()},
+\code{\link{optimalCutoff}()}
 }
+\concept{accuracy}
