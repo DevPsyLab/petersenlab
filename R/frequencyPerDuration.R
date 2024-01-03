@@ -100,7 +100,7 @@ timesPerInterval <- function(num_occurrences = NULL, interval = NULL, duration =
   )
 
   interval_occurrences <- ifelse(
-    (is.na(num_occurrences) | is.na(interval)) & (not_occurred_past_year == 0 | is.na(not_occurred_past_year)), NA,
+    ((is.na(num_occurrences) | is.na(interval)) & (not_occurred_past_year == 0 | is.na(not_occurred_past_year))) | num_occurrences < 0, NA,
     ifelse(
       is.na(not_occurred_past_year), num_occurrences * (duration_days / interval_days),
       ifelse(
@@ -123,7 +123,7 @@ timesPerLifetime <- function(num_occurrences = NULL, never_occurred = NULL) {
   }
 
   lifetime_occurrences <- ifelse(
-    is.na(num_occurrences) & never_occurred == 0, NA,
+    (is.na(num_occurrences) & never_occurred == 0) | num_occurrences < 0, NA,
     ifelse(
       is.na(never_occurred), num_occurrences,
       ifelse(never_occurred == 1, 0, num_occurrences)))
