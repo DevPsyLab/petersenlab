@@ -9,16 +9,15 @@
 #' zero (i.e., if the behavior has not occurred).
 #'
 #' @param intensity The intensity of the behavior.
-#' @param not_in_the_past_year Whether or not the behavior did NOT occur in
-#' the past year. If \code{yes}, the behavior did not occur in the past year.
+#' @param did_not_occur Whether or not the behavior did NOT occur. If
+#' \code{yes}, the behavior did not occur (in the given timeframe).
 #' @param frequency The frequency of the behavior.
 #' @param item_names The names of the questionnaire items.
 #' @param data The data object.
 #' @param frequency_vars The name(s) of the variables corresponding to the
 #' number of occurrences (\code{num_occurrences}).
-#' @param not_in_past_year_vars The name(s) of the variables corresponding to
-#' whether the behavior did not occur in the past year
-#' (\code{not_occurred_past_year}).
+#' @param did_not_occur_vars The name(s) of the variables corresponding to
+#' whether the behavior did not occur in the past year (\code{did_not_occur}).
 #'
 #' @return
 #' The intensity of the behavior.
@@ -27,31 +26,41 @@
 
 #' @rdname recodeBehaviorIntensity
 #' @export
-recode_intensity <- function(intensity, not_in_the_past_year = NULL, frequency = NULL){
+recode_intensity <- function(intensity, did_not_occur = NULL, frequency = NULL){
   if(missing(frequency) | is.null(frequency)){
-    result <- ifelse(is.na(not_in_the_past_year), intensity, ifelse(not_in_the_past_year == 1, 0, intensity))
-  } else if(missing(not_in_the_past_year) | is.null(not_in_the_past_year)){
+    result <- ifelse(is.na(did_not_occur), intensity, ifelse(did_not_occur == 1, 0, intensity))
+  } else if(missing(did_not_occur) | is.null(did_not_occur)){
     result <- ifelse(is.na(frequency), intensity, ifelse(frequency == 0, 0, intensity))
-  }
+  } else(
+    result <- ifelse(did_not_occur == 1, 0, ifelse(frequency == 0, 0, intensity))
+  )
 
   return(result)
 }
 
 #' @rdname recodeBehaviorIntensity
 #' @export
-mark_intensity_as_zero <- function(item_names, data, not_in_past_year_vars = NULL, frequency_vars = NULL) {
+mark_intensity_as_zero <- function(item_names, data, did_not_occur_vars = NULL, frequency_vars = NULL) {
   if(missing(frequency_vars) | is.null(frequency_vars)){
 
     recoded <- Map(
       recode_intensity,
       intensity = data[, item_names],
-      not_in_the_past_year = data[, not_in_past_year_vars])
+      did_not_occur = data[, did_not_occur_vars])
 
-  } else if(missing(not_in_past_year_vars) | is.null(not_in_past_year_vars)){
+  } else if(missing(did_not_occur_vars) | is.null(did_not_occur_vars)){
 
     recoded <- Map(
       recode_intensity,
       intensity = data[, item_names],
+      frequency = data[, frequency_vars])
+
+  } else {
+
+    recoded <- Map(
+      recode_intensity,
+      intensity = data[, item_names],
+      did_not_occur = data[, did_not_occur_vars],
       frequency = data[, frequency_vars])
 
   }

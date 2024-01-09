@@ -5,20 +5,20 @@
 \alias{mark_intensity_as_zero}
 \title{Recode Intensity.}
 \usage{
-recode_intensity(intensity, not_in_the_past_year = NULL, frequency = NULL)
+recode_intensity(intensity, did_not_occur = NULL, frequency = NULL)
 
 mark_intensity_as_zero(
   item_names,
   data,
-  not_in_past_year_vars = NULL,
+  did_not_occur_vars = NULL,
   frequency_vars = NULL
 )
 }
 \arguments{
 \item{intensity}{The intensity of the behavior.}
 
-\item{not_in_the_past_year}{Whether or not the behavior did NOT occur in
-the past year. If \code{yes}, the behavior did not occur in the past year.}
+\item{did_not_occur}{Whether or not the behavior did NOT occur. If
+\code{yes}, the behavior did not occur (in the given timeframe).}
 
 \item{frequency}{The frequency of the behavior.}
 
@@ -26,9 +26,8 @@ the past year. If \code{yes}, the behavior did not occur in the past year.}
 
 \item{data}{The data object.}
 
-\item{not_in_past_year_vars}{The name(s) of the variables corresponding to
-whether the behavior did not occur in the past year
-(\code{not_occurred_past_year}).}
+\item{did_not_occur_vars}{The name(s) of the variables corresponding to
+whether the behavior did not occur in the past year (\code{did_not_occur}).}
 
 \item{frequency_vars}{The name(s) of the variables corresponding to the
 number of occurrences (\code{num_occurrences}).}
