@@ -20,11 +20,11 @@
 #' petersenLabPath <- setLabPath()
 
 setLabPath <- function(){
-  if(dir.exists("//iowa.uiowa.edu/shared/ResearchData/rdss_itpetersen/Lab")){
-    petersenLab <- "//iowa.uiowa.edu/shared/ResearchData/rdss_itpetersen"
-  } else if(dir.exists("//rdss.iowa.uiowa.edu/rdss_itpetersen/Lab")){
-    petersenLab <- "//rdss.iowa.uiowa.edu/rdss_itpetersen"
+  if(dir.exists("//lc-rs-store24.hpc.uiowa.edu/lss_itpetersen/Lab")){
+    petersenLab <- "//lc-rs-store24.hpc.uiowa.edu/lss_itpetersen"
+  } else if(dir.exists("smb://lc-rs-store24.hpc.uiowa.edu/lss_itpetersen/Lab")){
+    petersenLab <- "smb://lc-rs-store24.hpc.uiowa.edu/lss_itpetersen/"
   } else {
-    petersenLab <- "/Volumes/rdss_itpetersen"
+    petersenLab <- "/Shared/lss_itpetersen"
   }
 }
