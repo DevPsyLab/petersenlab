@@ -60,8 +60,8 @@ Other plot:
 
 Other correlations: 
 \code{\link{cor.table}()},
-\code{\link{crossTimeCorrelationDF}()},
 \code{\link{crossTimeCorrelation}()},
+\code{\link{crossTimeCorrelationDF}()},
 \code{\link{partialcor.table}()},
 \code{\link{vwReg}()}
 }

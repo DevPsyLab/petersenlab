@@ -100,8 +100,8 @@ partialcor.table(mtcars[,c("mpg","cyl","disp")], mtcars[,c("drat","qsec")],
 Other correlations: 
 \code{\link{addText}()},
 \code{\link{cor.table}()},
-\code{\link{crossTimeCorrelationDF}()},
 \code{\link{crossTimeCorrelation}()},
+\code{\link{crossTimeCorrelationDF}()},
 \code{\link{vwReg}()}
 }
 \concept{correlations}

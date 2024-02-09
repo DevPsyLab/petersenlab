@@ -171,8 +171,8 @@ Other plot:
 Other correlations: 
 \code{\link{addText}()},
 \code{\link{cor.table}()},
-\code{\link{crossTimeCorrelationDF}()},
 \code{\link{crossTimeCorrelation}()},
+\code{\link{crossTimeCorrelationDF}()},
 \code{\link{partialcor.table}()}
 }
 \concept{correlations}

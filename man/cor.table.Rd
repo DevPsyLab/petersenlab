@@ -79,8 +79,8 @@ cor.table(mtcars[,c("mpg","cyl","disp")], mtcars[,c("drat","qsec")], type = "man
 \seealso{
 Other correlations: 
 \code{\link{addText}()},
-\code{\link{crossTimeCorrelationDF}()},
 \code{\link{crossTimeCorrelation}()},
+\code{\link{crossTimeCorrelationDF}()},
 \code{\link{partialcor.table}()},
 \code{\link{vwReg}()}
 }
