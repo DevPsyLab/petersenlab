@@ -17,6 +17,7 @@ Imports: stats, graphics, utils, nlme, Hmisc, digest, dplyr, ggplot2, lavaan,
 Description: This R package is a collection of functions that are widely used 
     in the Petersen Lab.
 URL: https://github.com/DevPsyLab/petersenlab, https://devpsylab.github.io/petersenlab/
+BugReports: https://github.com/DevPsyLab/petersenlab/issues
 License: CC BY 4.0 + file LICENSE
 Encoding: UTF-8
 LazyData: true
