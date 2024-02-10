@@ -1,10 +1,16 @@
-# petersenlab
+# `petersenlab`
+
+## Overview of the package
+
+The `petersenlab` package is a package of `R` functions that the Petersen Lab (the [Developmental Psychopathology Lab](https://developmental-psychopathology.lab.uiowa.edu) at the University of Iowa) has found to be useful.
+By making the package available, we hope to make our methods reproducible and replicable by others and to help others perform their data processing and analysis methods more easily and efficiently.
+The package website is here: https://devpsylab.github.io/petersenlab/.
+The source code for the package is here: https://github.com/DevPsyLab/petersenlab.
 
 ## Installing the package
 
-R package with functions for the Petersen Lab
-
 To install the package, run the following in `R`:
+
 ```
 install.packages("remotes")
 remotes::install_github("DevPsyLab/petersenlab")
@@ -40,84 +46,3 @@ This work is licensed under a
 [cc-by]: http://creativecommons.org/licenses/by/4.0/
 [cc-by-image]: https://i.creativecommons.org/l/by/4.0/88x31.png
 [cc-by-shield]: https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg
-
-# Dev Notes
-
-## Updating the package
-
-To update the package, run the following in `R`:
-```
-# 1. Update packages in package environment
-renv::upgrade()
-renv::update()
-renv::snapshot()
-
-# 2. Add/edit code
-
-# 3. Update documentation
-roxygen2::roxygenise()
-
-# 4. Update package version
-usethis::use_version()
-```
-
-Then, build the package: Ctrl-Shift-B
-
-Then, install the package:
-
-```
-renv::install("C:/R/Packages/petersenlab") #PC
-renv::install("/Library/Frameworks/R.framework/Packages/petersenlab") #Mac
-```
-
-## Installing Packages
-
-To install new packages in the package environment, run the following in `R`:
-```
-renv::install("NAME_OF_PACKAGE")
-```
-or:
-```
-install.packages("NAME_OF_PACKAGE)
-```
-
-## Some useful keyboard shortcuts for package authoring:
-
- Install Package:           'Ctrl + Shift + B'
- 
- Check Package:             'Ctrl + Shift + E'
- 
- Test Package:              'Ctrl + Shift + T'
-
-```
-renv::install("C:/R/Packages/petersenlab")
-renv::snapshot()
-renv::install()
-```
-
-## Resources
-
--https://rpubs.com/YaRrr/rpackageintro
-
--http://r-pkgs.had.co.nz/
-
--http://cran.r-project.org/doc/contrib/Leisch-CreatingPackages.pdf
-
--http://portal.stats.ox.ac.uk/userdata/ruth/APTS2012/Rcourse10.pdf
-
--http://web.mit.edu/insong/www/pdf/rpackage_instructions.pdf
-
--https://hilaryparker.com/2014/04/29/writing-an-r-package-from-scratch/
-
-### For Package Development Tasks
-
--https://usethis.r-lib.org/index.html
-
-### For Reproducibility of Package Management using renv
-
--https://rstudio.github.io/renv/articles/renv.html
-
-### For Documentation
-
--https://github.com/r-lib/roxygen2#roxygen2
--https://hilaryparker.com/2014/04/29/writing-an-r-package-from-scratch/
