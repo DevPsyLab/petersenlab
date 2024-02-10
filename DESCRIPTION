@@ -8,7 +8,7 @@ Authors@R: c(
            role = c("aut", "cre"),
            comment = c(ORCID = "0000-0003-3072-6673")),
     person("Developmental Psychopathology Lab at the University of Iowa",
-           role = c("ctb")),     
+           role = c("ctb"))
   )
 Maintainer: Isaac T. Petersen <isaac-t-petersen@uiowa.edu>
 Imports: stats, graphics, utils, nlme, Hmisc, digest, dplyr, ggplot2, lavaan, 
