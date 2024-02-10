@@ -12,3 +12,156 @@ authors:
 
 template:
   bootstrap: 5
+
+reference:
+- title: Accuracy
+  contents:
+  - accuracyAtCutoff
+  - accuracyAtEachCutoff
+  - accuracyOverall
+  - nomogrammer
+  - optimalCutoff
+
+- title: Bayesian
+  contents:
+  - bayesTheorem
+
+- title: Behavior Frequency
+  contents:
+  - frequencyPerDuration
+
+- title: Behavior Intensity
+  contents:
+  - recodeBehaviorIntensity
+
+- title: Computations
+  contents:
+  - meanSum
+  - Mode
+  - mySum
+
+- title: Conversion
+  contents:
+  - convert.magic
+  - convertHoursAMPM
+  - percentileToTScore
+  - pom
+  - convertToHours
+  - convertToMinutes
+  - convertToSeconds
+  - reverseScore
+
+- title: Correlation
+  contents:
+  - addText
+  - attenuationCorrelation
+  - cor.table
+  - crossTimeCorrelation
+  - crossTimeCorrelationDF
+  - disattenuationCorrelation
+  - partialcor.table
+  - vwReg
+
+- title: Data Evaluation
+  contents:
+  - not_all_na
+  - dropColsWithAllNA
+  - dropRowsWithAllNA
+  - is.nan.data.frame
+  - not_any_na
+
+- title: Data Manipulation
+  contents:
+  - columnBindFill
+  - convert.magic
+  - dropColsWithAllNA
+  - dropRowsWithAllNA
+
+- title: Encryption
+  contents:
+  - read.aes
+  - write.aes
+
+- title: Formatting
+  contents:
+  - pValue
+  - specify_decimal
+  - suppressLeadingZero
+
+- title: Grants
+  contents:
+  - personMonths
+
+- title: Item Response Theory (IRT)
+  contents:
+  - fourPL
+  - discriminationToFactorLoading
+  - itemInformation
+  - reliabilityIRT
+  - standardErrorIRT
+
+- title: Lab
+  contents:
+  - setLabPath
+
+- title: Mixed Model
+  contents:
+  - lmeSummary
+
+- title: Multiple Imputation
+  contents:
+  - imputationCombine
+  - imputationModelCompare
+  - imputationPRV
+  - lmCombine
+
+- title: Operators
+  contents:
+  - grapes-ni-grapes
+
+- title: Packages
+  contents:
+  - is_installed
+  - load_or_install
+  - getDependencies
+
+- title: Personal Finance
+  contents:
+  - mortgage
+
+- title: Plotting
+  contents:
+  - addText
+  - plot2WayInteraction
+  - ppPlot
+  - vwReg
+
+- title: Research Electronic Data Capture (REDCap)
+  contents:
+  - redcapProgressBar
+
+- title: Reliability
+  contents:
+  - reliabilityOfDifferenceScore
+  - reliabilityIRT
+  - repeatability
+
+- title: Simulation
+  contents:
+  - simulateAUC
+  - complement
+  - simulateIndirectEffect
+
+- title: Structural Equation Modeling (SEM)
+  contents:
+  - make_esem_model
+  - equiv_chi
+  - puc
+  - satorraBentlerScaledChiSquareDifferenceTestStatistic
+
+- title: Times
+  contents:
+  - convertHoursAMPM
+  - convertToHours
+  - convertToMinutes
+  - convertToSeconds
