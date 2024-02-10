@@ -1,4 +1,8 @@
 url: https://devpsylab.github.io/petersenlab/
 template:
   bootstrap: 5
-
+  includes:
+    in_header:
+    - "includes/google_analytics.html"
+    after_body:
+    - "includes/footer.html"
