@@ -1,6 +1,7 @@
 Package: petersenlab
 Type: Package
 Title: Package of R Functions for the Petersen Lab
+Version: 0.1.2-9030
 Authors@R: c(
     person("Isaac T.", "Petersen",
            email = "isaac-t-petersen@uiowa.edu",

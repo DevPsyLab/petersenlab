@@ -20,7 +20,7 @@ remotes::install_github("DevPsyLab/petersenlab")
 
 To obtain the citation for the `petersenlab` package, run `citation("petersenlab")`; the citation is:
 
-Petersen, I. T. (2024). *petersenlab: Package of R functions for the Petersen Lab*. R package version 0.1.2-9029. https://github.com/DevPsyLab/petersenlab, https://doi.org/10.5281/zenodo.7602890
+Petersen, I. T. (2024). *petersenlab: Package of R functions for the Petersen Lab*. R package version 0.1.2-9030. https://github.com/DevPsyLab/petersenlab, https://doi.org/10.5281/zenodo.7602890
 
 A `BibTeX` entry for `LaTeX` users is:
 ```
@@ -29,7 +29,7 @@ A `BibTeX` entry for `LaTeX` users is:
   title = {{petersenlab}: Package of {R} functions for the {Petersen Lab}},
   url = {https://github.com/DevPsyLab/petersenlab},
   doi = {10.5281/zenodo.7602890},
-  version = {0.1.2-9029},
+  version = {0.1.2-9030},
   year = {2024}
 }
 ```
