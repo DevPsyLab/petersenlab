@@ -1,7 +1,8 @@
-url: https://devpsylab.github.io/petersenlab/
+url: https://devpsylab.github.io/petersenlab, https://github.com/DevPsyLab/petersenlab
 
 home:
   title: petersenlab R package
+  description: Package of R functions that are widely used by the Petersen Lab
 
 authors:
   Isaac T. Petersen:
@@ -14,13 +15,31 @@ template:
   bootstrap: 5
 
 reference:
-- title: Accuracy
+- title: Accuracy of Judgments/Predictions
   contents:
   - accuracyAtCutoff
   - accuracyAtEachCutoff
   - accuracyOverall
   - nomogrammer
   - optimalCutoff
+
+- title: Assessment and Scoring
+
+- subtitle: Behavior Frequency
+  contents:
+  - computeItemFrequencies
+  - computeLifetimeFrequencies
+  - timesPerInterval
+  - timesPerLifetime
+
+- subtitle: Behavior Intensity
+  contents:
+  - recode_intensity
+  - mark_intensity_as_zero
+
+- subtitle: Research Electronic Data Capture (REDCap)
+  contents:
+  - redcapProgressBar
 
 - title: Bayesian
   contents:
@@ -30,35 +49,6 @@ reference:
   - pBgivenA
   - pAgivenNotB
   - pBgivenNotA
-
-- title: Behavior Frequency
-  contents:
-  - computeItemFrequencies
-  - computeLifetimeFrequencies
-  - timesPerInterval
-  - timesPerLifetime
-
-- title: Behavior Intensity
-  contents:
-  - recode_intensity
-  - mark_intensity_as_zero
-
-- title: Computations
-  contents:
-  - meanSum
-  - Mode
-  - mySum
-
-- title: Conversion
-  contents:
-  - convert.magic
-  - convertHoursAMPM
-  - percentileToTScore
-  - pom
-  - convertToHours
-  - convertToMinutes
-  - convertToSeconds
-  - reverse_score
 
 - title: Correlation
   contents:
@@ -71,7 +61,26 @@ reference:
   - partialcor.table
   - vwReg
 
-- title: Data Evaluation
+- title: Data Management
+
+- subtitle: Computations
+  contents:
+  - meanSum
+  - Mode
+  - mySum
+
+- subtitle: Conversion
+  contents:
+  - convert.magic
+  - convertHoursAMPM
+  - percentileToTScore
+  - pom
+  - convertToHours
+  - convertToMinutes
+  - convertToSeconds
+  - reverse_score
+
+- subtitle: Data Evaluation
   contents:
   - not_all_na
   - dropColsWithAllNA
@@ -79,88 +88,53 @@ reference:
   - is.nan.data.frame
   - not_any_na
 
-- title: Data Manipulation
+- subtitle: Data Manipulation
   contents:
   - columnBindFill
   - convert.magic
   - dropColsWithAllNA
   - dropRowsWithAllNA
 
-- title: Encryption
+- subtitle: Encryption
   contents:
   - read.aes
   - write.aes
 
-- title: Formatting
+- subtitle: Formatting Values
   contents:
   - pValue
   - specify_decimal
   - suppressLeadingZero
+
+- subtitle: Handling Time Data
+  contents:
+  - convertHoursAMPM
+  - convertToHours
+  - convertToMinutes
+  - convertToSeconds
+
+- subtitle: Operators
+  contents:
+  - "%ni%"
 
 - title: Grants
   contents:
   - percentEffort
   - personMonths
 
-- title: Item Response Theory (IRT)
+- title: Lab
+  contents:
+  - setLabPath
+
+- title: Latent Variable Modeling
+
+- subtitle: Item Response Theory (IRT)
   contents:
   - fourPL
   - discriminationToFactorLoading
   - itemInformation
   - reliabilityIRT
   - standardErrorIRT
-
-- title: Lab
-  contents:
-  - setLabPath
-
-- title: Mixed Model
-  contents:
-  - lmeSummary
-
-- title: Multiple Imputation
-  contents:
-  - imputationCombine
-  - imputationModelCompare
-  - imputationPRV
-  - lmCombine
-
-- title: Operators
-  contents:
-  - "%ni%"
-
-- title: Packages
-  contents:
-  - is_installed
-  - load_or_install
-  - getDependencies
-
-- title: Personal Finance
-  contents:
-  - mortgage
-
-- title: Plotting
-  contents:
-  - addText
-  - plot2WayInteraction
-  - ppPlot
-  - vwReg
-
-- title: Research Electronic Data Capture (REDCap)
-  contents:
-  - redcapProgressBar
-
-- title: Reliability
-  contents:
-  - reliabilityOfDifferenceScore
-  - reliabilityIRT
-  - repeatability
-
-- title: Simulation
-  contents:
-  - simulateAUC
-  - complement
-  - simulateIndirectEffect
 
 - title: Structural Equation Modeling (SEM)
   contents:
@@ -169,9 +143,50 @@ reference:
   - puc
   - satorraBentlerScaledChiSquareDifferenceTestStatistic
 
-- title: Times
+- title: Missing Data Handling
+
+- subtitle: Multiple Imputation
   contents:
-  - convertHoursAMPM
-  - convertToHours
-  - convertToMinutes
-  - convertToSeconds
+  - imputationCombine
+  - imputationModelCompare
+  - imputationPRV
+  - lmCombine
+
+- title: Packages
+  contents:
+  - is_installed
+  - load_or_install
+  - getDependencies
+
+- title: Plotting
+  contents:
+  - addText
+  - plot2WayInteraction
+  - ppPlot
+  - vwReg
+
+- title: Psychometrics
+
+- subtitle: Reliability
+  contents:
+  - reliabilityOfDifferenceScore
+  - reliabilityIRT
+  - repeatability
+
+- title: Random
+
+- subtitle: Personal Finance
+  contents:
+  - mortgage
+
+- title: Regression
+
+- subtitle: Mixed Model
+  contents:
+  - lmeSummary
+
+- title: Simulation
+  contents:
+  - simulateAUC
+  - complement
+  - simulateIndirectEffect

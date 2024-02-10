@@ -2,7 +2,7 @@
 
 ## Overview of the package
 
-The `petersenlab` package is a package of `R` functions that the Petersen Lab (the [Developmental Psychopathology Lab](https://developmental-psychopathology.lab.uiowa.edu) at the University of Iowa) has found to be useful.
+The `petersenlab` package is a package of `R` functions that are widely used by the Petersen Lab (the [Developmental Psychopathology Lab](https://developmental-psychopathology.lab.uiowa.edu) at the University of Iowa).
 By making the package available, we hope to make our methods reproducible and replicable by others and to help others perform their data processing and analysis methods more easily and efficiently.
 The package website is here: https://devpsylab.github.io/petersenlab.
 The source code for the package is here: https://github.com/DevPsyLab/petersenlab.
