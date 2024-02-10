@@ -1,0 +1,12 @@
+bibentry(
+  bibtype  = "Misc",
+  title    = "{petersenlab}: Package of {R} functions for the {Petersen Lab}",
+  author   = c(
+    person("Isaac T.", "Petersen",
+           email = "isaac-t-petersen@uiowa.edu",
+           comment = c(ORCID = "0000-0003-3072-6673"))),
+  year     = 2024,
+  note     = "version 0.1.2-9030",
+  url      = "https://github.com/DevPsyLab/petersenlab",
+  key      = "petersenlab"
+)
