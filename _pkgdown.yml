@@ -1,4 +1,14 @@
 url: https://devpsylab.github.io/petersenlab/
+
+home:
+  title: `petersenlab` R package
+
+authors:
+  Isaac T. Petersen:
+    href: https://psychology.uiowa.edu/people/isaac-petersen
+  Developmental Psychopathology Lab at the University of Iowa:
+    href: https://developmental-psychopathology.lab.uiowa.edu
+
 template:
   bootstrap: 5
   includes:
