@@ -1,5 +1,5 @@
 #' @title
-#' Mode.
+#' Statistical Mode.
 #'
 #' @description
 #' Calculate statistical mode.
