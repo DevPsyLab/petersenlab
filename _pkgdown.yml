@@ -136,7 +136,7 @@ reference:
   - reliabilityIRT
   - standardErrorIRT
 
-- title: Structural Equation Modeling (SEM)
+- subtitle: Structural Equation Modeling (SEM)
   contents:
   - make_esem_model
   - equiv_chi
