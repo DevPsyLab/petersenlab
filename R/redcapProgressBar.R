@@ -37,7 +37,3 @@ redcapProgressBar <- function(numSurveys, beginning = 2, end = 99){
 
   return(progressSequence)
 }
-
-
-
-

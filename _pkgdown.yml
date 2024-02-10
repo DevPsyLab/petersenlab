@@ -58,7 +58,7 @@ reference:
   - convertToHours
   - convertToMinutes
   - convertToSeconds
-  - reverseScore
+  - reverse_score
 
 - title: Correlation
   contents:
@@ -99,6 +99,7 @@ reference:
 
 - title: Grants
   contents:
+  - percentEffort
   - personMonths
 
 - title: Item Response Theory (IRT)
