@@ -2,7 +2,7 @@
 % Please edit documentation in R/mode.R
 \name{Mode}
 \alias{Mode}
-\title{Mode.}
+\title{Statistical Mode.}
 \usage{
 Mode(x, multipleModes = "all")
 }
