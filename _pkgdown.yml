@@ -8,6 +8,7 @@ authors:
     href: https://psychology.uiowa.edu/people/isaac-petersen
   Developmental Psychopathology Lab at the University of Iowa:
     href: https://developmental-psychopathology.lab.uiowa.edu
+    html: "<img src='formalLogo.png' height='72' alt='Developmental Psychopathology Lab'/>"
 
 template:
   bootstrap: 5
