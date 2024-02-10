@@ -7,7 +7,7 @@
 \alias{pBgivenA}
 \alias{pAgivenNotB}
 \alias{pBgivenNotA}
-\title{Bayes Theorem.}
+\title{Bayes' Theorem.}
 \usage{
 pA(pAgivenB, pB, pAgivenNotB)
 

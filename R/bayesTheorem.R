@@ -1,5 +1,5 @@
 #' @title
-#' Bayes Theorem.
+#' Bayes' Theorem.
 #'
 #' @description
 #' Estimate marginal and conditional probabilities using Bayes theorem.
