@@ -35,6 +35,8 @@ reference:
   contents:
   - computeItemFrequencies
   - computeLifetimeFrequencies
+  - timesPerInterval
+  - timesPerLifetime
 
 - title: Behavior Intensity
   contents:
@@ -124,7 +126,7 @@ reference:
 
 - title: Operators
   contents:
-  - `%ni%`
+  - "%ni%"
 
 - title: Packages
   contents:
