@@ -23,6 +23,7 @@
 #' \code{lavaan} model syntax.
 #'
 #' @family lavaan
+#' @family structural equation modeling
 #'
 #' @importFrom dplyr filter select rename
 #' @importFrom lavaan sem parameterEstimates

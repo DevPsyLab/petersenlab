@@ -23,6 +23,8 @@
 #' @return p-value indicating whether to reject the null hypothesis that the
 #' model is a poor fit to the data.
 #'
+#' @family structural equation modeling
+#'
 #' @importFrom stats pchisq
 #'
 #' @export

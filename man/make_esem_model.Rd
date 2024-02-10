@@ -86,5 +86,11 @@ lavaan::sem(
 }
 \seealso{
 \url{https://msilvestrin.me/post/esem/}
+
+Other structural equation modeling: 
+\code{\link{equiv_chi}()},
+\code{\link{puc}()},
+\code{\link{satorraBentlerScaledChiSquareDifferenceTestStatistic}()}
 }
 \concept{lavaan}
+\concept{structural equation modeling}

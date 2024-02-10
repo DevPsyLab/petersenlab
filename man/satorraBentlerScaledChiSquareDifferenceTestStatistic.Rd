@@ -53,3 +53,10 @@ satorraBentlerScaledChiSquareDifferenceTestStatistic(
  c1 = lavaan::fitMeasures(fit1)["chisq.scaling.factor"],
  d1 = lavaan::fitMeasures(fit1)["df.scaled"])
 }
+\seealso{
+Other structural equation modeling: 
+\code{\link{equiv_chi}()},
+\code{\link{make_esem_model}()},
+\code{\link{puc}()}
+}
+\concept{structural equation modeling}

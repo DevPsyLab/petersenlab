@@ -17,6 +17,8 @@
 #' @return
 #' Percent of Uncontaminated Correlations (PUC).
 #'
+#' @family structural equation modeling
+#'
 #' @export
 #'
 #' @examples

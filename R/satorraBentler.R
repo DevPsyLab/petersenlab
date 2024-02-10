@@ -18,6 +18,8 @@
 #'
 #' @return Satorra-Bentler Scaled Chi-Square Difference Test statistic.
 #'
+#' @family structural equation modeling
+#'
 #' @importFrom lavaan cfa fitMeasures
 #'
 #' @export
