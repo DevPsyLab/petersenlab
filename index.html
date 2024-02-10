@@ -60,12 +60,17 @@
 </nav><div class="container template-home">
 <div class="row">
   <main id="main" class="col-md-9"><div class="section level1">
-<div class="page-header"><h1 id="petersenlab">petersenlab<a class="anchor" aria-label="anchor" href="#petersenlab"></a>
+<div class="page-header"><h1 id="petersenlab">
+<code>petersenlab</code><a class="anchor" aria-label="anchor" href="#petersenlab"></a>
 </h1></div>
+<div class="section level2">
+<h2 id="overview-of-the-package">Overview of the package<a class="anchor" aria-label="anchor" href="#overview-of-the-package"></a>
+</h2>
+<p>The <code>petersenlab</code> package is a package of <code>R</code> functions that the Petersen Lab (the <a href="https://developmental-psychopathology.lab.uiowa.edu" class="external-link">Developmental Psychopathology Lab</a> at the University of Iowa) has found to be useful. By making the package available, we hope to make our methods reproducible and replicable by others and to help others perform their data processing and analysis methods more easily and efficiently. The package website is here: <a href="https://devpsylab.github.io/petersenlab/" class="uri">https://devpsylab.github.io/petersenlab/</a>. The source code for the package is here: <a href="https://github.com/DevPsyLab/petersenlab" class="external-link uri">https://github.com/DevPsyLab/petersenlab</a>.</p>
+</div>
 <div class="section level2">
 <h2 id="installing-the-package">Installing the package<a class="anchor" aria-label="anchor" href="#installing-the-package"></a>
 </h2>
-<p>R package with functions for the Petersen Lab</p>
 <p>To install the package, run the following in <code>R</code>:</p>
 <pre><code><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"remotes"</span><span class="op">)</span></span>
 <span><span class="fu">remotes</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"DevPsyLab/petersenlab"</span><span class="op">)</span></span></code></pre>
@@ -92,74 +97,6 @@
 <p><a href="http://creativecommons.org/licenses/by/4.0/" class="external-link"><img src="https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg" alt="CC BY 4.0"></a></p>
 <p>This work is licensed under a <a href="http://creativecommons.org/licenses/by/4.0/" class="external-link">Creative Commons Attribution 4.0 International License</a>.</p>
 <p><a href="http://creativecommons.org/licenses/by/4.0/" class="external-link"><img src="https://i.creativecommons.org/l/by/4.0/88x31.png" alt="CC BY 4.0"></a></p>
-</div>
-<div class="section level1">
-<h1 id="dev-notes">Dev Notes<a class="anchor" aria-label="anchor" href="#dev-notes"></a>
-</h1>
-<div class="section level2">
-<h2 id="updating-the-package">Updating the package<a class="anchor" aria-label="anchor" href="#updating-the-package"></a>
-</h2>
-<p>To update the package, run the following in <code>R</code>:</p>
-<pre><code><span><span class="co"># 1. Update packages in package environment</span></span>
-<span><span class="fu">renv</span><span class="fu">::</span><span class="fu"><a href="https://rstudio.github.io/renv/reference/upgrade.html" class="external-link">upgrade</a></span><span class="op">(</span><span class="op">)</span></span>
-<span><span class="fu">renv</span><span class="fu">::</span><span class="fu"><a href="https://rstudio.github.io/renv/reference/update.html" class="external-link">update</a></span><span class="op">(</span><span class="op">)</span></span>
-<span><span class="fu">renv</span><span class="fu">::</span><span class="fu"><a href="https://rstudio.github.io/renv/reference/snapshot.html" class="external-link">snapshot</a></span><span class="op">(</span><span class="op">)</span></span>
-<span></span>
-<span><span class="co"># 2. Add/edit code</span></span>
-<span></span>
-<span><span class="co"># 3. Update documentation</span></span>
-<span><span class="fu">roxygen2</span><span class="fu">::</span><span class="fu">roxygenise</span><span class="op">(</span><span class="op">)</span></span>
-<span></span>
-<span><span class="co"># 4. Update package version</span></span>
-<span><span class="fu">usethis</span><span class="fu">::</span><span class="fu">use_version</span><span class="op">(</span><span class="op">)</span></span></code></pre>
-<p>Then, build the package: Ctrl-Shift-B</p>
-<p>Then, install the package:</p>
-<pre><code><span><span class="fu">renv</span><span class="fu">::</span><span class="fu"><a href="https://rstudio.github.io/renv/reference/install.html" class="external-link">install</a></span><span class="op">(</span><span class="st">"C:/R/Packages/petersenlab"</span><span class="op">)</span> <span class="co">#PC</span></span>
-<span><span class="fu">renv</span><span class="fu">::</span><span class="fu"><a href="https://rstudio.github.io/renv/reference/install.html" class="external-link">install</a></span><span class="op">(</span><span class="st">"/Library/Frameworks/R.framework/Packages/petersenlab"</span><span class="op">)</span> <span class="co">#Mac</span></span></code></pre>
-</div>
-<div class="section level2">
-<h2 id="installing-packages">Installing Packages<a class="anchor" aria-label="anchor" href="#installing-packages"></a>
-</h2>
-<p>To install new packages in the package environment, run the following in <code>R</code>:</p>
-<pre><code><span><span class="fu">renv</span><span class="fu">::</span><span class="fu"><a href="https://rstudio.github.io/renv/reference/install.html" class="external-link">install</a></span><span class="op">(</span><span class="st">"NAME_OF_PACKAGE"</span><span class="op">)</span></span></code></pre>
-<p>or:</p>
-<pre><code>install.packages("NAME_OF_PACKAGE)</code></pre>
-</div>
-<div class="section level2">
-<h2 id="some-useful-keyboard-shortcuts-for-package-authoring">Some useful keyboard shortcuts for package authoring:<a class="anchor" aria-label="anchor" href="#some-useful-keyboard-shortcuts-for-package-authoring"></a>
-</h2>
-<p>Install Package: ‘Ctrl + Shift + B’</p>
-<p>Check Package: ‘Ctrl + Shift + E’</p>
-<p>Test Package: ‘Ctrl + Shift + T’</p>
-<pre><code><span><span class="fu">renv</span><span class="fu">::</span><span class="fu"><a href="https://rstudio.github.io/renv/reference/install.html" class="external-link">install</a></span><span class="op">(</span><span class="st">"C:/R/Packages/petersenlab"</span><span class="op">)</span></span>
-<span><span class="fu">renv</span><span class="fu">::</span><span class="fu"><a href="https://rstudio.github.io/renv/reference/snapshot.html" class="external-link">snapshot</a></span><span class="op">(</span><span class="op">)</span></span>
-<span><span class="fu">renv</span><span class="fu">::</span><span class="fu"><a href="https://rstudio.github.io/renv/reference/install.html" class="external-link">install</a></span><span class="op">(</span><span class="op">)</span></span></code></pre>
-</div>
-<div class="section level2">
-<h2 id="resources">Resources<a class="anchor" aria-label="anchor" href="#resources"></a>
-</h2>
-<p>-<a href="https://rpubs.com/YaRrr/rpackageintro" class="external-link uri">https://rpubs.com/YaRrr/rpackageintro</a></p>
-<p>-<a href="http://r-pkgs.had.co.nz/" class="external-link uri">http://r-pkgs.had.co.nz/</a></p>
-<p>-<a href="http://cran.r-project.org/doc/contrib/Leisch-CreatingPackages.pdf" class="external-link uri">http://cran.r-project.org/doc/contrib/Leisch-CreatingPackages.pdf</a></p>
-<p>-<a href="http://portal.stats.ox.ac.uk/userdata/ruth/APTS2012/Rcourse10.pdf" class="external-link uri">http://portal.stats.ox.ac.uk/userdata/ruth/APTS2012/Rcourse10.pdf</a></p>
-<p>-<a href="http://web.mit.edu/insong/www/pdf/rpackage_instructions.pdf" class="external-link uri">http://web.mit.edu/insong/www/pdf/rpackage_instructions.pdf</a></p>
-<p>-<a href="https://hilaryparker.com/2014/04/29/writing-an-r-package-from-scratch/" class="external-link uri">https://hilaryparker.com/2014/04/29/writing-an-r-package-from-scratch/</a></p>
-<div class="section level3">
-<h3 id="for-package-development-tasks">For Package Development Tasks<a class="anchor" aria-label="anchor" href="#for-package-development-tasks"></a>
-</h3>
-<p>-<a href="https://usethis.r-lib.org/index.html" class="external-link uri">https://usethis.r-lib.org/index.html</a></p>
-</div>
-<div class="section level3">
-<h3 id="for-reproducibility-of-package-management-using-renv">For Reproducibility of Package Management using renv<a class="anchor" aria-label="anchor" href="#for-reproducibility-of-package-management-using-renv"></a>
-</h3>
-<p>-<a href="https://rstudio.github.io/renv/articles/renv.html" class="external-link uri">https://rstudio.github.io/renv/articles/renv.html</a></p>
-</div>
-<div class="section level3">
-<h3 id="for-documentation">For Documentation<a class="anchor" aria-label="anchor" href="#for-documentation"></a>
-</h3>
-<p>-<a href="https://github.com/r-lib/roxygen2#roxygen2" class="external-link uri">https://github.com/r-lib/roxygen2#roxygen2</a> -<a href="https://hilaryparker.com/2014/04/29/writing-an-r-package-from-scratch/" class="external-link uri">https://hilaryparker.com/2014/04/29/writing-an-r-package-from-scratch/</a></p>
-</div>
-</div>
 </div>
 
   </main><aside class="col-md-3"><div class="links">
