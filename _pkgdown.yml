@@ -33,11 +33,13 @@ reference:
 
 - title: Behavior Frequency
   contents:
-  - frequencyPerDuration
+  - computeItemFrequencies
+  - computeLifetimeFrequencies
 
 - title: Behavior Intensity
   contents:
-  - recodeBehaviorIntensity
+  - recode_intensity
+  - mark_intensity_as_zero
 
 - title: Computations
   contents:
@@ -122,7 +124,7 @@ reference:
 
 - title: Operators
   contents:
-  - grapes-ni-grapes
+  - `%ni%`
 
 - title: Packages
   contents:
