@@ -1,0 +1,28 @@
+cff-version: 1.2.0
+title: 'petersenlab: Package of R functions for the Petersen Lab'
+message: >-
+  If you use this software, please cite it as below.
+type: software
+authors:
+  - given-names: Isaac T.
+    family-names: Petersen
+    email: isaac-t-petersen@uiowa.edu
+    affiliation: University of Iowa
+    orcid: "https://orcid.org/0000-0003-3072-6673"
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.7602890
+    description: This is the DOI for the codebase.
+repository-code: "https://github.com/DevPsyLab/petersenlab"
+url: "https://devpsylab.github.io/petersenlab"
+abstract: >-
+  The petersenlab package is a package of R functions that
+  are widely used by the Petersen Lab (the Developmental
+  Psychopathology Lab at the University of Iowa).
+keywords:
+  - R
+  - R-package
+  - psychometrics
+license: CC-BY-4.0
+version: 0.1.2-9031
+date-released: '2024-03-11'
