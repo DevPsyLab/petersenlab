@@ -11,6 +11,8 @@ update_nested(object, formula., ..., evaluate = TRUE)
 
 \item{formula.}{updated model formula}
 
+\item{...}{further parameters passed to the fitting function}
+
 \item{evaluate}{whether to evaluate the model. One of: \code{TRUE} or
 \code{FALSE}}
 }

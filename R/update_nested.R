@@ -14,12 +14,13 @@
 #' @param formula. updated model formula
 #' @param evaluate whether to evaluate the model. One of: \code{TRUE} or
 #' \code{FALSE}
+#' @param ... further parameters passed to the fitting function
 #'
 #' @return \code{lm} model
 #'
 #' @family multipleRegression
 #'
-#' @importFrom stats lm anova
+#' @importFrom stats lm update anova
 #'
 #' @export
 #'
