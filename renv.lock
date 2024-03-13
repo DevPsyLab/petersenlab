@@ -33,11 +33,12 @@
     },
     "Hmisc": {
       "Package": "Hmisc",
-      "Version": "5.1-1",
+      "Version": "5.1-2",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
         "Formula",
+        "R",
         "base64enc",
         "cluster",
         "colorspace",
@@ -56,7 +57,7 @@
         "rpart",
         "viridis"
       ],
-      "Hash": "27c7750992bc511728e2f9ebd2911199"
+      "Hash": "c0d441bec5693f2cad30231f7f72d90a"
     },
     "MASS": {
       "Package": "MASS",
@@ -303,14 +304,14 @@
     },
     "digest": {
       "Package": "digest",
-      "Version": "0.6.34",
+      "Version": "0.6.35",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
         "R",
         "utils"
       ],
-      "Hash": "7ede2ee9ea8d3edbf1ca84c1e333ad1a"
+      "Hash": "698ece7ba5a4fa4559e3d537e7ec3d31"
     },
     "downlit": {
       "Package": "downlit",
@@ -1043,7 +1044,7 @@
     },
     "rmarkdown": {
       "Package": "rmarkdown",
-      "Version": "2.25",
+      "Version": "2.26",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -1056,14 +1057,13 @@
         "jsonlite",
         "knitr",
         "methods",
-        "stringr",
         "tinytex",
         "tools",
         "utils",
         "xfun",
         "yaml"
       ],
-      "Hash": "d65e35823c817f09f4de424fcdfa812a"
+      "Hash": "9b148e7f95d33aac01f31282d49e4f44"
     },
     "rpart": {
       "Package": "rpart",
@@ -1158,14 +1158,14 @@
     },
     "systemfonts": {
       "Package": "systemfonts",
-      "Version": "1.0.5",
+      "Version": "1.0.6",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
         "R",
         "cpp11"
       ],
-      "Hash": "15b594369e70b975ba9f064295983499"
+      "Hash": "6d538cff441f0f1f36db2209ac7495ac"
     },
     "textshaping": {
       "Package": "textshaping",
@@ -1200,7 +1200,7 @@
     },
     "tidyselect": {
       "Package": "tidyselect",
-      "Version": "1.2.0",
+      "Version": "1.2.1",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -1212,7 +1212,7 @@
         "vctrs",
         "withr"
       ],
-      "Hash": "79540e5fcd9e0435af547d885f184fd5"
+      "Hash": "829f27b9c4919c16b593794a6344d6c0"
     },
     "tinytex": {
       "Package": "tinytex",

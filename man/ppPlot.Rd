@@ -40,5 +40,11 @@ Other plot:
 \code{\link{addText}()},
 \code{\link{plot2WayInteraction}()},
 \code{\link{vwReg}()}
+
+Other multipleRegression: 
+\code{\link{lmCombine}()},
+\code{\link{plot2WayInteraction}()},
+\code{\link{update_nested}()}
 }
+\concept{multipleRegression}
 \concept{plot}

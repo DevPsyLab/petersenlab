@@ -14,6 +14,7 @@
 #' Summary of multiple regression imputation models.
 #'
 #' @family multipleImputation
+#' @family multipleRegression
 #'
 #' @importFrom mix mi.inference
 #' @importFrom stats vcov lm coef

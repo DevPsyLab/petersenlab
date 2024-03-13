@@ -152,6 +152,13 @@ reference:
   - imputationPRV
   - lmCombine
 
+- title: Multiple Regression
+  contents:
+  - lmCombine
+  - plot2WayInteraction
+  - ppPlot
+  - update_nested
+
 - title: Packages
   contents:
   - is_installed
@@ -190,3 +197,10 @@ reference:
   - simulateAUC
   - complement
   - simulateIndirectEffect
+
+- title: Time Data
+  contents:
+  - convertHoursAMPM
+  - convertToHours
+  - convertToMinutes
+  - convertToSeconds

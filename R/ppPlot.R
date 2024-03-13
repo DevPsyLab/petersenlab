@@ -15,6 +15,7 @@
 #' Normal probability (P-P) plot.
 #'
 #' @family plot
+#' @family multipleRegression
 #'
 #' @importFrom graphics abline
 #' @importFrom stats predict resid sd pnorm rnorm lm na.omit ppoints

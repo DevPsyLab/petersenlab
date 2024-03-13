@@ -28,5 +28,11 @@ Other multipleImputation:
 \code{\link{imputationCombine}()},
 \code{\link{imputationModelCompare}()},
 \code{\link{imputationPRV}()}
+
+Other multipleRegression: 
+\code{\link{plot2WayInteraction}()},
+\code{\link{ppPlot}()},
+\code{\link{update_nested}()}
 }
 \concept{multipleImputation}
+\concept{multipleRegression}

@@ -211,5 +211,11 @@ Other plot:
 \code{\link{addText}()},
 \code{\link{ppPlot}()},
 \code{\link{vwReg}()}
+
+Other multipleRegression: 
+\code{\link{lmCombine}()},
+\code{\link{ppPlot}()},
+\code{\link{update_nested}()}
 }
+\concept{multipleRegression}
 \concept{plot}
