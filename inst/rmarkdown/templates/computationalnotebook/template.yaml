@@ -1,0 +1,4 @@
+name: computationalNotebook
+description: >
+   A template for an R Markdown script for data analysis.
+create_dir: FALSE

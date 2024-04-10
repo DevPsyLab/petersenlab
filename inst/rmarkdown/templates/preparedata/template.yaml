@@ -1,0 +1,4 @@
+name: prepareData
+description: >
+   A template for an R Markdown script to prepare your data for analysis.
+create_dir: FALSE

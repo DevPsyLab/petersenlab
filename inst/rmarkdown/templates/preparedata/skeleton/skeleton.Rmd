@@ -1,0 +1,189 @@
+---
+title: "Prepare Data"
+author: "Insert Author's Name Here"
+date: '`r format(Sys.Date(), "%B %d, %Y")`'
+output:
+  html_notebook:
+    toc: true
+    toc_depth: 4
+    toc_float: true
+    number_sections: true
+    code_folding: show
+    df_print: paged
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  echo = TRUE # print code
+)
+```
+
+# Intro
+
+This is a starter file for your "Prepare Data" script.
+This script should update the data file(s) by re-exporting, merging, re-running calculations, etc.
+This script should be separate from the "Computational Notebook" file that is used for running analyses on the data.
+Every time you run the "Computational Notebook" file with the exact same data, you should get the exact same findings (i.e., reproducibility).
+Thus, we keep the "Prepare Data script" separate from the "Computational Notebook" file so that you update the data only when you intend to.
+
+This document is an [R Markdown](http://rmarkdown.rstudio.com) Notebook, which is an example of a computational notebook.
+Best practices for using Markdown are in the Lab Wiki here: https://devpsylab.github.io/DataAnalysis/markdown.html#bestPractices.
+Steps for working with computational notebooks are located in the Lab Wiki here: https://devpsylab.github.io/DataAnalysis/markdown.html#computationalNotebook
+
+# Preamble
+
+## Install Libraries
+
+```{r}
+#install.packages("remotes")
+#remotes::install_github("DevPsyLab/petersenlab")
+#remotes::install_github("paulhendricks/anonymizer")
+```
+
+## Load Libraries
+
+```{r}
+library("petersenlab") #located here: https://github.com/DevPsyLab/petersenlab
+
+load_or_install(c("tidyverse","anonymizer"))
+```
+
+## Set Lab Drive Path
+
+```{r}
+petersenLabPath <- setLabPath()
+```
+
+# Update Data
+
+## Re-export Data
+
+```{r, include = FALSE}
+
+```
+
+## Import Data
+
+```{r}
+
+```
+
+## Pre-Merging Preparation
+
+### Calculations
+
+```{r}
+
+```
+
+### Drop Variables
+
+```{r}
+
+```
+
+### Subset Data
+
+```{r}
+
+```
+
+## Merge Data
+
+```{r}
+
+```
+
+## Prepare Data
+
+### Calculations
+
+```{r}
+
+```
+
+#### Fill in missing values for SES and demographic variables from other time points
+
+```{r}
+
+```
+
+### Create Factors
+
+```{r}
+
+```
+
+## Subset to consented participants
+
+```{r}
+
+```
+
+## Create Mplus Data
+
+### Specify Variables
+
+```{r}
+
+```
+
+## Save Data
+
+```{r}
+
+```
+
+## OSF Data
+
+### Specify Variables to Keep
+
+```{r}
+
+```
+
+### Subset Variables
+
+```{r}
+
+```
+
+### Generate Random Anonymized ID
+
+Generate anonymized ID so that participants cannot be stitched together across papers.
+
+```{r}
+
+```
+
+### Create Factors
+
+```{r}
+
+```
+
+### Re-sort Data by Random Anonymized ID
+
+Mix up the order of participants in the data file so they are not in the same order for every paper.
+
+```{r}
+
+```
+
+### Save Data
+
+```{r}
+
+```
+
+# Session Info
+
+```{r}
+sessionInfo()
+```
+
+## Rstudio Version
+
+```{r}
+rstudioapi::versionInfo()
+```

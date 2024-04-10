@@ -1,0 +1,391 @@
+---
+title: "Computational Notebook for R code"
+author: "Insert Author's Name Here"
+date: '`r format(Sys.Date(), "%B %d, %Y")`'
+output:
+  html_notebook:
+    toc: true
+    toc_depth: 4
+    toc_float: true
+    number_sections: true
+    code_folding: show
+    df_print: paged
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  echo = TRUE, # print code
+  error = TRUE # do not interrupt in case of errors
+)
+
+# Use for higher quality figures on Windows devices
+trace(grDevices::png, quote({
+  if (missing(type) && missing(antialias)) {
+    type <- "cairo-png"
+    antialias <- "subpixel"
+  }
+}), print = FALSE)
+```
+
+# Intro
+
+This is a starter file for your "Computational Notebook" script.
+This script be used to run analyses using the data file(s).
+This script should be separate from the "Prepare Data" file that is used for update the data file(s).
+Every time you run the "Computational Notebook" file with the exact same data, you should get the exact same findings (i.e., reproducibility).
+Thus, we keep the "Prepare Data script" separate from the "Computational Notebook" file so that you update the data only when you intend to.
+
+This document is an [R Markdown](http://rmarkdown.rstudio.com) Notebook, which is an example of a computational notebook.
+Best practices for using Markdown are in the Lab Wiki here: https://devpsylab.github.io/DataAnalysis/markdown.html#bestPractices.
+Steps for working with computational notebooks are located in the Lab Wiki here: https://devpsylab.github.io/DataAnalysis/markdown.html#computationalNotebook
+
+This document is an [R Markdown](http://rmarkdown.rstudio.com) Notebook.
+[R Markdown](http://rmarkdown.rstudio.com) enables you to weave together content and executable code into a finished document.
+When you execute code within the notebook, the results appear beneath the code. 
+This allows you to share your analyses and results with others so that they can see the results in line with the code for reproducibility.
+Make sure to have only one sentence per line.
+For more information on the value of computational notebooks, see the article titled "[The Scientific Paper Is Obsolete](https://www.theatlantic.com/science/archive/2018/04/the-scientific-paper-is-obsolete/556676/)".
+For more information about how to create R Notebooks, see here:
+
+- https://garrettgman.github.io/rmarkdown/r_notebooks
+- https://bookdown.org/yihui/rmarkdown/notebook.html
+
+# Preamble
+
+## Install Libraries
+
+```{r}
+#install.packages("remotes")
+#remotes::install_github("DevPsyLab/petersenlab")
+```
+
+## Load Libraries
+
+```{r, message = FALSE, warning = FALSE}
+library("petersenlab") #located here: https://github.com/DevPsyLab/petersenlab
+
+load_or_install(c("tidyverse","showtext"))
+```
+
+## Set Lab Drive Path
+
+```{r}
+#petersenLabPath <- setLabPath()
+```
+
+## Import Font for Figures
+
+To use the fonts, download and install the fonts located here[^1]: https://drive.google.com/drive/u/0/folders/1fqlrnEe7NFnWZoIrsHmr8ulDS4nhs-H3
+
+[^1]: You may need to ask Dr. Petersen to get access to this file.
+
+```{r, include = FALSE}
+#Add Gotham Fonts
+font_add(
+  family = "Gotham",
+  regular = "Gotham-Book.otf",
+  bold = "Gotham-Bold.otf",
+  italic = "Gotham-BookItalic.otf",
+  bolditalic = "Gotham-BoldItalic.otf")
+
+showtext_auto()
+```
+
+## Load Data
+
+```{r}
+
+```
+
+# Specify Variables
+
+```{r}
+
+```
+
+# Screening
+
+## Contacted to Screen
+
+```{r}
+
+```
+
+## Refused Screen
+
+```{r}
+
+```
+
+### Reasons People Refused the Screen
+
+```{r}
+
+```
+
+## Eligible
+
+```{r}
+
+```
+
+### Reasons for Ineligibility
+
+```{r}
+
+```
+
+## Interested (Among Those Who were Eligible)
+
+```{r}
+
+```
+
+### Reasons Eligible People Chose Not to Participate
+
+```{r}
+
+```
+
+## Contacted to Enroll (Among Those Who Were Eligible and Interested)
+
+```{r}
+
+```
+
+### Reasons Eligible and Interested People Were Not Contacted
+
+```{r}
+
+```
+
+## Enrolled (Among Those Who Were Eligible, Interested, and Contacted)
+
+```{r}
+
+```
+
+### Reasons Eligible and Interested People Were Not Enrolled
+
+```{r}
+
+```
+
+## Consented (Among Those Who Were Eligible)
+
+```{r}
+
+```
+
+### Reasons Enrolled People Were Not Consented
+
+```{r}
+
+```
+
+## Recruitment Source
+
+### Among All of Those Screened
+
+```{r}
+
+```
+
+### Among Those Who Consented
+
+```{r}
+
+```
+
+## Tests of Systematic Differences Between Contacted (But Not Consented) and Consented
+
+```{r}
+
+```
+
+# Describe the Sample
+
+## Sample Composition
+
+### Sex of the Participant
+
+```{r}
+
+```
+
+### Race/Ethnicity of the Participant
+
+```{r}
+```
+
+## Socioeconomic Status
+
+### Marital Status
+
+```{r}
+
+```
+
+### Occupational Prestige
+
+```{r}
+
+```
+
+### Educational Attainment
+
+```{r}
+
+```
+
+# Duration of Procedures
+
+```{r}
+
+```
+
+# Missingness
+
+## Extent of Missingness
+
+### Predictors
+
+```{r}
+
+```
+
+### Outcome
+
+```{r}
+
+```
+
+## Reasons for Missingness
+
+### Predictors
+
+```{r}
+
+```
+
+### Outcome
+
+```{r}
+
+```
+
+## Tests of Systematic Missingness
+
+### MCAR Test
+
+```{r}
+
+```
+
+### Systematic Missingness of Predictors
+
+```{r}
+
+```
+
+### Systematic Missingness of Outcome
+
+```{r}
+
+```
+
+# Descriptive Statistics
+
+## Sample Size
+
+```{r}
+
+```
+
+## Values
+
+```{r}
+
+```
+
+## Frequencies
+
+```{r}
+
+```
+
+## Histograms
+
+```{r}
+
+```
+
+# Correlations
+
+## Bivariate Correlations
+
+```{r}
+
+```
+
+## Correlation Matrices
+
+```{r}
+
+```
+
+## Correlograms
+
+```{r}
+
+```
+
+## Scatterplots
+
+```{r}
+
+```
+
+## Scatterplot Matrix
+
+```{r}
+
+```
+
+# Reliability
+
+## Internal Consistency
+
+```{r}
+
+```
+
+## Inter-Rater Reliability
+
+```{r}
+
+```
+
+## Cross-Time Stability Correlations
+
+```{r}
+
+```
+
+# Analyses
+
+```{r}
+
+```
+
+# Session Info
+
+```{r}
+sessionInfo()
+```
+
+## Rstudio Version
+
+```{r}
+rstudioapi::versionInfo()
+```
