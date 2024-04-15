@@ -155,11 +155,11 @@ vwReg(y ~ x, df, quantize = "SD") # 1-2-3-SD plot
 
 \url{https://www.nicebread.de/visually-weighted-watercolor-plots-new-variants-please-vote/}
 
-\url{https://www.fight-entropy.com/2012/07/visually-weighted-regression.html}
+\url{http://www.fight-entropy.com/2012/07/visually-weighted-regression.html}
 
-\url{https://www.fight-entropy.com/2012/08/visually-weighted-confidence-intervals.html}
+\url{http://www.fight-entropy.com/2012/08/visually-weighted-confidence-intervals.html}
 
-\url{https://www.fight-entropy.com/2012/08/watercolor-regression.html}
+\url{http://www.fight-entropy.com/2012/08/watercolor-regression.html}
 
 \url{https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2265501}
 

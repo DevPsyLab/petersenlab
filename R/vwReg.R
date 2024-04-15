@@ -162,11 +162,11 @@
 #'
 #' \url{https://www.nicebread.de/visually-weighted-watercolor-plots-new-variants-please-vote/}
 #'
-#' \url{https://www.fight-entropy.com/2012/07/visually-weighted-regression.html}
+#' \url{http://www.fight-entropy.com/2012/07/visually-weighted-regression.html}
 #'
-#' \url{https://www.fight-entropy.com/2012/08/visually-weighted-confidence-intervals.html}
+#' \url{http://www.fight-entropy.com/2012/08/visually-weighted-confidence-intervals.html}
 #'
-#' \url{https://www.fight-entropy.com/2012/08/watercolor-regression.html}
+#' \url{http://www.fight-entropy.com/2012/08/watercolor-regression.html}
 #'
 #' \url{https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2265501}
 
@@ -194,7 +194,7 @@ vwReg <- function(formula, data, title = "", B = 1000, shade = TRUE,
   for (i in 1:B) {
     data2 <- data[sample(nrow(data), replace = TRUE), ]
     data2 <- data2[order(data2[, IV]), ]
-    if (class(l0) == "loess") {
+    if (inherits(l0, "loess")) {
       m1 <- method(formula, data2, control = loess.control(surface = "i", statistics = "a", trace.hat = "a"), ...)
     } else {
       m1 <- method(formula, data2, ...)

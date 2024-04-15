@@ -43,7 +43,8 @@ m1 <- lm(mpg ~ wt + cyl + hp, data = dat)
 m2 <- update_nested(m1, . ~ . - wt)  # Remove wt
 m3 <- update_nested(m1, . ~ . - cyl) # Remove cyl
 m4 <- update_nested(m1, . ~ . - wt - cyl) # Remove wt and cyl
-m5 <- update_nested(m1, . ~ . - wt - cyl - hp) # Remove all three variables (i.e., model with intercept only)
+m5 <- update_nested(m1, . ~ . - wt - cyl - hp) # Remove all three variables
+# (i.e., model with intercept only)
 
 anova(m1, m2, m3, m4, m5)
 

@@ -54,7 +54,7 @@
 #' \url{https://stats.stackexchange.com/questions/401759/how-can-mase-mean-absolute-scaled-error-score-value-be-interpreted-for-non-tim} \cr
 #'
 #' Predictive R-squared: \cr
-#' \url{https://www.r-bloggers.com/can-we-do-better-than-r-squared/} \cr
+#' \url{https://www.r-bloggers.com/2014/05/can-we-do-better-than-r-squared/} \cr
 #'
 
 accuracyOverall <- function(predicted, actual, dropUndefined = FALSE){

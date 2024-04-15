@@ -42,9 +42,9 @@ puc(
 
 }
 \seealso{
-\url{https://doi.org/10.31234/osf.io/6tf7j}
-\url{https://doi.org/10.1177/0013164412449831}
-\url{https://doi.org/10.1037/met0000045}
+\doi{10.31234/osf.io/6tf7j}
+\doi{10.1177/0013164412449831}
+\doi{10.1037/met0000045}
 
 Other structural equation modeling: 
 \code{\link{equiv_chi}()},
