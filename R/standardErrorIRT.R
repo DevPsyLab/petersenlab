@@ -33,7 +33,7 @@
 #' standardErrorIRT(items$testInformation)
 #'
 #' @seealso
-#' \url{https://journals.sagepub.com/doi/full/10.1177/0146621613475471}
+#' \url{10.1177/0146621613475471}
 
 standardErrorIRT <- function(information){
   1/sqrt(information)

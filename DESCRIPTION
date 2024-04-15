@@ -1,6 +1,6 @@
 Package: petersenlab
 Type: Package
-Title: Package of R functions that are widely used by the Petersen Lab
+Title: Package of R Functions for the Petersen Lab
 Version: 0.1.2-9033
 Authors@R: c(
     person("Isaac T.", "Petersen",
