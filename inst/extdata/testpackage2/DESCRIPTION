@@ -1,0 +1,8 @@
+Package: testpackage2
+Type: Package
+Title: Test Package 2
+Version: 0.1.0
+Author: Isaac T. Petersen
+Maintainer: Isaac T. Petersen <isaac-t-petersen@uiowa.edu>
+Description: Package 2 for testing
+License: `use_mit_license()`
