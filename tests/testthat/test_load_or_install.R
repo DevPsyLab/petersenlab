@@ -9,7 +9,12 @@ test_that("load_or_install installs and loads packages correctly", {
 
   # Run load_or_install function
   oldpath <- getwd()
-  newpath <- ("./inst/extdata/")
+  filelocation <- system.file(
+    "extdata",
+    "testpackage1_0.1.0.tar.gz",
+    package = "petersenlab")
+  filepath <- dirname(filelocation)
+  newpath <- setwd(filepath)
   setwd(newpath)
   load_or_install(
     c("testpackage1", "testpackage2"),
