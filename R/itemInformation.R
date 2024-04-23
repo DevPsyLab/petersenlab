@@ -28,7 +28,7 @@
 #' itemInformation(b = 2, a = 1.5, c = 0.10, d = 0.95, theta = -4:4) #4PL
 #'
 #' @seealso
-#' \url{10.1177/0146621613475471}
+#' \doi{10.1177/0146621613475471}
 
 itemInformation <- function(a = 1, b, c = 0, d = 1, theta){
   P <- NULL
