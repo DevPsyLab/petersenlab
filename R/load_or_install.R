@@ -20,7 +20,9 @@
 #' @export
 #'
 #' @examples
+#' \dontrun{
 #' load_or_install(c("tidyverse","nlme"))
+#' }
 #'
 #' @seealso
 #' \url{https://www.r-bloggers.com/2012/05/loading-andor-installing-packages-programmatically/}
