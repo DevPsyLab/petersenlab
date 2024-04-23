@@ -4,10 +4,12 @@
 \alias{load_or_install}
 \title{Load or Install Packages.}
 \usage{
-load_or_install(package_names)
+load_or_install(package_names, ...)
 }
 \arguments{
 \item{package_names}{Character vector of one or more package names.}
+
+\item{...}{Additional arguments for \code{install.packages()}.}
 }
 \value{
 Loaded packages.

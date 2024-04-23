@@ -8,4 +8,4 @@
 ^pkgdown$
 ^\.github$
 CITATION.cff
-LICENSE
+LICENSE.md
