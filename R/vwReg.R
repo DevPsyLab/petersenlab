@@ -104,6 +104,7 @@
 #' @export
 #'
 #' @examples
+#'\dontrun{
 #' # Prepare Data
 #' data("mtcars")
 #' df <- data.frame(x = mtcars$hp, y = mtcars$mpg)
@@ -156,6 +157,7 @@
 #' grDevices::colorRampPalette(c("black","green","yellow","red"),
 #' bias = 5)(20), family = "symmetric") # Northern Light Plot/ fMRI plot
 #' vwReg(y ~ x, df, quantize = "SD") # 1-2-3-SD plot
+#' }
 #'
 #' @seealso
 #' \url{https://www.nicebread.de/visually-weighted-regression-in-r-a-la-solomon-hsiang/}

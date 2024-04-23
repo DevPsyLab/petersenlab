@@ -96,6 +96,7 @@ Create watercolor plot to visualize weighted regression.
 Creates a watercolor plot to visualize weighted regression.
 }
 \examples{
+\dontrun{
 # Prepare Data
 data("mtcars")
 df <- data.frame(x = mtcars$hp, y = mtcars$mpg)
@@ -148,6 +149,7 @@ vwReg(y ~ x, df, shade.alpha = 0, slices = 400, palette =
 grDevices::colorRampPalette(c("black","green","yellow","red"),
 bias = 5)(20), family = "symmetric") # Northern Light Plot/ fMRI plot
 vwReg(y ~ x, df, quantize = "SD") # 1-2-3-SD plot
+}
 
 }
 \seealso{
