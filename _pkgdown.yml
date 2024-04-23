@@ -143,6 +143,12 @@ reference:
   - puc
   - satorraBentlerScaledChiSquareDifferenceTestStatistic
 
+- title: Miscellaneous
+
+- subtitle: Personal Finance
+  contents:
+  - mortgage
+
 - title: Missing Data Handling
 
 - subtitle: Multiple Imputation
@@ -179,12 +185,6 @@ reference:
   - reliabilityOfDifferenceScore
   - reliabilityIRT
   - repeatability
-
-- title: Random
-
-- subtitle: Personal Finance
-  contents:
-  - mortgage
 
 - title: Regression
 

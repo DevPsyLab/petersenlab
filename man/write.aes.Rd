@@ -24,10 +24,14 @@ Writes data to an encrypted file. To read data from an encrypted file, see
 \link{read.aes}.
 }
 \examples{
+\dontrun{
 # Location Where to Save Encryption Key on Local Computer
   #(where only you should have access to it)
-encryptionKeyLocation <- file.path(getwd(), "/encryptionKey.RData",
-  fsep = "") #Can change to a different path, e.g.: "C:/Users/[USERNAME]/"
+#encryptionKeyLocation <- file.path(getwd(), "/encryptionKey.RData",
+#  fsep = "") #Can change to a different path, e.g.: "C:/Users/[USERNAME]/"
+
+# Generate a Temporary File Path for Encryption Key
+encryptionKeyLocation <- tempfile(fileext = ".RData")
 
 # Generate Encryption Key
 key <- as.raw(sample(1:16, 16))
@@ -38,12 +42,23 @@ save(key, file = encryptionKeyLocation)
 # Specify Credentials
 credentials <- "Insert My Credentials Here"
 
+# Generate a Temporary File Path for Encrypted Credentials
+encryptedCredentialsLocation <- tempfile(fileext = ".txt")
+
 # Save Encrypted Credentials
-write.aes(df = credentials,
-  filename = file.path(getwd(), "/encrypytedCredentials.txt", fsep = ""),
-  key = key) #Change the file location to save this on the lab drive
+#write.aes(
+#  df = credentials,
+#  filename = file.path(getwd(), "/encrypytedCredentials.txt", fsep = ""),
+#  key = key) #Change the file location to save this on the lab drive
+
+write.aes(
+  df = credentials,
+  filename = encryptedCredentialsLocation,
+  key = key)
+
 rm(credentials)
 rm(key)
+}
 
 }
 \seealso{

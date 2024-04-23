@@ -443,7 +443,7 @@
     },
     "ggplot2": {
       "Package": "ggplot2",
-      "Version": "3.5.0",
+      "Version": "3.5.1",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -464,7 +464,7 @@
         "vctrs",
         "withr"
       ],
-      "Hash": "52ef83f93f74833007f193b2d4c159a2"
+      "Hash": "44c6a2f8202d5b7e878ea274b1092426"
     },
     "glue": {
       "Package": "glue",
@@ -493,7 +493,7 @@
     },
     "gtable": {
       "Package": "gtable",
-      "Version": "0.3.4",
+      "Version": "0.3.5",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -504,7 +504,7 @@
         "lifecycle",
         "rlang"
       ],
-      "Hash": "b29cf3031f49b04ab9c852c912547eef"
+      "Hash": "e18861963cbc65a27736e02b3cd3c4a0"
     },
     "highr": {
       "Package": "highr",
@@ -827,13 +827,13 @@
     },
     "openssl": {
       "Package": "openssl",
-      "Version": "2.1.1",
+      "Version": "2.1.2",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
         "askpass"
       ],
-      "Hash": "2a0dc8c6adfb6f032e4d4af82d258ab5"
+      "Hash": "ea2475b073243d9d338aa8f086ce973e"
     },
     "pbivnorm": {
       "Package": "pbivnorm",
@@ -871,7 +871,7 @@
     },
     "pkgdown": {
       "Package": "pkgdown",
-      "Version": "2.0.8",
+      "Version": "2.0.9",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -897,7 +897,7 @@
         "xml2",
         "yaml"
       ],
-      "Hash": "2e99bcaa58646fc0142d10d6fb67a040"
+      "Hash": "8bf1151ed1a48328d71b937e651117a6"
     },
     "plyr": {
       "Package": "plyr",

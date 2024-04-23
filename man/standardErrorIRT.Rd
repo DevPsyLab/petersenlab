@@ -36,7 +36,7 @@ standardErrorIRT(items$testInformation)
 
 }
 \seealso{
-\url{10.1177/0146621613475471}
+\doi{10.1177/0146621613475471}
 
 Other IRT: 
 \code{\link{discriminationToFactorLoading}()},

@@ -20,7 +20,9 @@ Loads packages that are already installed, and if the packages are not
 already installed, it installs and then loads them.
 }
 \examples{
+\dontrun{
 load_or_install(c("tidyverse","nlme"))
+}
 
 }
 \seealso{
