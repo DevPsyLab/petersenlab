@@ -18,6 +18,8 @@ Sets the path directory to the lab drive, and saves it in the object
 \code{petersenLab}.
 }
 \examples{
+\dontrun{
 petersenLabPath <- setLabPath()
+}
 }
 \concept{lab}

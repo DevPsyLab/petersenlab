@@ -17,7 +17,9 @@
 #' @export
 #'
 #' @examples
+#' \dontrun{
 #' petersenLabPath <- setLabPath()
+#' }
 
 setLabPath <- function(){
   if(dir.exists("//lc-rs-store24.hpc.uiowa.edu/lss_itpetersen/Lab")){
