@@ -21,11 +21,11 @@ load_or_install(
   repos = NULL,
   type = "source")
 
-# Check if packages are installed and loaded correctly
-expect_true("testpackage1" %in% installed.packages())
-expect_true(requireNamespace("testpackage1", quietly = TRUE))
-expect_true("testpackage2" %in% installed.packages())
-expect_true(requireNamespace("testpackage2", quietly = TRUE))
+# Check if packages are installed, loaded, and attached correctly
+expect_true(is.element("testpackage1", installed.packages()[, "Package"]))
+expect_true("package:testpackage1" %in% search())
+expect_true(is.element("testpackage2", installed.packages()[, "Package"]))
+expect_true("package:testpackage2" %in% search())
 
 # Clean up
 .libPaths(old_libs)  # Restore original library paths
