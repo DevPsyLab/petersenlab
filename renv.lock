@@ -1246,6 +1246,22 @@
       ],
       "Hash": "6d538cff441f0f1f36db2209ac7495ac"
     },
+    "testpackage1": {
+      "Package": "testpackage1",
+      "Version": "0.1.0",
+      "Source": "Local",
+      "RemoteType": "local",
+      "RemoteUrl": "D:/Documents/GitHub/petersenlab/inst/extdata/testpackage1_0.1.0.tar.gz",
+      "Hash": "993c097d8740428fd0caadee2d69b6ea"
+    },
+    "testpackage2": {
+      "Package": "testpackage2",
+      "Version": "0.1.0",
+      "Source": "Local",
+      "RemoteType": "local",
+      "RemoteUrl": "D:/Documents/GitHub/petersenlab/inst/extdata/testpackage2_0.1.0.tar.gz",
+      "Hash": "552895a8a13b1725a6ebd3e884b6c760"
+    },
     "testthat": {
       "Package": "testthat",
       "Version": "3.2.1.1",
