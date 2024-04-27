@@ -22,7 +22,7 @@
 #' @importFrom digest AES
 #'
 #' @examples
-#' \dontrun{
+#' \donttest{
 #' # Location Where to Save Encryption Key on Local Computer
 #'   #(where only you should have access to it)
 #' #encryptionKeyLocation <- file.path(getwd(), "/encryptionKey.RData",

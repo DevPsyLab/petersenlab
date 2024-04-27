@@ -22,7 +22,7 @@
 #' @importFrom utils read.csv write.csv
 #'
 #' @examples
-#' \dontrun{
+#' \donttest{
 #' # Location of Encryption Key on Local Computer (where only you should have access to it)
 #' #encryptionKeyLocation <- file.path(getwd(), "/encryptionKey.RData",
 #' #  fsep = "") #Can change to a different path, e.g.: "C:/Users/[USERNAME]/"

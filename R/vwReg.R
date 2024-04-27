@@ -104,7 +104,7 @@
 #' @export
 #'
 #' @examples
-#'\dontrun{
+#'\donttest{
 #' # Prepare Data
 #' data("mtcars")
 #' df <- data.frame(x = mtcars$hp, y = mtcars$mpg)

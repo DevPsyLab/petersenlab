@@ -96,7 +96,7 @@ Create watercolor plot to visualize weighted regression.
 Creates a watercolor plot to visualize weighted regression.
 }
 \examples{
-\dontrun{
+\donttest{
 # Prepare Data
 data("mtcars")
 df <- data.frame(x = mtcars$hp, y = mtcars$mpg)

@@ -21,7 +21,7 @@
 #' @export
 #'
 #' @examples
-#' \dontrun{
+#' \donttest{
 #' load_or_install(c("tidyverse","nlme"))
 #' }
 #'
