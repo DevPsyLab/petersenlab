@@ -2,7 +2,8 @@
 
 # Package Overview
 
-The `petersenlab` package is a package of `R` functions that are widely used by the Petersen Lab (the [Developmental Psychopathology Lab](https://developmental-psychopathology.lab.uiowa.edu) at the University of Iowa).
+The `petersenlab` package contains a collection `R` functions that are widely used by the Petersen Lab (the [Developmental Psychopathology Lab](https://developmental-psychopathology.lab.uiowa.edu) at the University of Iowa).
+Included are functions for various purposes, including evaluating the accuracy of judgments and predictions, performing scoring of assessments, generating correlation matrices, conversion of data between various types, data management, psychometric evaluation, extensions related to latent variable modeling, various plotting capabilities, and other miscellaneous useful functions.
 By making the package available, we hope to make our methods reproducible and replicable by others and to help others perform their data processing and analysis methods more easily and efficiently.
 The package website is here: https://devpsylab.github.io/petersenlab.
 The source code for the package is here: https://github.com/DevPsyLab/petersenlab.
@@ -24,13 +25,13 @@ A list of the functions included in the package is here: https://devpsylab.githu
 
 To obtain the citation for the `petersenlab` package, run `citation("petersenlab")`; the citation is:
 
-Petersen, I. T. (2024). *petersenlab: Package of R functions for the Petersen Lab*. R package version 1.0.0. https://github.com/DevPsyLab/petersenlab, https://doi.org/10.5281/zenodo.7602890
+Petersen, I. T. (2024). *petersenlab: A collection of R Functions by the Petersen Lab*. R package version 1.0.0. https://github.com/DevPsyLab/petersenlab, https://doi.org/10.5281/zenodo.7602890
 
 A `BibTeX` entry for `LaTeX` users is:
 ```
 @software{petersenlab,
   author = {Isaac T. Petersen},
-  title = {{petersenlab}: Package of {R} functions for the {Petersen Lab}},
+  title = {{petersenlab}: A collection of {R} Functions by the {Petersen Lab}},
   url = {https://github.com/DevPsyLab/petersenlab},
   doi = {10.5281/zenodo.7602890},
   version = {1.0.0},

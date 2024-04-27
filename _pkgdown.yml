@@ -2,7 +2,8 @@ url: https://devpsylab.github.io/petersenlab, https://github.com/DevPsyLab/peter
 
 home:
   title: petersenlab R package
-  description: Package of R functions that are widely used by the Petersen Lab
+  description: A collection of R functions that are widely used by the Petersen
+    Lab
 
 authors:
   Isaac T. Petersen:
