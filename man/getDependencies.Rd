@@ -19,8 +19,10 @@ Determine package dependencies.
 Determine which packages depend on a target package (or packages).
 }
 \examples{
+old <- options("repos")
 options(repos = "https://cran.r-project.org")
 getDependencies("tidyverse")
+options(old)
 
 }
 \seealso{
