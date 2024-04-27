@@ -87,7 +87,7 @@
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span></span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co"># \donttest{</span></span></span>
 <span class="r-in"><span><span class="co"># Location of Encryption Key on Local Computer (where only you should have access to it)</span></span></span>
 <span class="r-in"><span><span class="co">#encryptionKeyLocation &lt;- file.path(getwd(), "/encryptionKey.RData",</span></span></span>
 <span class="r-in"><span><span class="co">#  fsep = "") #Can change to a different path, e.g.: "C:/Users/[USERNAME]/"</span></span></span>
@@ -131,7 +131,7 @@
 <span class="r-in"><span><span class="va">credentials</span> <span class="op">&lt;-</span> <span class="fu">read.aes</span><span class="op">(</span></span></span>
 <span class="r-in"><span>  filename <span class="op">=</span> <span class="va">encryptedCredentialsLocation</span>,</span></span>
 <span class="r-in"><span>  key <span class="op">=</span> <span class="va">key</span><span class="op">)</span></span></span>
-<span class="r-in"><span><span class="op">}</span></span></span>
+<span class="r-in"><span><span class="co"># }</span></span></span>
 <span class="r-in"><span></span></span>
 </code></pre></div>
     </div>
