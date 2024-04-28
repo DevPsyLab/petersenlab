@@ -11,6 +11,7 @@ Authors@R: c(
            role = c("ctb"))
   )
 Maintainer: Isaac T. Petersen <isaac-t-petersen@uiowa.edu>
+Depends: R (>= 4.1.0)
 Imports: stats, graphics, utils, nlme, Hmisc, digest, dplyr, ggplot2, lavaan, 
     mitools, mix, mvtnorm, psych, stringr, xtable, grDevices, plyr, 
     reshape2, RColorBrewer, viridisLite, tidyselect, scales
