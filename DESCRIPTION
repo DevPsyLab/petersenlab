@@ -1,6 +1,6 @@
 Package: petersenlab
 Type: Package
-Title: A collection of R Functions by the Petersen Lab
+Title: A Collection of R Functions by the Petersen Lab
 Version: 1.0.0
 Authors@R: c(
     person("Isaac T.", "Petersen",
