@@ -187,7 +187,7 @@ vwReg <- function(formula, data, title = "", B = 1000, shade = TRUE,
     palette <- colorRampPalette(c("#EEEEEE", "#999999", "#333333"), bias = 2)(20)
   }
 
-  print("Computing boostrapped smoothers ...")
+  message("Computing boostrapped smoothers ...")
   newx <- data.frame(seq(min(data[, IV]), max(data[, IV]), length = slices))
   colnames(newx) <- IV
   l0.boot <- matrix(NA, nrow = nrow(newx), ncol = B)
@@ -236,7 +236,7 @@ vwReg <- function(formula, data, title = "", B = 1000, shade = TRUE,
   if (shade == TRUE) {
     quantize <- match.arg(quantize, c("continuous", "SD"))
     if (quantize == "continuous") {
-      print("Computing density estimates for each vertical cut ...")
+      message("Computing density estimates for each vertical cut ...")
       flush.console()
 
       if (is.null(ylim)) {
@@ -286,25 +286,25 @@ vwReg <- function(formula, data, title = "", B = 1000, shade = TRUE,
     }
   }
 
-  print("Build ggplot figure ...")
+  message("Build ggplot figure ...")
   flush.console()
 
   if (spag == TRUE) {
-    gg.spag <-  geom_path(data = b2, aes(x = x, y = value, group = B), size = 0.7, alpha = 10/B, color = spag.color)
+    gg.spag <-  geom_path(data = b2, aes(x = x, y = value, group = B), linewidth = 0.7, alpha = 10/B, color = spag.color)
   }
 
   if (show.median == TRUE) {
     if (mweight == TRUE) {
-      gg.median <-  geom_path(data = CI.boot, aes(x = x, y = M, alpha = w3^3), size = .6, linejoin = "mitre", color = median.col)
+      gg.median <-  geom_path(data = CI.boot, aes(x = x, y = M, alpha = w3^3), linewidth = .6, linejoin = "mitre", color = median.col)
     } else {
-      gg.median <-  geom_path(data = CI.boot, aes(x = x, y = M), size = 0.6, linejoin = "mitre", color = median.col)
+      gg.median <-  geom_path(data = CI.boot, aes(x = x, y = M), linewidth = 0.6, linejoin = "mitre", color = median.col)
     }
   }
 
   # Confidence limits
   if (show.CI == TRUE) {
-    gg.CI1 <- geom_path(data = CI.boot, aes(x = x, y = UL), size = 1, color = "red")
-    gg.CI2 <- geom_path(data = CI.boot, aes(x = x, y = LL), size = 1, color = "red")
+    gg.CI1 <- geom_path(data = CI.boot, aes(x = x, y = UL), linewidth = 1, color = "red")
+    gg.CI2 <- geom_path(data = CI.boot, aes(x = x, y = LL), linewidth = 1, color = "red")
   }
 
   # plain linear regression line

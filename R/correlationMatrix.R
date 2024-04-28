@@ -364,29 +364,22 @@ cor.table <- function(x, y, type = "none", dig = 2, correlation = "pearson"){
   r.manuscriptBig <- data.frame(r.manuscriptBig)
 
   if(missing(type)){
-    print(r.table, quote = FALSE)
     returnTable <- r.table
   } else if(type=="none"){
-    print(r.table, quote = FALSE)
     returnTable <- r.table
   } else if(type=="latexSPSS"){
-    print(r.table, quote = FALSE)
     returnTable <- r.table
   } else if (type=="latex"){
-    print(r.table, quote = FALSE)
-    xtable(r.table[1:(dim(r.table)[1]/3)*3-2,])
     returnTable <- xtable(r.table[1:(dim(r.table)[1]/3)*3-2,])
   } else if (type=="manuscript"){
-    print(r.manuscript, quote = FALSE)
     returnTable <- r.manuscript
   } else if (type=="manuscriptBig"){
-    print(r.manuscriptBig, quote = FALSE)
     returnTable <- r.manuscriptBig
   } else if(type=="manuscriptLatex"){
-    #print(r.manuscript, quote = FALSE)
     returnTable <- r.manuscript
   } else if(type=="manuscriptBigLatex"){
-    #print(r.manuscriptBig, quote = FALSE)
     returnTable <- r.manuscriptBig
   }
+
+  return(returnTable)
 }

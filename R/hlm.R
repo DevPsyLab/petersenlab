@@ -56,5 +56,6 @@ lmeSummary <- function(model, dig = 3){
 
   output[[1]] <- modelInfo
   output[[2]] <- results
-  print(output, quote = FALSE)
+
+  return(output)
 }
