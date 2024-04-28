@@ -21,9 +21,10 @@
 #' @export
 #'
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' old <- options("repos")
 #' options(repos = "https://cran.r-project.org")
+#' # Warning: the command below installs packages that are not already installed
 #' load_or_install(c("tidyverse","nlme"))
 #' options(old)
 #' }

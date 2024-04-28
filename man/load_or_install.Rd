@@ -22,9 +22,10 @@ Loads packages that are already installed, and if the packages are not
 already installed, it installs and then loads them.
 }
 \examples{
-\donttest{
+\dontrun{
 old <- options("repos")
 options(repos = "https://cran.r-project.org")
+# Warning: the command below installs packages that are not already installed
 load_or_install(c("tidyverse","nlme"))
 options(old)
 }
