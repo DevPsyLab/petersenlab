@@ -27,12 +27,13 @@
 #'
 #' @seealso
 #' \url{https://www.r-bloggers.com/2012/05/loading-andor-installing-packages-programmatically/}
+#' \url{https://stackoverflow.com/questions/4090169/elegant-way-to-check-for-missing-packages-and-install-them}
 
-load_or_install <- function(package_names, ...){
-  for(package_name in package_names){
-    if(!is_installed(package_name)){
+load_or_install <- function(package_names, ...) {
+  for(package_name in package_names) {
+    if (!require(package_name, character.only = TRUE, quietly = TRUE)) {
       install.packages(package_name, ...)
+      library(package_name, character.only = TRUE, quietly = TRUE, verbose = FALSE)
     }
-    library(package_name, character.only = TRUE, quietly = TRUE, verbose = FALSE)
   }
 }

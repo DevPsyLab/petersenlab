@@ -29,9 +29,9 @@ load_or_install(c("tidyverse","nlme"))
 }
 \seealso{
 \url{https://www.r-bloggers.com/2012/05/loading-andor-installing-packages-programmatically/}
+\url{https://stackoverflow.com/questions/4090169/elegant-way-to-check-for-missing-packages-and-install-them}
 
 Other packages: 
-\code{\link{getDependencies}()},
-\code{\link{is_installed}()}
+\code{\link{getDependencies}()}
 }
 \concept{packages}

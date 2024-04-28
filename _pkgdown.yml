@@ -168,7 +168,6 @@ reference:
 
 - title: Packages
   contents:
-  - is_installed
   - load_or_install
   - getDependencies
 

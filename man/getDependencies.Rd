@@ -29,7 +29,6 @@ options(old)
 \url{https://stackoverflow.com/questions/52929114/install-packages-in-r-without-internet-connection-with-all-dependencies/52935020#52935020}
 
 Other packages: 
-\code{\link{is_installed}()},
 \code{\link{load_or_install}()}
 }
 \concept{packages}
