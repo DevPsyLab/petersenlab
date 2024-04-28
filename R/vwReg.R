@@ -228,7 +228,8 @@ vwReg <- function(formula, data, title = "", B = 1000, shade = TRUE,
   # All plot elements are constructed as a list, so they can be added to an existing ggplot
 
   # if add == FALSE: provide the basic ggplot object
-  p0 <- ggplot(data, aes_string(x = IV, y = DV)) + theme_bw()
+  p0 <- ggplot(data, aes(x = !!sym(IV), y = !!sym(DV))) + theme_bw() +
+    labs(x = IV, y = DV)
 
   # initialize elements with NULL (if they are defined, they are overwritten with something meaningful)
   gg.tiles <- gg.poly <- gg.spag <- gg.median <- gg.CI1 <- gg.CI2 <- gg.lm <- gg.points <- gg.title <- NULL
@@ -310,7 +311,7 @@ vwReg <- function(formula, data, title = "", B = 1000, shade = TRUE,
   # plain linear regression line
   if (show.lm == TRUE) {gg.lm <- geom_smooth(method = "lm", color = "darkgreen", se = FALSE)}
 
-  gg.points <- geom_point(data = data, aes_string(x = IV, y = DV), size = 1, shape = shape, fill = "white", color = "black")
+  gg.points <- geom_point(data = data, aes(x = !!sym(IV), y = !!sym(DV)), size = 1, shape = shape, fill = "white", color = "black")
 
   if (title != "") {
     gg.title <- theme(title = title)
