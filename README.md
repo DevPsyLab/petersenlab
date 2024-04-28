@@ -1,5 +1,9 @@
 # `petersenlab`
 
+<!-- badges: start -->
+  [![R-CMD-check](https://github.com/DevPsyLab/petersenlab/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/DevPsyLab/petersenlab/actions/workflows/R-CMD-check.yaml)
+  <!-- badges: end -->
+
 # Package Overview
 
 The `petersenlab` package contains a collection `R` functions that are widely used by the Petersen Lab (the [Developmental Psychopathology Lab](https://developmental-psychopathology.lab.uiowa.edu) at the University of Iowa).
