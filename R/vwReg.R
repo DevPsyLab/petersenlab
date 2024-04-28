@@ -94,8 +94,8 @@
 #' @importFrom plyr adply ddply .
 #' @importFrom reshape2 melt
 #' @importFrom ggplot2 ggplot theme_bw geom_tile scale_fill_gradientn
-#' scale_alpha_continuous geom_polygon geom_path aes aes_string geom_smooth
-#' geom_point theme
+#' scale_alpha_continuous geom_polygon geom_path aes geom_smooth geom_point
+#' theme labs sym
 #' @importFrom RColorBrewer brewer.pal
 #' @importFrom utils flush.console
 #' @importFrom viridisLite viridis
