@@ -23,7 +23,10 @@ already installed, it installs and then loads them.
 }
 \examples{
 \donttest{
+old <- options("repos")
+options(repos = "https://cran.r-project.org")
 load_or_install(c("tidyverse","nlme"))
+options(old)
 }
 
 }
