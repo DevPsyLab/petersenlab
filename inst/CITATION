@@ -1,6 +1,6 @@
 bibentry(
   bibtype  = "Misc",
-  title    = "{petersenlab}: A collection of {R} Functions by the {Petersen Lab}",
+  title    = "{petersenlab}: A collection of {R} functions by the {Petersen Lab}",
   author   = c(
     person("Isaac T.", "Petersen",
            email = "isaac-t-petersen@uiowa.edu",
