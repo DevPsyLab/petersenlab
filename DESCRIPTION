@@ -29,7 +29,7 @@ Description: A collection of R functions that are widely used by the Petersen
     codebase is provided in Petersen (2024) <doi:10.5281/zenodo.7602890>. The
     package is described in "Principles of Psychological Assessment: With
     Applied Examples in R" (Petersen, 2024) <doi:10.1201/9781003357421>,
-    <doi:10.5281/zenodo.6466590>.
+    <doi:10.5281/zenodo.6466589>.
 URL: https://github.com/DevPsyLab/petersenlab, https://devpsylab.github.io/petersenlab/
 BugReports: https://github.com/DevPsyLab/petersenlab/issues
 License: MIT + file LICENSE
