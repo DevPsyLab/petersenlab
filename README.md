@@ -14,7 +14,13 @@ The source code for the package is here: https://github.com/DevPsyLab/petersenla
 
 # Installing the Package
 
-To install the package, run the following in `R`:
+To install the latest stable release on `CRAN`, run the following in `R`:
+
+```
+install.packages("petersenlab")
+```
+
+To install the latest development version from `GitHub`, run the following in `R`:
 
 ```
 install.packages("remotes")
