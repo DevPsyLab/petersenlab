@@ -11,14 +11,20 @@
 #' @param num_occurrences The number of times the behavior occurred during the
 #' specified interval, \code{interval}.
 #' @param interval The specified interval corresponding to the number of times
-#' the behavior occurred \code{num_occurrences}.
-#' @param duration The desired duration during which to estimate how many times
-#' the behavior occurred:
+#' the behavior occurred \code{num_occurrences}. One of:
 #' \itemize{
 #'   \item \code{1} = average number of times per day
 #'   \item \code{2} = average number of times per week
 #'   \item \code{3} = number of times in the past month
 #'   \item \code{4} = number of times in the past year
+#' }
+#' @param duration The desired duration during which to estimate how many times
+#' the behavior occurred:
+#' \itemize{
+#'   \item "day" = average number of times per day
+#'   \item "week" = average number of times per week
+#'   \item "month" = number of times in the past month
+#'   \item "year" = number of times in the past year
 #' }
 #' @param not_occurred_past_year Whether or not the behavior did NOT occur in
 #' the past year. If \code{yes}, the behavior did not occur in the past year.
