@@ -16,7 +16,7 @@
     
     <a class="navbar-brand me-2" href="../index.html">petersenlab</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.0.0</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.0.1</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -89,15 +89,19 @@ specified interval, <code>interval</code>.</p></dd>
 
 <dt>interval</dt>
 <dd><p>The specified interval corresponding to the number of times
-the behavior occurred <code>num_occurrences</code>.</p></dd>
+the behavior occurred <code>num_occurrences</code>. One of:</p><ul><li><p><code>1</code> = average number of times per day</p></li>
+<li><p><code>2</code> = average number of times per week</p></li>
+<li><p><code>3</code> = number of times in the past month</p></li>
+<li><p><code>4</code> = number of times in the past year</p></li>
+</ul></dd>
 
 
 <dt>duration</dt>
 <dd><p>The desired duration during which to estimate how many times
-the behavior occurred:</p><ul><li><p><code>1</code> = average number of times per day</p></li>
-<li><p><code>2</code> = average number of times per week</p></li>
-<li><p><code>3</code> = number of times in the past month</p></li>
-<li><p><code>4</code> = number of times in the past year</p></li>
+the behavior occurred:</p><ul><li><p>"day" = average number of times per day</p></li>
+<li><p>"week" = average number of times per week</p></li>
+<li><p>"month" = number of times in the past month</p></li>
+<li><p>"year" = number of times in the past year</p></li>
 </ul></dd>
 
 
