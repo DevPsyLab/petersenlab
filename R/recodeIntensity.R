@@ -9,8 +9,9 @@
 #' zero (i.e., if the behavior has not occurred).
 #'
 #' @param intensity The intensity of the behavior.
-#' @param did_not_occur Whether or not the behavior did NOT occur. If
-#' \code{yes}, the behavior did not occur (in the given timeframe).
+#' @param did_not_occur Whether or not the behavior did NOT occur. If \code{0},
+#' the behavior did occur (in the given timeframe). If \code{1}, the behavior
+#' did not occur in (in the given timeframe).
 #' @param frequency The frequency of the behavior.
 #' @param item_names The names of the questionnaire items.
 #' @param data The data object.

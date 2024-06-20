@@ -17,8 +17,9 @@ mark_intensity_as_zero(
 \arguments{
 \item{intensity}{The intensity of the behavior.}
 
-\item{did_not_occur}{Whether or not the behavior did NOT occur. If
-\code{yes}, the behavior did not occur (in the given timeframe).}
+\item{did_not_occur}{Whether or not the behavior did NOT occur. If \code{0},
+the behavior did occur (in the given timeframe). If \code{1}, the behavior
+did not occur in (in the given timeframe).}
 
 \item{frequency}{The frequency of the behavior.}
 

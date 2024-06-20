@@ -27,9 +27,11 @@
 #'   \item "year" = number of times in the past year
 #' }
 #' @param not_occurred_past_year Whether or not the behavior did NOT occur in
-#' the past year. If \code{yes}, the behavior did not occur in the past year.
+#' the past year. If \code{0}, the behavior did occur in the past year. If
+#' \code{1}, the behavior did not occur in the past year.
 #' @param never_occurred Whether or not the behavior has NEVER occurred in
-#' the person's lifetime. If \code{yes}, the behavior has never occurred in the
+#' the person's lifetime. If \code{0}, the behavior has occurred in the
+#' person's lifetime. If \code{1}, the behavior has never occurred in the
 #' person's lifetime.
 #' @param item_names The names of the questionnaire items.
 #' @param data The data object.
