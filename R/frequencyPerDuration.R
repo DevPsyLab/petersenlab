@@ -11,7 +11,7 @@
 #' @param num_occurrences The number of times the behavior occurred during the
 #' specified interval, \code{interval}.
 #' @param interval The specified interval corresponding to the number of times
-#' the behavior occurred \code{num_occurrences}. One of:
+#' the behavior occurred, \code{num_occurrences}. One of:
 #' \itemize{
 #'   \item \code{1} = average number of times per day
 #'   \item \code{2} = average number of times per week
