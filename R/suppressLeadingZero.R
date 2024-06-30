@@ -11,6 +11,8 @@
 #'
 #' @return Character vector of numbers without leading zeros.
 #'
+#' @family formatting
+#'
 #' @importFrom stats rnorm
 #'
 #' @export

@@ -13,6 +13,8 @@
 #' @return Character vector of numbers with the specified number of decimal
 #' places.
 #'
+#' @family formatting
+#'
 #' @importFrom stringr str_trim
 #' @importFrom stats rnorm
 #'

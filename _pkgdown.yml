@@ -103,6 +103,7 @@ reference:
 
 - subtitle: Formatting Values
   contents:
+  - apa
   - pValue
   - specify_decimal
   - suppressLeadingZero

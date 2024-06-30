@@ -25,3 +25,10 @@ v1 <- rnorm(1000)
 # Suppress Leading Zero
 suppressLeadingZero(v1)
 }
+\seealso{
+Other formatting: 
+\code{\link{apa}()},
+\code{\link{pValue}()},
+\code{\link{specify_decimal}()}
+}
+\concept{formatting}

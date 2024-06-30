@@ -25,3 +25,10 @@ pValue(0.70)
 pValue(0.04)
 pValue(0.00002)
 }
+\seealso{
+Other formatting: 
+\code{\link{apa}()},
+\code{\link{specify_decimal}()},
+\code{\link{suppressLeadingZero}()}
+}
+\concept{formatting}

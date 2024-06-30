@@ -35,7 +35,7 @@ A list of the functions included in the package is here: https://devpsylab.githu
 
 To obtain the citation for the `petersenlab` package, run `citation("petersenlab")`; the citation is:
 
-Petersen, I. T. (2024). *petersenlab: A collection of R functions by the Petersen Lab*. R package version 1.0.1. https://github.com/DevPsyLab/petersenlab, https://doi.org/10.5281/zenodo.7602890
+Petersen, I. T. (2024). *petersenlab: A collection of R functions by the Petersen Lab*. R package version 1.0.2. https://github.com/DevPsyLab/petersenlab, https://doi.org/10.5281/zenodo.7602890
 
 A `BibTeX` entry for `LaTeX` users is:
 ```
@@ -44,7 +44,7 @@ A `BibTeX` entry for `LaTeX` users is:
   title = {{petersenlab}: A collection of {R} functions by the {Petersen Lab}},
   url = {https://github.com/DevPsyLab/petersenlab},
   doi = {10.5281/zenodo.7602890},
-  version = {1.0.1},
+  version = {1.0.2},
   year = {2024}
 }
 ```

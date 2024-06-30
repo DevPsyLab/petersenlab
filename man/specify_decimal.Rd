@@ -28,3 +28,10 @@ v1 <- rnorm(1000)
 # Specify Decimals
 specify_decimal(v1, 2)
 }
+\seealso{
+Other formatting: 
+\code{\link{apa}()},
+\code{\link{pValue}()},
+\code{\link{suppressLeadingZero}()}
+}
+\concept{formatting}

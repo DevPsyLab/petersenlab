@@ -12,6 +12,8 @@
 #'
 #' @return p-value.
 #'
+#' @family formatting
+#'
 #' @export
 #'
 #' @examples

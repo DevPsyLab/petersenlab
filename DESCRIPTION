@@ -1,7 +1,7 @@
 Package: petersenlab
 Type: Package
 Title: A Collection of R Functions by the Petersen Lab
-Version: 1.0.1
+Version: 1.0.2
 Authors@R: c(
     person("Isaac T.", "Petersen",
            email = "isaac-t-petersen@uiowa.edu",
@@ -35,5 +35,5 @@ BugReports: https://github.com/DevPsyLab/petersenlab/issues
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 7.3.1
+RoxygenNote: 7.3.2
 Config/testthat/edition: 3
