@@ -604,20 +604,26 @@
       ],
       "Hash": "04291cc45198225444a397606810ac37"
     },
-    "httr": {
-      "Package": "httr",
-      "Version": "1.4.7",
+    "httr2": {
+      "Package": "httr2",
+      "Version": "1.0.1",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
         "R",
         "R6",
+        "cli",
         "curl",
-        "jsonlite",
-        "mime",
-        "openssl"
+        "glue",
+        "lifecycle",
+        "magrittr",
+        "openssl",
+        "rappdirs",
+        "rlang",
+        "vctrs",
+        "withr"
       ],
-      "Hash": "ac107251d9d9fd72f0ca8049988f1d7f"
+      "Hash": "03d741c92fda96d98c3a3f22494e3b4a"
     },
     "isoband": {
       "Package": "isoband",
@@ -652,7 +658,7 @@
     },
     "knitr": {
       "Package": "knitr",
-      "Version": "1.47",
+      "Version": "1.48",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -664,7 +670,7 @@
         "xfun",
         "yaml"
       ],
-      "Hash": "7c99b2d55584b982717fcc0950378612"
+      "Hash": "acf380f300c721da9fde7df115a5f86f"
     },
     "labeling": {
       "Package": "labeling",
@@ -924,7 +930,7 @@
     },
     "pkgdown": {
       "Package": "pkgdown",
-      "Version": "2.0.9",
+      "Version": "2.1.0",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -935,11 +941,11 @@
         "desc",
         "digest",
         "downlit",
+        "fontawesome",
         "fs",
-        "httr",
+        "httr2",
         "jsonlite",
-        "magrittr",
-        "memoise",
+        "openssl",
         "purrr",
         "ragg",
         "rlang",
@@ -950,7 +956,7 @@
         "xml2",
         "yaml"
       ],
-      "Hash": "8bf1151ed1a48328d71b937e651117a6"
+      "Hash": "0d3d789055c873f48521ce7e23c23f48"
     },
     "pkgload": {
       "Package": "pkgload",
@@ -1007,14 +1013,14 @@
     },
     "ps": {
       "Package": "ps",
-      "Version": "1.7.6",
+      "Version": "1.7.7",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
         "R",
         "utils"
       ],
-      "Hash": "dd2b9319ee0656c8acf45c7f40c59de7"
+      "Hash": "878b467580097e9c383acbb16adab57a"
     },
     "psych": {
       "Package": "psych",
@@ -1470,10 +1476,10 @@
     },
     "yaml": {
       "Package": "yaml",
-      "Version": "2.3.8",
+      "Version": "2.3.9",
       "Source": "Repository",
       "Repository": "CRAN",
-      "Hash": "29240487a071f535f5e5d5a323b7afbd"
+      "Hash": "9cb28d11799d93c953f852083d55ee9e"
     }
   }
 }
