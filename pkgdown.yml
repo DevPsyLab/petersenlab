@@ -2,7 +2,7 @@ pandoc: 3.1.11
 pkgdown: 2.1.0
 pkgdown_sha: ~
 articles: {}
-last_built: 2024-07-07T21:55Z
+last_built: 2024-07-13T05:38Z
 urls:
   reference: https://devpsylab.github.io/petersenlab, https://github.com/DevPsyLab/petersenlab/reference
   article: https://devpsylab.github.io/petersenlab, https://github.com/DevPsyLab/petersenlab/articles
