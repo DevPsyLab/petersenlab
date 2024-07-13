@@ -115,6 +115,7 @@ Other accuracy:
 \code{\link{accuracyAtEachCutoff}()},
 \code{\link{accuracyOverall}()},
 \code{\link{nomogrammer}()},
-\code{\link{optimalCutoff}()}
+\code{\link{optimalCutoff}()},
+\code{\link{posttestOdds}()}
 }
 \concept{accuracy}

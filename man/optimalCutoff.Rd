@@ -85,6 +85,7 @@ Other accuracy:
 \code{\link{accuracyAtCutoff}()},
 \code{\link{accuracyAtEachCutoff}()},
 \code{\link{accuracyOverall}()},
-\code{\link{nomogrammer}()}
+\code{\link{nomogrammer}()},
+\code{\link{posttestOdds}()}
 }
 \concept{accuracy}

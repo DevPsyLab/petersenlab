@@ -63,6 +63,7 @@ Other accuracy:
 \code{\link{accuracyAtCutoff}()},
 \code{\link{accuracyAtEachCutoff}()},
 \code{\link{nomogrammer}()},
-\code{\link{optimalCutoff}()}
+\code{\link{optimalCutoff}()},
+\code{\link{posttestOdds}()}
 }
 \concept{accuracy}
