@@ -40,7 +40,7 @@
 #'
 #' @importFrom ggplot2 theme_set theme_bw theme element_blank element_text
 #' geom_line geom_vline annotate scale_x_continuous scale_y_continuous sec_axis
-#' rel
+#' rel coord_cartesian
 #' @importFrom scales percent
 #'
 #' @export
@@ -305,12 +305,12 @@ nomogrammer <- function(
              y = adj_max,
              label = "likelihood ratio") +
     scale_x_continuous(expand = c(0,0)) +
+    coord_cartesian(ylim = rescale) +
     scale_y_continuous(expand = c(0,0),
-                       limits = rescale,
                        breaks = -rescale_x_breaks,
                        labels = ticks_prob,
                        name = "prior \n prob.",
-                       sec.axis = sec_axis(trans = ~.,
+                       sec.axis = sec_axis(transform = ~.,
                                            name = "posterior \n prob.",
                                            labels = ticks_prob,
                                            breaks = ticks_logodds))
