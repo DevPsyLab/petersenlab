@@ -33,6 +33,7 @@ columnBindFill(df1, df2)
 Other dataManipulation: 
 \code{\link{convert.magic}()},
 \code{\link{dropColsWithAllNA}()},
-\code{\link{dropRowsWithAllNA}()}
+\code{\link{dropRowsWithAllNA}()},
+\code{\link{varsDifferentTypes}()}
 }
 \concept{dataManipulation}

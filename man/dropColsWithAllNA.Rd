@@ -42,7 +42,8 @@ dropColsWithAllNA(df, ignore = c("naCol2"))
 Other dataManipulation: 
 \code{\link{columnBindFill}()},
 \code{\link{convert.magic}()},
-\code{\link{dropRowsWithAllNA}()}
+\code{\link{dropRowsWithAllNA}()},
+\code{\link{varsDifferentTypes}()}
 
 Other dataEvaluations: 
 \code{\link{dropRowsWithAllNA}()},

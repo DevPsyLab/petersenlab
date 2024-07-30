@@ -1,7 +1,7 @@
 Package: petersenlab
 Type: Package
 Title: A Collection of R Functions by the Petersen Lab
-Version: 1.0.3
+Version: 1.0.4
 Authors@R: c(
     person("Isaac T.", "Petersen",
            email = "isaac-t-petersen@uiowa.edu",
@@ -14,7 +14,7 @@ Maintainer: Isaac T. Petersen <isaac-t-petersen@uiowa.edu>
 Depends: R (>= 4.1.0)
 Imports: stats, graphics, utils, nlme, Hmisc, digest, dplyr, ggplot2, lavaan, 
     mitools, mix, mvtnorm, psych, stringr, xtable, grDevices, plyr, 
-    reshape2, RColorBrewer, viridisLite, tidyselect, scales
+    reshape2, RColorBrewer, viridisLite, tidyselect, scales, purrr
 Suggests: 
     testthat (>= 3.0.0), waldo, withr
 Description: A collection of R functions that are widely used by the Petersen

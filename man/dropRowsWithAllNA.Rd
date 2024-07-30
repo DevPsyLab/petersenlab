@@ -40,7 +40,8 @@ dropRowsWithAllNA(df, ignore = c("ID","time"))
 Other dataManipulation: 
 \code{\link{columnBindFill}()},
 \code{\link{convert.magic}()},
-\code{\link{dropColsWithAllNA}()}
+\code{\link{dropColsWithAllNA}()},
+\code{\link{varsDifferentTypes}()}
 
 Other dataEvaluations: 
 \code{\link{dropColsWithAllNA}()},

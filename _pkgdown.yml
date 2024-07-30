@@ -97,6 +97,7 @@ reference:
   - convert.magic
   - dropColsWithAllNA
   - dropRowsWithAllNA
+  - varsDifferentTypes
 
 - subtitle: Encryption
   contents:

@@ -30,7 +30,7 @@ variable types to character, numeric, or factor.
 # Prepare Data
 data("USArrests")
 
-# Check if any rows are not NA
+# Convert variables to character
 convert.magic(USArrests, "character")
 
 }
@@ -40,7 +40,8 @@ convert.magic(USArrests, "character")
 Other dataManipulation: 
 \code{\link{columnBindFill}()},
 \code{\link{dropColsWithAllNA}()},
-\code{\link{dropRowsWithAllNA}()}
+\code{\link{dropRowsWithAllNA}()},
+\code{\link{varsDifferentTypes}()}
 
 Other conversion: 
 \code{\link{convertHoursAMPM}()},

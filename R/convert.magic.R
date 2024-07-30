@@ -28,7 +28,7 @@
 #' # Prepare Data
 #' data("USArrests")
 #'
-#' # Check if any rows are not NA
+#' # Convert variables to character
 #' convert.magic(USArrests, "character")
 #'
 #' @seealso
