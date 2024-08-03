@@ -150,6 +150,10 @@ reference:
 
 - title: Miscellaneous
 
+- subtitle: Fantasy Football
+  contents:
+  - cleanUpNames
+
 - subtitle: Personal Finance
   contents:
   - mortgage
