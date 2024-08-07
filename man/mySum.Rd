@@ -32,6 +32,7 @@ df$sum <- mySum(df)
 \seealso{
 Other computations: 
 \code{\link{Mode}()},
+\code{\link{kish_ess}()},
 \code{\link{meanSum}()}
 }
 \concept{computations}

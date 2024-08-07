@@ -30,6 +30,7 @@ df$missingnessAdjustedSum <- meanSum(df)
 \seealso{
 Other computations: 
 \code{\link{Mode}()},
+\code{\link{kish_ess}()},
 \code{\link{mySum}()}
 }
 \concept{computations}

@@ -40,6 +40,7 @@ Mode(v1, multipleModes = "first")
 \url{https://stackoverflow.com/questions/2547402/how-to-find-the-statistical-mode/8189441#8189441}
 
 Other computations: 
+\code{\link{kish_ess}()},
 \code{\link{meanSum}()},
 \code{\link{mySum}()}
 }

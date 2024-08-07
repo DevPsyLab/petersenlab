@@ -71,6 +71,9 @@ reference:
   - meanSum
   - Mode
   - mySum
+  - whdquantile
+  - wthdquantile
+  - wquantile
 
 - subtitle: Conversion
   contents:
