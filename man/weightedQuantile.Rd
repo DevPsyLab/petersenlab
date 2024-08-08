@@ -37,16 +37,18 @@ Harrell-Davis quantile estimator.}
 Numeric vector of specified quantiles.
 }
 \description{
-Computes weighted quantiles. \code{whdquantile} uses a weighted Harrell-Davis
-quantile estimator. \code{wthdquantile} uses a weighted trimmed Harrell-Davis
-quantile estimator. \code{wquantile} uses a weighted traditional quantile
-estimator.
+Computes weighted quantiles. \code{whdquantile()} uses a weighted
+Harrell-Davis quantile estimator. \code{wthdquantile()} uses a weighted
+trimmed Harrell-Davis quantile estimator. \code{wquantile()} uses a weighted
+traditional quantile estimator.
 }
 \details{
 Computes weighted quantiles according to Akinshin (2023).
 }
 \examples{
 mydata <- c(1:100, 1000)
+mydataWithNAs <- mydata
+mydataWithNAs[c(1,5,7)] <- NA
 weights <- rep(1, length(mydata))
 quantiles <- c(0.01, 0.05, 0.1, 0.25, 0.5, 0.75, 0.9, 0.95, 0.99)
 
@@ -62,6 +64,21 @@ wthdquantile(
 
 wquantile(
   x = mydata,
+  w = weights,
+  probs = quantiles)
+
+whdquantile(
+  x = mydataWithNAs,
+  w = weights,
+  probs = quantiles)
+
+wthdquantile(
+  x = mydataWithNAs,
+  w = weights,
+  probs = quantiles)
+
+wquantile(
+  x = mydataWithNAs,
   w = weights,
   probs = quantiles)
 
