@@ -37,7 +37,10 @@ Harrell-Davis quantile estimator.}
 Numeric vector of specified quantiles.
 }
 \description{
-Computes weighted quantiles.
+Computes weighted quantiles. \code{whdquantile} uses a weighted Harrell-Davis
+quantile estimator. \code{wthdquantile} uses a weighted trimmed Harrell-Davis
+quantile estimator. \code{wquantile} uses a weighted traditional quantile
+estimator.
 }
 \details{
 Computes weighted quantiles according to Akinshin (2023).
