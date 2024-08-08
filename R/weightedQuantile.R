@@ -2,10 +2,10 @@
 #' Weighted Quantiles.
 #'
 #' @description
-#' Computes weighted quantiles. \code{whdquantile} uses a weighted Harrell-Davis
-#' quantile estimator. \code{wthdquantile} uses a weighted trimmed Harrell-Davis
-#' quantile estimator. \code{wquantile} uses a weighted traditional quantile
-#' estimator.
+#' Computes weighted quantiles. \code{whdquantile()} uses a weighted
+#' Harrell-Davis quantile estimator. \code{wthdquantile()} uses a weighted
+#' trimmed Harrell-Davis quantile estimator. \code{wquantile()} uses a weighted
+#' traditional quantile estimator.
 #'
 #' @details
 #' Computes weighted quantiles according to Akinshin (2023).
