@@ -2,9 +2,12 @@
 % Please edit documentation in R/accuracyOverall.R
 \name{accuracyOverall}
 \alias{accuracyOverall}
+\alias{wisdomOfCrowd}
 \title{Overall Accuracy.}
 \usage{
 accuracyOverall(predicted, actual, dropUndefined = FALSE)
+
+wisdomOfCrowd(predicted, actual, dropUndefined = FALSE)
 }
 \arguments{
 \item{predicted}{vector of continuous predicted values.}
@@ -47,6 +50,7 @@ data("USArrests")
 
 # Calculate Accuracy
 accuracyOverall(predicted = USArrests$Assault, actual = USArrests$Murder)
+wisdomOfCrowd(predicted = USArrests$Assault, actual = 200)
 
 }
 \seealso{

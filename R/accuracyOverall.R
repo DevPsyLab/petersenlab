@@ -33,11 +33,10 @@
 #'   \item \code{rsquaredPredictive} = predictive \emph{R}-squared
 #' }
 #'
-#' @export
-#'
 #' @family accuracy
 #'
 #' @importFrom stats na.omit residuals lm lm.influence anova
+#' @importFrom utils combn
 #'
 #' @examples
 #' # Prepare Data
@@ -45,6 +44,7 @@
 #'
 #' # Calculate Accuracy
 #' accuracyOverall(predicted = USArrests$Assault, actual = USArrests$Murder)
+#' wisdomOfCrowd(predicted = USArrests$Assault, actual = 200)
 #'
 #' @seealso
 #' Mean absolute scaled error (MASE): \cr
@@ -57,6 +57,8 @@
 #' \url{https://www.r-bloggers.com/2014/05/can-we-do-better-than-r-squared/} \cr
 #'
 
+#' @rdname accuracyOverall
+#' @export
 accuracyOverall <- function(predicted, actual, dropUndefined = FALSE){
 
   #Mean error
@@ -210,4 +212,50 @@ accuracyOverall <- function(predicted, actual, dropUndefined = FALSE){
   accuracyTable <- data.frame(cbind(ME, MAE, MSE, RMSE, MPE, MAPE, sMAPE, MASE, RMSLE, rsquared, rsquaredAdj, rsquaredPredictive))
 
   return(accuracyTable)
+}
+
+#' @rdname accuracyOverall
+#' @export
+wisdomOfCrowd <- function(predicted, actual, dropUndefined = FALSE){
+  bracketing_rate <- function(predicted, actual) {
+    predictions <- na.omit(predicted)
+    n <- length(predictions)
+
+    # Create all pairwise combinations of predictions
+    pairwise_matrix <- combn(predictions, 2)
+
+    # Check bracketing for each pair
+    bracketing_pairs <- (pairwise_matrix[1, ] < actual & pairwise_matrix[2, ] > actual) |
+      (pairwise_matrix[1, ] > actual & pairwise_matrix[2, ] < actual)
+
+    # Average pairwise bracketing rate
+    bracketing_rate <- mean(bracketing_pairs)
+    return(bracketing_rate)
+  }
+
+  accuracyTable <- accuracyOverall(
+    predicted = predicted,
+    actual = rep(actual, length(predicted)),
+    dropUndefined = dropUndefined)
+
+  accuracyTable_crowdAverage <- accuracyOverall(
+    predicted = rep(mean(predicted, na.rm = TRUE), length(predicted)),
+    actual = rep(actual, length(predicted)),
+    dropUndefined = dropUndefined)
+
+  accuracyTableOverall <- rbind(
+    accuracyTable,
+    accuracyTable_crowdAverage
+  )
+
+  accuracyTableOverall[,!(names(accuracyTableOverall) %in% c("rsquared","rsquaredAdj","rsquaredPredictive"))]
+
+  accuracyTableOverall$bracketingRate <- bracketing_rate(
+    predicted = predicted,
+    actual = actual
+  )
+
+  row.names(accuracyTableOverall) <- c("individual","crowdAveraged")
+
+  return(accuracyTableOverall)
 }

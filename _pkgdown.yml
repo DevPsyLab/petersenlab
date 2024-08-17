@@ -25,6 +25,7 @@ reference:
   - optimalCutoff
   - posttestOdds
   - posttestProbability
+  - wisdomOfCrowd
 
 - title: Assessment and Scoring
 
