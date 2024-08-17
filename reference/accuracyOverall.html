@@ -13,7 +13,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">petersenlab</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.0.5</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.0.6</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -44,7 +44,9 @@
 
     <div class="section level2">
     <h2 id="ref-usage">Usage<a class="anchor" aria-label="anchor" href="#ref-usage"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">accuracyOverall</span><span class="op">(</span><span class="va">predicted</span>, <span class="va">actual</span>, dropUndefined <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">accuracyOverall</span><span class="op">(</span><span class="va">predicted</span>, <span class="va">actual</span>, dropUndefined <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu">wisdomOfCrowd</span><span class="op">(</span><span class="va">predicted</span>, <span class="va">actual</span>, dropUndefined <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div class="section level2">
@@ -112,6 +114,19 @@ option at your own risk!</p>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 1 162.972 162.972 32814.24 181.147 -2382.823 2382.823 91.16591 44.6861 2.990233</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>    rsquared rsquaredAdj rsquaredPredictive</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 1 0.6430008   0.6355633          0.6163406</span>
+<span class="r-in"><span><span class="fu">wisdomOfCrowd</span><span class="op">(</span>predicted <span class="op">=</span> <span class="va">USArrests</span><span class="op">$</span><span class="va">Assault</span>, actual <span class="op">=</span> <span class="fl">200</span><span class="op">)</span></span></span>
+<span class="r-wrn co"><span class="r-pr">#&gt;</span> <span class="warning">Warning: </span>essentially perfect fit: summary may be unreliable</span>
+<span class="r-wrn co"><span class="r-pr">#&gt;</span> <span class="warning">Warning: </span>essentially perfect fit: summary may be unreliable</span>
+<span class="r-wrn co"><span class="r-pr">#&gt;</span> <span class="warning">Warning: </span>ANOVA F-tests on an essentially perfect fit are unreliable</span>
+<span class="r-wrn co"><span class="r-pr">#&gt;</span> <span class="warning">Warning: </span>essentially perfect fit: summary may be unreliable</span>
+<span class="r-wrn co"><span class="r-pr">#&gt;</span> <span class="warning">Warning: </span>essentially perfect fit: summary may be unreliable</span>
+<span class="r-wrn co"><span class="r-pr">#&gt;</span> <span class="warning">Warning: </span>ANOVA F-tests on an essentially perfect fit are unreliable</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                   ME   MAE       MSE     RMSE   MPE  MAPE     sMAPE MASE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> individual    -29.24 76.32 7661.2400 87.52851 14.62 38.16 23.239460  Inf</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> crowdAveraged -29.24 29.24  854.9776 29.24000 14.62 14.62  7.886503  Inf</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                   RMSLE  rsquared rsquaredAdj rsquaredPredictive bracketingRate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> individual    0.6310922 0.3756237   0.3626159        -0.06373237      0.4808163</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> crowdAveraged 0.1572068 0.0000000   0.0000000        -0.04123282      0.4808163</span>
 <span class="r-in"><span></span></span>
 </code></pre></div>
     </div>
