@@ -248,7 +248,7 @@ wisdomOfCrowd <- function(predicted, actual, dropUndefined = FALSE){
     accuracyTable_crowdAverage
   )
 
-  accuracyTableOverall[,!(names(accuracyTableOverall) %in% c("rsquared","rsquaredAdj","rsquaredPredictive"))]
+  accuracyTableOverall <- accuracyTableOverall[,!(names(accuracyTableOverall) %in% c("rsquared","rsquaredAdj","rsquaredPredictive"))]
 
   accuracyTableOverall$bracketingRate <- bracketing_rate(
     predicted = predicted,
