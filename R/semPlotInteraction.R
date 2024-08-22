@@ -3,11 +3,10 @@
 #'
 #' @description
 #' Generates a plot of a 2-way interaction from a structural equation model
-#' (SEM).
+#' (SEM) that was estimated using the lavaan package.
 #'
 #' @details
-#' Generates a plot of a 2-way interaction from a structural equation model
-#' (SEM) that was estimated using the lavaan package.
+#' Created by Johanna Caskey (johanna-caskey@uiowa.edu).
 #'
 #' @param data the dataframe object from which the model was derived
 #' @param fit the fitted model lavaan object
