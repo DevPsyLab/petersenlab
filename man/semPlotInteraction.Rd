@@ -63,11 +63,10 @@ Plot of two-way interaction from structural equation model.
 }
 \description{
 Generates a plot of a 2-way interaction from a structural equation model
-(SEM).
+(SEM) that was estimated using the lavaan package.
 }
 \details{
-Generates a plot of a 2-way interaction from a structural equation model
-(SEM) that was estimated using the lavaan package.
+Created by Johanna Caskey (johanna-caskey@uiowa.edu).
 }
 \examples{
 states <- as.data.frame(state.x77)
