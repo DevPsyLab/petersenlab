@@ -49,6 +49,7 @@ puc(
 Other structural equation modeling: 
 \code{\link{equiv_chi}()},
 \code{\link{make_esem_model}()},
-\code{\link{satorraBentlerScaledChiSquareDifferenceTestStatistic}()}
+\code{\link{satorraBentlerScaledChiSquareDifferenceTestStatistic}()},
+\code{\link{semPlotInteraction}()}
 }
 \concept{structural equation modeling}

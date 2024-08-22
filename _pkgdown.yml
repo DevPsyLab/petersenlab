@@ -151,6 +151,7 @@ reference:
   - equiv_chi
   - puc
   - satorraBentlerScaledChiSquareDifferenceTestStatistic
+  - semPlotInteraction
 
 - title: Miscellaneous
 

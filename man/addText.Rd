@@ -56,6 +56,7 @@ addText(x = USArrests$Assault, y = USArrests$Murder)
 Other plot: 
 \code{\link{plot2WayInteraction}()},
 \code{\link{ppPlot}()},
+\code{\link{semPlotInteraction}()},
 \code{\link{vwReg}()}
 
 Other correlations: 

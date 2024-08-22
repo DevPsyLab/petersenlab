@@ -1,14 +1,22 @@
 Package: petersenlab
 Type: Package
 Title: A Collection of R Functions by the Petersen Lab
-Version: 1.0.6
+Version: 1.0.7
 Authors@R: c(
     person("Isaac T.", "Petersen",
            email = "isaac-t-petersen@uiowa.edu",
            role = c("aut", "cre"),
            comment = c(ORCID = "0000-0003-3072-6673")),
     person("Developmental Psychopathology Lab at the University of Iowa",
-           role = c("ctb"))
+           role = c("ctb")),
+    person("Angela D.", "Staples",
+           email = "astaples@emich.edu",
+           role = c("ctb"),
+           comment = c(ORCID = "0000-0002-7678-5794")),
+    person("Johanna", "Caskey",
+           email = "johanna-caskey@uiowa.edu",
+           role = c("ctb"),
+           comment = c(ORCID = "0009-0001-8227-6603"))
   )
 Maintainer: Isaac T. Petersen <isaac-t-petersen@uiowa.edu>
 Depends: R (>= 4.1.0)

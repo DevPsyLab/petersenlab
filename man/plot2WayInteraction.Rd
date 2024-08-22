@@ -210,11 +210,13 @@ plot2WayInteraction(predictor = "predictor",
 Other plot: 
 \code{\link{addText}()},
 \code{\link{ppPlot}()},
+\code{\link{semPlotInteraction}()},
 \code{\link{vwReg}()}
 
 Other multipleRegression: 
 \code{\link{lmCombine}()},
 \code{\link{ppPlot}()},
+\code{\link{semPlotInteraction}()},
 \code{\link{update_nested}()}
 }
 \concept{multipleRegression}

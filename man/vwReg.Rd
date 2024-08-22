@@ -168,7 +168,8 @@ vwReg(y ~ x, df, quantize = "SD") # 1-2-3-SD plot
 Other plot: 
 \code{\link{addText}()},
 \code{\link{plot2WayInteraction}()},
-\code{\link{ppPlot}()}
+\code{\link{ppPlot}()},
+\code{\link{semPlotInteraction}()}
 
 Other correlations: 
 \code{\link{addText}()},

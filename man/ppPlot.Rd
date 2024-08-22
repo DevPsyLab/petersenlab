@@ -39,11 +39,13 @@ ppPlot(lmModel)
 Other plot: 
 \code{\link{addText}()},
 \code{\link{plot2WayInteraction}()},
+\code{\link{semPlotInteraction}()},
 \code{\link{vwReg}()}
 
 Other multipleRegression: 
 \code{\link{lmCombine}()},
 \code{\link{plot2WayInteraction}()},
+\code{\link{semPlotInteraction}()},
 \code{\link{update_nested}()}
 }
 \concept{multipleRegression}

@@ -32,6 +32,7 @@ Other multipleImputation:
 Other multipleRegression: 
 \code{\link{plot2WayInteraction}()},
 \code{\link{ppPlot}()},
+\code{\link{semPlotInteraction}()},
 \code{\link{update_nested}()}
 }
 \concept{multipleImputation}
