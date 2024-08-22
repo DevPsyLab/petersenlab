@@ -183,7 +183,7 @@ semPlotInteraction <- function(data, fit, predictor, centered_predictor, moderat
   moderator_labels <- factor(
     impliedData$moderator_factor,
     levels = c("High", "Middle", "Low"),
-    labels = c("High (+1 SD)", "Middle (mean)", "Low (\u2212 1 SD)"))
+    labels = c("High (+1 SD)", "Middle (mean)", "Low (\u22121 SD)"))
 
   # Plot
   if(!is.null(modStr) & !is.null(predStr) & !is.null(outStr)){
