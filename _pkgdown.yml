@@ -137,6 +137,10 @@ reference:
 
 - title: Latent Variable Modeling
 
+- subtitle: Factor Analysis
+  contents:
+  - my_loadings_sorter
+
 - subtitle: Item Response Theory (IRT)
   contents:
   - fourPL
