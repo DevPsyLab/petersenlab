@@ -12,7 +12,9 @@
 #'   and false negatives (FN)
 #'   \item 2) pretest probability (pretestProb), sensitivity (SN), and
 #'   specificity (SP), OR
-#'   \item 3) pretest probability (pretestProb), positive likelihood ratio
+#'   \item 3) pretest probability (pretestProb), sensitivity (SN), and
+#'   selection rate (selectionRate), OR
+#'   \item 4) pretest probability (pretestProb), positive likelihood ratio
 #'   (PLR), and negative likelihood ratio (NLR)
 #' }
 #'
@@ -22,6 +24,8 @@
 #' @param FN Number of false negative cases.
 #' @param pretestProb Pretest probability (prevalence/base rate/prior
 #' probability) of characteristic, as a number between 0 and 1.
+#' @param selectionRate Selection rate (marginal probability of positive test),
+#' as a number between 0 and 1.
 #' @param SN Sensitivity of the test at a given cut point, as a number
 #' between 0 and 1.
 #' @param SP Specificity of the test at a given cut point, as a number
@@ -60,6 +64,11 @@
 #'
 #' nomogrammer(
 #'   pretestProb = .60,
+#'   SN = 0.421,
+#'   selectionRate = 0.267)
+#'
+#' nomogrammer(
+#'   pretestProb = .60,
 #'   PLR = 12,
 #'   NLR = 0.6)
 #'
@@ -75,6 +84,7 @@
 nomogrammer <- function(
     TP = NULL, TN = NULL, FP = NULL, FN = NULL,
     pretestProb = NULL,
+    selectionRate = NULL,
     SN = NULL, SP = NULL,
     PLR = NULL, NLR = NULL,
     Detail = FALSE,
@@ -126,22 +136,28 @@ nomogrammer <- function(
   } else if (!missing(pretestProb) & !missing(SN) & !missing(SP)){
     SNSP <- TRUE
     TPTNFPFN <- FALSE
+  } else if (!missing(pretestProb) & !missing(SN) & !missing(selectionRate)){
+    SNSR <- TRUE
+    TPTNFPFN <- FALSE
+    SNSP <- FALSE
   } else if (!missing(pretestProb) & !missing(PLR) & !missing(NLR)){
     PLRNLR <- TRUE
     TPTNFPFN <- FALSE
     SNSP <- FALSE
+    SNSR <- FALSE
   } else{
     stop("Missing arguments")
   }
 
   ## If TP, TN, FP, and FN provided, we calculate posterior probabilities & odds using TP, TN, FP, and FN
   ##  otherwise, if SN and SP are provided, we calculate posteriors using SN & SP
+  ##  otherwise, if SN and selectionRate are provided, we calculate posteriors using SN & selectionRate
   ##  otherwise, if PLR and NLR provided, we calculate posteriors using PLR & NLR
   if(TPTNFPFN == TRUE){
     # TP/TN/FP/FN needs to be numeric
     if(!is.numeric(TP) | !is.numeric(TN) | !is.numeric(FP) | !is.numeric(FN)){stop("TP, TN, FP, and FN should be numeric")}
 
-    # make sure STP, TN, FP, and FN are numbers
+    # make sure TP, TN, FP, and FN are numbers
     if(!is.numeric(TP)){stop("TP should be numeric")}
     if(!is.numeric(TN)){stop("TN should be numeric")}
     if(!is.numeric(FP)){stop("FP should be numeric")}
@@ -174,6 +190,29 @@ nomogrammer <- function(
     prior_odds  <- odds(prior_prob)
     sensitivity <- SN
     specificity <- SP
+    PLR <- sensitivity/(1-specificity)
+    NLR <- (1-sensitivity)/specificity
+    post_odds_pos  <- prior_odds * PLR
+    post_odds_neg  <- prior_odds * NLR
+    post_prob_pos  <- post_odds_pos/(1+post_odds_pos)
+    post_prob_neg  <- post_odds_neg/(1+post_odds_neg)
+  } else if(SNSR == TRUE){
+    # pretest prob needs to be numeric
+    if(!is.numeric(pretestProb)){stop("Pretest probability should be numeric")}
+    # pretest prob needs to be a prob not a percent
+    if((pretestProb > 1) | (pretestProb <= 0)){stop("Pretest probability should be a probability (did you give a %?)")}
+
+    # make sure SN and selectionRate are numbers
+    if(!is.numeric(SN)){stop("Sensitivity should be numeric")}
+    if(!is.numeric(selectionRate)){stop("Selection Rate should be numeric")}
+    # make sure SN and selectionRate are numbers that are probabilities not percentages
+    if((SN > 1) | (SN <= 0)){stop("Sensitivity should be a probability (did you give a %?)")}
+    if((selectionRate > 1) | (selectionRate <= 0)){stop("Selection Rate should be a probability (did you give a %?)")}
+
+    prior_prob  <- pretestProb
+    prior_odds  <- odds(prior_prob)
+    sensitivity <- SN
+    specificity <- 1 - ((selectionRate - SN * pretestProb) / (1 - pretestProb))
     PLR <- sensitivity/(1-specificity)
     NLR <- (1-sensitivity)/specificity
     post_odds_pos  <- prior_odds * PLR
