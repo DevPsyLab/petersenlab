@@ -13,6 +13,7 @@ nomogrammer(
   selectionRate = NULL,
   SN = NULL,
   SP = NULL,
+  FPR = NULL,
   PLR = NULL,
   NLR = NULL,
   Detail = FALSE,
@@ -42,6 +43,9 @@ between 0 and 1.}
 \item{SP}{Specificity of the test at a given cut point, as a number
 between 0 and 1.}
 
+\item{FPR}{False positive rate of the test at a given cut point, as a number
+between 0 and 1.}
+
 \item{PLR}{Positive likelihood ratio of the test at a given cut point.}
 
 \item{NLR}{Positive likelihood ratio of the test at a given cut point.}
@@ -69,8 +73,10 @@ Create nomogram plot from the following at a given cut point:
   \item 2) pretest probability (pretestProb), sensitivity (SN), and
   specificity (SP), OR
   \item 3) pretest probability (pretestProb), sensitivity (SN), and
+  false positive rate (FPR), OR
+  \item 4) pretest probability (pretestProb), sensitivity (SN), and
   selection rate (selectionRate), OR
-  \item 4) pretest probability (pretestProb), positive likelihood ratio
+  \item 5) pretest probability (pretestProb), positive likelihood ratio
   (PLR), and negative likelihood ratio (NLR)
 }
 }
@@ -86,6 +92,11 @@ nomogrammer(
   pretestProb = .60,
   SN = 0.421,
   SP = 0.965)
+
+nomogrammer(
+  pretestProb = .60,
+  SN = 0.421,
+  FPR = 0.035)
 
 nomogrammer(
   pretestProb = .60,

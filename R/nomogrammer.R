@@ -13,8 +13,10 @@
 #'   \item 2) pretest probability (pretestProb), sensitivity (SN), and
 #'   specificity (SP), OR
 #'   \item 3) pretest probability (pretestProb), sensitivity (SN), and
+#'   false positive rate (FPR), OR
+#'   \item 4) pretest probability (pretestProb), sensitivity (SN), and
 #'   selection rate (selectionRate), OR
-#'   \item 4) pretest probability (pretestProb), positive likelihood ratio
+#'   \item 5) pretest probability (pretestProb), positive likelihood ratio
 #'   (PLR), and negative likelihood ratio (NLR)
 #' }
 #'
@@ -29,6 +31,8 @@
 #' @param SN Sensitivity of the test at a given cut point, as a number
 #' between 0 and 1.
 #' @param SP Specificity of the test at a given cut point, as a number
+#' between 0 and 1.
+#' @param FPR False positive rate of the test at a given cut point, as a number
 #' between 0 and 1.
 #' @param PLR Positive likelihood ratio of the test at a given cut point.
 #' @param NLR Positive likelihood ratio of the test at a given cut point.
@@ -65,6 +69,11 @@
 #' nomogrammer(
 #'   pretestProb = .60,
 #'   SN = 0.421,
+#'   FPR = 0.035)
+#'
+#' nomogrammer(
+#'   pretestProb = .60,
+#'   SN = 0.421,
 #'   selectionRate = 0.267)
 #'
 #' nomogrammer(
@@ -86,6 +95,7 @@ nomogrammer <- function(
     pretestProb = NULL,
     selectionRate = NULL,
     SN = NULL, SP = NULL,
+    FPR = NULL,
     PLR = NULL, NLR = NULL,
     Detail = FALSE,
     NullLine = FALSE,
@@ -136,14 +146,20 @@ nomogrammer <- function(
   } else if (!missing(pretestProb) & !missing(SN) & !missing(SP)){
     SNSP <- TRUE
     TPTNFPFN <- FALSE
+  } else if (!missing(pretestProb) & !missing(SN) & !missing(FPR)){
+    SNFPR <- TRUE
+    TPTNFPFN <- FALSE
+    SNSP <- FALSE
   } else if (!missing(pretestProb) & !missing(SN) & !missing(selectionRate)){
     SNSR <- TRUE
     TPTNFPFN <- FALSE
     SNSP <- FALSE
+    SNFPR <- FALSE
   } else if (!missing(pretestProb) & !missing(PLR) & !missing(NLR)){
     PLRNLR <- TRUE
     TPTNFPFN <- FALSE
     SNSP <- FALSE
+    SNFPR <- FALSE
     SNSR <- FALSE
   } else{
     stop("Missing arguments")
@@ -164,15 +180,11 @@ nomogrammer <- function(
     if(!is.numeric(FN)){stop("FN should be numeric")}
 
     prior_prob  <- (TP + FN)/(TP + TN + FP + FN)
-    prior_odds  <- odds(prior_prob)
+
     sensitivity <- TP/(TP + FN)
     specificity <- TN/(TN + FP)
     PLR <- sensitivity/(1-specificity)
     NLR <- (1-sensitivity)/specificity
-    post_odds_pos  <- prior_odds * PLR
-    post_odds_neg  <- prior_odds * NLR
-    post_prob_pos  <- post_odds_pos/(1+post_odds_pos)
-    post_prob_neg  <- post_odds_neg/(1+post_odds_neg)
   } else if(SNSP == TRUE){
     # pretest prob needs to be numeric
     if(!is.numeric(pretestProb)){stop("Pretest probability should be numeric")}
@@ -187,15 +199,30 @@ nomogrammer <- function(
     if((SP > 1) | (SP <= 0)){stop("Specificity should be a probability (did you give a %?)")}
 
     prior_prob  <- pretestProb
-    prior_odds  <- odds(prior_prob)
+
     sensitivity <- SN
     specificity <- SP
     PLR <- sensitivity/(1-specificity)
     NLR <- (1-sensitivity)/specificity
-    post_odds_pos  <- prior_odds * PLR
-    post_odds_neg  <- prior_odds * NLR
-    post_prob_pos  <- post_odds_pos/(1+post_odds_pos)
-    post_prob_neg  <- post_odds_neg/(1+post_odds_neg)
+  } else if(SNFPR == TRUE){
+    # pretest prob needs to be numeric
+    if(!is.numeric(pretestProb)){stop("Pretest probability should be numeric")}
+    # pretest prob needs to be a prob not a percent
+    if((pretestProb > 1) | (pretestProb <= 0)){stop("Pretest probability should be a probability (did you give a %?)")}
+
+    # make sure SN and FPR are numbers
+    if(!is.numeric(SN)){stop("Sensitivity should be numeric")}
+    if(!is.numeric(FPR)){stop("Specificity should be numeric")}
+    # make sure SN and SP are numbers that are probabilities not percentages
+    if((SN > 1) | (SN <= 0)){stop("Sensitivity should be a probability (did you give a %?)")}
+    if((FPR > 1) | (FPR <= 0)){stop("False positive rate should be a probability (did you give a %?)")}
+
+    prior_prob  <- pretestProb
+
+    sensitivity <- SN
+    specificity <- 1 - FPR
+    PLR <- sensitivity/(1-specificity)
+    NLR <- (1-sensitivity)/specificity
   } else if(SNSR == TRUE){
     # pretest prob needs to be numeric
     if(!is.numeric(pretestProb)){stop("Pretest probability should be numeric")}
@@ -210,15 +237,11 @@ nomogrammer <- function(
     if((selectionRate > 1) | (selectionRate <= 0)){stop("Selection Rate should be a probability (did you give a %?)")}
 
     prior_prob  <- pretestProb
-    prior_odds  <- odds(prior_prob)
+
     sensitivity <- SN
     specificity <- 1 - ((selectionRate - SN * pretestProb) / (1 - pretestProb))
     PLR <- sensitivity/(1-specificity)
     NLR <- (1-sensitivity)/specificity
-    post_odds_pos  <- prior_odds * PLR
-    post_odds_neg  <- prior_odds * NLR
-    post_prob_pos  <- post_odds_pos/(1+post_odds_pos)
-    post_prob_neg  <- post_odds_neg/(1+post_odds_neg)
   } else if(PLRNLR == TRUE){
     # pretest prob needs to be numeric
     if(!is.numeric(pretestProb)){stop("Pretest probability should be numeric")}
@@ -234,20 +257,22 @@ nomogrammer <- function(
     if(NLR > 1){stop("NLR shouldn't be more than 1")}
 
     prior_prob  <- pretestProb
-    prior_odds  <- odds(prior_prob)
+
     PLR <- PLR
     NLR <- NLR
     sensitivity <- (PLR*(1-NLR))/(PLR-NLR)    ## TODO: check Adam's math!
     specificity <- (1-PLR)/(NLR-PLR)          ## TODO: check Adam's math!
-    post_odds_pos  <- prior_odds * PLR
-    post_odds_neg  <- prior_odds * NLR
-    post_prob_pos  <- post_odds_pos/(1+post_odds_pos)
-    post_prob_neg  <- post_odds_neg/(1+post_odds_neg)
+
   } else{
     stop("Couldn't find SN & SP, or positive & negative likelihood ratios")
   }
 
+  prior_odds <- odds(prior_prob)
 
+  post_odds_pos <- prior_odds * PLR
+  post_odds_neg <- prior_odds * NLR
+  post_prob_pos <- post_odds_pos/(1+post_odds_pos)
+  post_prob_neg <- post_odds_neg/(1+post_odds_neg)
 
   ######################################
   ########## Plotting (prep)  ##########
