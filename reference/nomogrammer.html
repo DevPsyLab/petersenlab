@@ -13,7 +13,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">petersenlab</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.0.9</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.0.10</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -53,6 +53,7 @@
 <span>  selectionRate <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  SN <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  SP <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  FPR <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  PLR <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  NLR <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  Detail <span class="op">=</span> <span class="cn">FALSE</span>,</span>
@@ -102,6 +103,11 @@ between 0 and 1.</p></dd>
 between 0 and 1.</p></dd>
 
 
+<dt id="arg-fpr">FPR<a class="anchor" aria-label="anchor" href="#arg-fpr"></a></dt>
+<dd><p>False positive rate of the test at a given cut point, as a number
+between 0 and 1.</p></dd>
+
+
 <dt id="arg-plr">PLR<a class="anchor" aria-label="anchor" href="#arg-plr"></a></dt>
 <dd><p>Positive likelihood ratio of the test at a given cut point.</p></dd>
 
@@ -138,8 +144,10 @@ between 0 and 1.</p></dd>
 <li><p>2) pretest probability (pretestProb), sensitivity (SN), and
   specificity (SP), OR</p></li>
 <li><p>3) pretest probability (pretestProb), sensitivity (SN), and
+  false positive rate (FPR), OR</p></li>
+<li><p>4) pretest probability (pretestProb), sensitivity (SN), and
   selection rate (selectionRate), OR</p></li>
-<li><p>4) pretest probability (pretestProb), positive likelihood ratio
+<li><p>5) pretest probability (pretestProb), positive likelihood ratio
   (PLR), and negative likelihood ratio (NLR)</p></li>
 </ul></div>
     <div class="section level2">
@@ -172,14 +180,20 @@ between 0 and 1.</p></dd>
 <span class="r-in"><span><span class="fu">nomogrammer</span><span class="op">(</span></span></span>
 <span class="r-in"><span>  pretestProb <span class="op">=</span> <span class="fl">.60</span>,</span></span>
 <span class="r-in"><span>  SN <span class="op">=</span> <span class="fl">0.421</span>,</span></span>
-<span class="r-in"><span>  selectionRate <span class="op">=</span> <span class="fl">0.267</span><span class="op">)</span></span></span>
+<span class="r-in"><span>  FPR <span class="op">=</span> <span class="fl">0.035</span><span class="op">)</span></span></span>
 <span class="r-plt img"><img src="nomogrammer-3.png" alt="" width="700" height="433"></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="fu">nomogrammer</span><span class="op">(</span></span></span>
+<span class="r-in"><span>  pretestProb <span class="op">=</span> <span class="fl">.60</span>,</span></span>
+<span class="r-in"><span>  SN <span class="op">=</span> <span class="fl">0.421</span>,</span></span>
+<span class="r-in"><span>  selectionRate <span class="op">=</span> <span class="fl">0.267</span><span class="op">)</span></span></span>
+<span class="r-plt img"><img src="nomogrammer-4.png" alt="" width="700" height="433"></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="fu">nomogrammer</span><span class="op">(</span></span></span>
 <span class="r-in"><span>  pretestProb <span class="op">=</span> <span class="fl">.60</span>,</span></span>
 <span class="r-in"><span>  PLR <span class="op">=</span> <span class="fl">12</span>,</span></span>
 <span class="r-in"><span>  NLR <span class="op">=</span> <span class="fl">0.6</span><span class="op">)</span></span></span>
-<span class="r-plt img"><img src="nomogrammer-4.png" alt="" width="700" height="433"></span>
+<span class="r-plt img"><img src="nomogrammer-5.png" alt="" width="700" height="433"></span>
 <span class="r-in"><span></span></span>
 </code></pre></div>
     </div>
