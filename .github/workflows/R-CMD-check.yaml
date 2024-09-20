@@ -51,6 +51,10 @@ jobs:
           extra-packages: any::rcmdcheck
           needs: check
 
+      - name: Install rcmdcheck package
+        run: renv::install("rcmdcheck")
+        shell: Rscript {0}
+
       #- uses: r-lib/actions/setup-r-dependencies@v2
       #  with:
       #    extra-packages: any::rcmdcheck
