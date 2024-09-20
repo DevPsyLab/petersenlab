@@ -52,6 +52,10 @@ jobs:
         run: renv::install("rcmdcheck")
         shell: Rscript {0}
 
+      - name: Build and install petersenlab package
+          R CMD build .
+          R CMD INSTALL *.tar.gz
+
       #- uses: r-lib/actions/setup-r-dependencies@v2
       #  with:
       #    extra-packages: any::rcmdcheck
