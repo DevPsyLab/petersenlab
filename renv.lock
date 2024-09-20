@@ -294,13 +294,13 @@
     },
     "curl": {
       "Package": "curl",
-      "Version": "5.2.3",
+      "Version": "5.2.2",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
         "R"
       ],
-      "Hash": "d91263322a58af798f6cf3b13fd56dde"
+      "Hash": "8f27335f2bcff4d6035edcc82d7d46de"
     },
     "data.table": {
       "Package": "data.table",
