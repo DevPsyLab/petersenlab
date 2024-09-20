@@ -26,14 +26,21 @@ jobs:
 
       - uses: r-lib/actions/setup-pandoc@v2
 
+      # Address problems with installation of curl and textshaping packages
+      - name: Install system dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libcurl4-openssl-dev libharfbuzz-dev libfribidi-dev
+
       - uses: r-lib/actions/setup-r@v2
         with:
           use-public-rspm: true
 
       - uses: r-lib/actions/setup-renv@v2
-        with:
-          extra-packages: any::pkgdown, local::.
-          needs: website
+
+      - name: Install pkgdown package
+        run: renv::install("pkgdown")
+        shell: Rscript {0}
 
       #- uses: r-lib/actions/setup-r-dependencies@v2
       #  with:

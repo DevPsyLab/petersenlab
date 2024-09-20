@@ -38,7 +38,7 @@ Description: A collection of R functions that are widely used by the Petersen
     CRAN: <doi: 10.32614/CRAN.package.petersenlab>. The package is described in
     "Principles of Psychological Assessment: With Applied Examples in R"
     (Petersen, 2024) <doi:10.1201/9781003357421>, <doi:10.5281/zenodo.6466589>.
-URL: https://github.com/DevPsyLab/petersenlab, https://devpsylab.github.io/petersenlab/
+URL: https://github.com/DevPsyLab/petersenlab, https://devpsylab.github.io/petersenlab
 BugReports: https://github.com/DevPsyLab/petersenlab/issues
 License: MIT + file LICENSE
 Encoding: UTF-8
