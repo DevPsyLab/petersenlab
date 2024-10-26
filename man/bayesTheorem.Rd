@@ -70,4 +70,8 @@ pAgivenNotB(pAgivenB = .95, pB = .003, pA = .01)
 
 pBgivenNotA(pBgivenA = .95, pA = .003, pB = .01)
 }
+\seealso{
+Other bayesian: 
+\code{\link{deriv_d_negBinom}()}
+}
 \concept{bayesian}

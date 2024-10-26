@@ -1,7 +1,7 @@
 Package: petersenlab
 Type: Package
 Title: A Collection of R Functions by the Petersen Lab
-Version: 1.0.10
+Version: 1.0.11
 Authors@R: c(
     person("Isaac T.", "Petersen",
            email = "isaac-t-petersen@uiowa.edu",
@@ -16,7 +16,15 @@ Authors@R: c(
     person("Johanna", "Caskey",
            email = "johanna-caskey@uiowa.edu",
            role = c("ctb"),
-           comment = c(ORCID = "0009-0001-8227-6603"))
+           comment = c(ORCID = "0009-0001-8227-6603")),
+    person("Philipp", "Doebler",
+           email = "doebler@statistik.tu-dortmund.de",
+           role = c("ctb"),
+           comment = c(ORCID = "0000-0002-2946-8526")),
+    person("Loreen", "Sabel",
+           email = "loreen.sabel@tu-dortmund.de",
+           role = c("ctb"),
+           comment = c(ORCID = "0000-0002-9832-8842"))       
   )
 Maintainer: Isaac T. Petersen <isaac-t-petersen@uiowa.edu>
 Depends: R (>= 4.1.0)

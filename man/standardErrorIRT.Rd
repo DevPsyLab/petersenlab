@@ -39,6 +39,7 @@ standardErrorIRT(items$testInformation)
 \doi{10.1177/0146621613475471}
 
 Other IRT: 
+\code{\link{deriv_d_negBinom}()},
 \code{\link{discriminationToFactorLoading}()},
 \code{\link{fourPL}()},
 \code{\link{itemInformation}()},

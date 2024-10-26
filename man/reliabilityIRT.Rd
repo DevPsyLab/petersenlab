@@ -41,6 +41,7 @@ reliabilityIRT(items$testInformation)
 \url{https://groups.google.com/g/mirt-package/c/ZAgpt6nq5V8/m/R3OEeEqdAQAJ}
 
 Other IRT: 
+\code{\link{deriv_d_negBinom}()},
 \code{\link{discriminationToFactorLoading}()},
 \code{\link{fourPL}()},
 \code{\link{itemInformation}()},

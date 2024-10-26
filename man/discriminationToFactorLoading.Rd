@@ -37,6 +37,7 @@ discriminationToFactorLoading(1.3, model = "logit")
 \url{https://stats.stackexchange.com/questions/228629/conversion-of-irt-logit-discrimination-parameter-to-factor-loading-metric}
 
 Other IRT: 
+\code{\link{deriv_d_negBinom}()},
 \code{\link{fourPL}()},
 \code{\link{itemInformation}()},
 \code{\link{reliabilityIRT}()},

@@ -47,6 +47,7 @@ reference:
 
 - title: Bayesian
   contents:
+  - itemInformationZINB
   - pA
   - pB
   - pAgivenB
@@ -146,6 +147,7 @@ reference:
   - fourPL
   - discriminationToFactorLoading
   - itemInformation
+  - itemInformationZINB
   - reliabilityIRT
   - standardErrorIRT
 
