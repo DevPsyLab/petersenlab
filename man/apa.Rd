@@ -46,6 +46,3 @@ Other formatting:
 \code{\link{suppressLeadingZero}()}
 }
 \concept{formatting}
-\keyword{APA,}
-\keyword{decimals,}
-\keyword{formatting}

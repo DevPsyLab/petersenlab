@@ -9,7 +9,7 @@
 The `petersenlab` package contains a collection `R` functions that are widely used by the Petersen Lab (the [Developmental Psychopathology Lab](https://developmental-psychopathology.lab.uiowa.edu) at the University of Iowa).
 Included are functions for various purposes, including evaluating the accuracy of judgments and predictions, performing scoring of assessments, generating correlation matrices, conversion of data between various types, data management, psychometric evaluation, extensions related to latent variable modeling, various plotting capabilities, and other miscellaneous useful functions.
 By making the package available, we hope to make our methods reproducible and replicable by others and to help others perform their data processing and analysis methods more easily and efficiently.
-The package website is here: https://devpsylab.github.io/petersenlab.
+The package website is here: https://devpsylab.github.io/petersenlab/.
 The source code for the package is here: https://github.com/DevPsyLab/petersenlab.
 
 # Installing the Package
@@ -29,13 +29,13 @@ remotes::install_github("DevPsyLab/petersenlab")
 
 # Package Functions
 
-A list of the functions included in the package is here: https://devpsylab.github.io/petersenlab/reference
+A list of the functions included in the package is here: https://devpsylab.github.io/petersenlab/reference/
 
 # Citing the Package
 
 To obtain the citation for the `petersenlab` package, run `citation("petersenlab")`; the citation is:
 
-Petersen, I. T. (2024). *petersenlab: A collection of R functions by the Petersen Lab*. R package version 1.0.11. https://github.com/DevPsyLab/petersenlab, https://doi.org/10.32614/CRAN.package.petersenlab
+Petersen, I. T. (2024). *petersenlab: A collection of R functions by the Petersen Lab*. R package version 1.1.0. https://github.com/DevPsyLab/petersenlab, https://doi.org/10.32614/CRAN.package.petersenlab
 
 A `BibTeX` entry for `LaTeX` users is:
 ```
@@ -44,7 +44,7 @@ A `BibTeX` entry for `LaTeX` users is:
   title = {{petersenlab}: A collection of {R} functions by the {Petersen Lab}},
   url = {https://github.com/DevPsyLab/petersenlab},
   doi = {10.32614/CRAN.package.petersenlab},
-  version = {1.0.11},
+  version = {1.1.0},
   year = {2024}
 }
 ```

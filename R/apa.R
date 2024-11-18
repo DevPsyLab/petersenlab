@@ -26,8 +26,6 @@
 #'
 #' @family formatting
 #'
-#' @keywords APA, decimals, formatting
-#'
 #' @importFrom stats lm update anova
 #'
 #' @examples

@@ -14,7 +14,7 @@ identifiers:
     value: 10.32614/CRAN.package.petersenlab
     description: This is the DOI for the codebase.
 repository-code: "https://github.com/DevPsyLab/petersenlab"
-url: "https://devpsylab.github.io/petersenlab"
+url: "https://devpsylab.github.io/petersenlab/"
 abstract: >-
   A collection of R functions that are widely used by the Petersen Lab.
   Included are functions for various purposes, including evaluating the
@@ -30,5 +30,5 @@ keywords:
   - R-package
   - psychometrics
 license: MIT
-version: 1.0.11
+version: 1.1.0
 date-released: '2024-03-11'
