@@ -38,7 +38,7 @@ latent factors (only possible for models with an oblique rotation)}
 Sorted loadings from exploratory factor analysis model.
 }
 \description{
-Sorts items' loadings based on their loadings from exploratoary factor
+Sorts items' loadings based on their loadings from exploratory factor
 analysis fit with the \code{psych::fa()} function.
 }
 \details{

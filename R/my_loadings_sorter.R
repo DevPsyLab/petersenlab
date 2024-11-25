@@ -2,7 +2,7 @@
 #' Sorts loadings from exploratory factor analysis.
 #'
 #' @description
-#' Sorts items' loadings based on their loadings from exploratoary factor
+#' Sorts items' loadings based on their loadings from exploratory factor
 #' analysis fit with the \code{psych::fa()} function.
 #'
 #' @details
