@@ -7,7 +7,11 @@
 \alias{deriv_logd_negBinom}
 \alias{info_neg_binom_analytical}
 \alias{item_info_NB_zero_analytical}
-\title{Item Information from Zero-Inflated Negative Binomial Model.}
+\alias{item_info_NB_analytical}
+\alias{test_info_NB}
+\alias{error_variance_NB}
+\alias{reliability_NB}
+\title{Item and Test Information from Zero-Inflated Negative Binomial Model.}
 \usage{
 deriv_d_negBinom(n, alpha, beta, theta, phi)
 
@@ -26,6 +30,22 @@ info_neg_binom_analytical(
 )
 
 item_info_NB_zero_analytical(theta, alpha, beta, phi, varpi)
+
+item_info_NB_analytical(theta, alpha, beta, phi, varpi = NULL, zero = FALSE)
+
+test_info_NB(theta, alpha, beta, phi, varpi = NULL, zero = FALSE)
+
+error_variance_NB(
+  lower = -Inf,
+  upper = Inf,
+  alpha,
+  beta,
+  phi,
+  varpi = NULL,
+  zero = FALSE
+)
+
+reliability_NB(alpha, beta, phi, varpi = NULL, zero = FALSE)
 }
 \arguments{
 \item{n}{Integer. The observed count, representing the the event frequency.}
@@ -46,14 +66,24 @@ negative binomial distribution.}
 
 \item{varpi}{Numeric. The probability of observing a zero count due to a
 separate zero-inflation process.}
+
+\item{zero}{TRUE/FALSE. Whether the item is a from a zero-inflated model.}
+
+\item{lower}{Numeric. The lower range of theta, for estimating error variance
+or reliability.}
+
+\item{upper}{Numeric. The upper range of theta, for estimating error variance
+or reliability.}
 }
 \value{
-The amount of information for a given item at each of the values of
-\code{theta} specified.
+The amount of information for a given item (or the test as a whole) at each
+of the values of \code{theta} specified. Based on test information, one can
+estimate error variance and marginal reliability using
+\code{error_variance_NB()} and \code{reliability_NB()}, respectively.
 }
 \description{
-Estimate item information from Bayesian zero-inflated negative binomial
-model that was fit using the \code{brms} package.
+Estimate item and test information from Bayesian zero-inflated negative
+binomial model that was fit using the \code{brms} package.
 }
 \details{
 Created by Philipp Doebler (doebler@statistik.tu-dortmund.de) and Loreen
@@ -61,8 +91,8 @@ Sabel (loreen.sabel@tu-dortmund.de).
 }
 \examples{
 \dontrun{
-library(brms)
-library(rstan)
+library("brms")
+library("rstan")
 
 coef_bayesianMixedEffectsGRM_gam <- coef(bayesianMixedEffectsGRM_gam)
 str(coef_bayesianMixedEffectsGRM_gam)
@@ -73,16 +103,79 @@ theta_seq <- seq(-4, 4, length.out = 201)
 
 # item information for all items
 # The resulting matrix has length(theta_seq) columns and a row per item.
-# We use a loop for the calcualtions
+# We use a loop for the calculations
 item_info <- matrix(NA, nrow = nrow(itempars), ncol = length(theta_seq))
 for(i in 1:nrow(itempars)){
   item_info[i, ] <- item_info_NB_zero_analytical(
-    theta_seq,
-    itempars[i, "alpha_Intercept"],
-    itempars[i, "beta_Intercept"],
-    exp(itempars[i, "shape_Intercept"]),
-    plogis(itempars[i, "zi_Intercept"]))
+    theta = theta_seq,
+    alpha = itempars[i, "alpha_Intercept"],
+    beta = itempars[i, "beta_Intercept"],
+    phi = exp(itempars[i, "shape_Intercept"]),
+    varpi = plogis(itempars[i, "zi_Intercept"]))
 }
+
+test_info <- data.frame(
+  theta = theta_seq,
+  testInformation = colSums(item_info)
+)
+
+# Or, alternatively:
+test_info_NB(
+  theta = compareTestInfo$theta,
+  alpha = itempars[,"alpha_Intercept"],
+  beta = itempars[,"beta_Intercept"],
+  phi = exp(itempars[,"shape_Intercept"]),
+  varpi = plogis(itempars[,"zi_Intercept"]),
+  zero = TRUE)
+
+# Test Standard Error of Measurement in Different Theta Ranges
+error_variance_NB(
+  lower = -4,
+  upper = 4,
+  alpha = itempars[,"alpha_Intercept"],
+  beta = itempars[,"beta_Intercept"],
+  phi = exp(itempars[,"shape_Intercept"]),
+  varpi = plogis(itempars[,"zi_Intercept"]),
+  zero = TRUE
+)
+
+error_variance_NB(
+  lower = -4,
+  upper = 0,
+  alpha = itempars[,"alpha_Intercept"],
+  beta = itempars[,"beta_Intercept"],
+  phi = exp(itempars[,"shape_Intercept"]),
+  varpi = plogis(itempars[,"zi_Intercept"]),
+  zero = TRUE
+)
+
+error_variance_NB(
+  lower = 0,
+  upper = 1.5,
+  alpha = itempars[,"alpha_Intercept"],
+  beta = itempars[,"beta_Intercept"],
+  phi = exp(itempars[,"shape_Intercept"]),
+  varpi = plogis(itempars[,"zi_Intercept"]),
+  zero = TRUE
+)
+
+error_variance_NB(
+  lower = 1.5,
+  upper = 4,
+  alpha = itempars[,"alpha_Intercept"],
+  beta = itempars[,"beta_Intercept"],
+  phi = exp(itempars[,"shape_Intercept"]),
+  varpi = plogis(itempars[,"zi_Intercept"]),
+  zero = TRUE
+)
+
+# One-Number Summary of Test Reliability
+reliability_NB(
+  alpha = itempars[,"alpha_Intercept"],
+  beta = itempars[,"beta_Intercept"],
+  phi = exp(itempars[,"shape_Intercept"]),
+  varpi = plogis(itempars[,"zi_Intercept"]),
+  zero = TRUE)
 }
 }
 \seealso{
