@@ -42,6 +42,7 @@ Other IRT:
 \code{\link{discriminationToFactorLoading}()},
 \code{\link{fourPL}()},
 \code{\link{reliabilityIRT}()},
-\code{\link{standardErrorIRT}()}
+\code{\link{standardErrorIRT}()},
+\code{\link{test_info_4PL}()}
 }
 \concept{IRT}

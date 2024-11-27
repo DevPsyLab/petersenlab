@@ -146,13 +146,16 @@ reference:
   contents:
   - fourPL
   - discriminationToFactorLoading
+  - error_variance_4PL
   - error_variance_NB
   - item_info_NB_zero_analytical
   - item_info_NB_analytical
   - itemInformation
   - reliabilityIRT
+  - reliability_4PL
   - reliability_NB
   - standardErrorIRT
+  - test_info_4PL
   - test_info_NB
 
 - subtitle: Structural Equation Modeling (SEM)
