@@ -42,7 +42,7 @@ Description: A collection of R functions that are widely used by the Petersen
     useful functions. By making the package available, we hope to make our
     methods reproducible and replicable by others and to help others perform
     their data processing and analysis methods more easily and efficiently. The
-    codebase is provided in Petersen (2024) <doi:10.5281/zenodo.7602890> and on
+    codebase is provided in Petersen (2025) <doi:10.5281/zenodo.7602890> and on
     CRAN: <doi: 10.32614/CRAN.package.petersenlab>. The package is described in
     "Principles of Psychological Assessment: With Applied Examples in R"
     (Petersen, 2024, 2025) <doi:10.1201/9781003357421>,

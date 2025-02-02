@@ -5,7 +5,7 @@ bibentry(
     person("Isaac T.", "Petersen",
            email = "isaac-t-petersen@uiowa.edu",
            comment = c(ORCID = "0000-0003-3072-6673"))),
-  year     = 2024,
+  year     = 2025,
   doi      = "10.32614/CRAN.package.petersenlab",
   note     = "R package version 1.1.0, https://devpsylab.github.io/petersenlab/",
   url      = "https://github.com/DevPsyLab/petersenlab",
