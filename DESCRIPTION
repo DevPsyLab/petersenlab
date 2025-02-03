@@ -43,8 +43,8 @@ Description: A collection of R functions that are widely used by the Petersen
     methods reproducible and replicable by others and to help others perform
     their data processing and analysis methods more easily and efficiently. The
     codebase is provided in Petersen (2025) <doi:10.5281/zenodo.7602890> and on
-    CRAN: <doi: 10.32614/CRAN.package.petersenlab>. The package is described in
-    "Principles of Psychological Assessment: With Applied Examples in R"
+    'CRAN': <doi: 10.32614/CRAN.package.petersenlab>. The package is described
+    in "Principles of Psychological Assessment: With Applied Examples in R"
     (Petersen, 2024, 2025) <doi:10.1201/9781003357421>,
     <doi:10.25820/work.007199>, <doi:10.5281/zenodo.6466589>.
 URL: https://github.com/DevPsyLab/petersenlab, https://devpsylab.github.io/petersenlab/
