@@ -169,9 +169,10 @@ semPlotInteraction <- function(data, fit, predictor, centered_predictor, moderat
   }
 
   # Append NA columns for any model-included variables that are ignored for plotting purposes
+  if (!is.null(ignore)) {
   ignoreVars <- data.frame(matrix(ncol = length(ignore), nrow = nrow(impliedData)))
   impliedData <- cbind(impliedData, ignoreVars) %>% data.frame()
-  
+  }
   # Rename columns for model-based calculations
   colnames(impliedData) <- c("predictor_factor", "moderator_factor", predictor, moderator, centered_predictor, centered_moderator, interaction, outcome, covariates, ignore)
   
