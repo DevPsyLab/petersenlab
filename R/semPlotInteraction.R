@@ -25,6 +25,9 @@
 #' @param covariates default NULL; a vector of the names of the covariate
 #' variables as they appear in the model object syntax in lavaan (each in
 #' quotes)
+#' @param ignore default NULL; a vector of the names of any variables
+#' (as they appear in the model object syntax in lavaan) to ignore when 
+#' creating model implied predicted data (each in quotes)
 #' @param predStr default NULL; optional addition of an x-axis title for the
 #' name of the predictor variable (in quotes); if left unset,
 #' plot label will default to "Predictor"
@@ -84,7 +87,8 @@
 #'   centered_moderator = "Murder_centered",
 #'   interaction = "interaction",
 #'   outcome = "Income_rescaled",
-#'   covariates = "HS.Grad")
+#'   covariates = "HS.Grad",
+#'   ignore = NULL,)
 #'
 #' # Pass model to function (labeled plot)
 #' semPlotInteraction(
@@ -97,11 +101,12 @@
 #'   interaction = "interaction",
 #'   outcome = "Income_rescaled",
 #'   covariates = "HS.Grad",
+#'   ignore = NULL,
 #'   predStr = "Illiteracy Level",
 #'   modStr = "Murder Rate",
 #'   outStr = "Income")
 
-semPlotInteraction <- function(data, fit, predictor, centered_predictor, moderator, centered_moderator, interaction, outcome, covariates = NULL, predStr = NULL, modStr = NULL, outStr = NULL) {
+semPlotInteraction <- function(data, fit, predictor, centered_predictor, moderator, centered_moderator, interaction, outcome, covariates = NULL, ignore = NULL, predStr = NULL, modStr = NULL, outStr = NULL) {
 
   # Create data template
   impliedData <- expand.grid(
@@ -163,9 +168,14 @@ semPlotInteraction <- function(data, fit, predictor, centered_predictor, moderat
     }
   }
 
+  # Append NA columns for any model-included variables that are ignored for plotting purposes
+  if (!is.null(ignore)) {
+  ignoreVars <- data.frame(matrix(ncol = length(ignore), nrow = nrow(impliedData)))
+  impliedData <- cbind(impliedData, ignoreVars) %>% data.frame()
+  }
   # Rename columns for model-based calculations
-  colnames(impliedData) <- c("predictor_factor", "moderator_factor", predictor, moderator, centered_predictor, centered_moderator, interaction, outcome, covariates)
-
+  colnames(impliedData) <- c("predictor_factor", "moderator_factor", predictor, moderator, centered_predictor, centered_moderator, interaction, outcome, covariates, ignore)
+  
   # Locate columns for calculations and plotting
   predCol_new <- match(predictor, names(impliedData))
   modCol_new <- match(moderator, names(impliedData))
