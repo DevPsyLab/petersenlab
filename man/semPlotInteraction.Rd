@@ -14,6 +14,7 @@ semPlotInteraction(
   interaction,
   outcome,
   covariates = NULL,
+  ignore = NULL,
   predStr = NULL,
   modStr = NULL,
   outStr = NULL
@@ -45,6 +46,10 @@ model object syntax in lavaan (in quotes)}
 \item{covariates}{default NULL; a vector of the names of the covariate
 variables as they appear in the model object syntax in lavaan (each in
 quotes)}
+
+\item{ignore}{default NULL; a vector of the names of any variables
+(as they appear in the model object syntax in lavaan) to ignore when
+creating model implied predicted data (each in quotes)}
 
 \item{predStr}{default NULL; optional addition of an x-axis title for the
 name of the predictor variable (in quotes); if left unset,
