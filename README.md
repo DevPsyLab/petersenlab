@@ -1,7 +1,7 @@
 # `petersenlab`
 
 <!-- badges: start -->
-  [![Number of CRAN Downloads](https://cranlogs.r-pkg.org/badges/grand-total/petersenlab)](https://doi.org/10.32614/CRAN.package.petersenlab)
+  [![Number of Downloads from CRAN](https://cranlogs.r-pkg.org/badges/grand-total/petersenlab)](https://doi.org/10.32614/CRAN.package.petersenlab)
   
   [![R-CMD-check](https://github.com/DevPsyLab/petersenlab/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/DevPsyLab/petersenlab/actions/workflows/R-CMD-check.yaml)
   <!-- badges: end -->
