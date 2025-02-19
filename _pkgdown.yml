@@ -191,6 +191,7 @@ reference:
   - plot2WayInteraction
   - ppPlot
   - update_nested
+  - semPlotInteraction
 
 - title: Packages
   contents:
@@ -202,6 +203,7 @@ reference:
   - addText
   - plot2WayInteraction
   - ppPlot
+  - semPlotInteraction
   - vwReg
 
 - title: Psychometrics
