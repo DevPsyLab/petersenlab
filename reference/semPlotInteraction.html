@@ -15,7 +15,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">petersenlab</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.1.0</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.1.1</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -57,6 +57,7 @@
 <span>  <span class="va">interaction</span>,</span>
 <span>  <span class="va">outcome</span>,</span>
 <span>  covariates <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  ignore <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  predStr <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  modStr <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  outStr <span class="op">=</span> <span class="cn">NULL</span></span>
@@ -109,6 +110,12 @@ model object syntax in lavaan (in quotes)</p></dd>
 <dd><p>default NULL; a vector of the names of the covariate
 variables as they appear in the model object syntax in lavaan (each in
 quotes)</p></dd>
+
+
+<dt id="arg-ignore">ignore<a class="anchor" aria-label="anchor" href="#arg-ignore"></a></dt>
+<dd><p>default NULL; a vector of the names of any variables
+(as they appear in the model object syntax in lavaan) to ignore when
+creating model implied predicted data (each in quotes)</p></dd>
 
 
 <dt id="arg-predstr">predStr<a class="anchor" aria-label="anchor" href="#arg-predstr"></a></dt>
