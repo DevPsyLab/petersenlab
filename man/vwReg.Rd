@@ -153,9 +153,9 @@ vwReg(y ~ x, df, quantize = "SD") # 1-2-3-SD plot
 
 }
 \seealso{
-\url{https://www.nicebread.de/visually-weighted-regression-in-r-a-la-solomon-hsiang/}
+\url{https://web.archive.org/web/20250113033713/https://www.nicebread.de/visually-weighted-regression-in-r-a-la-solomon-hsiang/}
 
-\url{https://www.nicebread.de/visually-weighted-watercolor-plots-new-variants-please-vote/}
+\url{https://web.archive.org/web/20250113022046/https://www.nicebread.de/visually-weighted-watercolor-plots-new-variants-please-vote/}
 
 \url{http://www.fight-entropy.com/2012/07/visually-weighted-regression.html}
 
