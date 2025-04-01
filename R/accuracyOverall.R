@@ -21,6 +21,7 @@
 #' \itemize{
 #'   \item \code{ME} = mean error
 #'   \item \code{MAE} = mean absolute error
+#'   \item \code{MdAE} = median absolute error
 #'   \item \code{MSE} = mean squared error
 #'   \item \code{RMSE} = root mean squared error
 #'   \item \code{MPE} = mean percentage error
@@ -61,31 +62,37 @@
 #' @export
 accuracyOverall <- function(predicted, actual, dropUndefined = FALSE){
 
-  #Mean error
+  # Mean error (ME)
   meanError <- function(predicted, actual){
     value <- mean(predicted - actual, na.rm = TRUE)
     return(value)
   }
 
-  #Mean Absolute Error
+  # Mean Absolute Error (MAE)
   meanAbsoluteError <- function(predicted, actual){
     value <- mean(abs(predicted - actual), na.rm = TRUE)
     return(value)
   }
 
-  #Mean Squared Error
+  # Median Absolute Error (MdAE)
+  medianAbsoluteError <- function(predicted, actual){
+    value <- median(abs(predicted - actual), na.rm = TRUE)
+    return(value)
+  }
+
+  # Mean Squared Error (MSE)
   meanSquaredError = function(predicted, actual){
     value <- mean((predicted - actual)^2, na.rm = TRUE)
     return(value)
   }
 
-  #Root Mean Squared Error
+  # Root Mean Squared Error (RMSE)
   rootMeanSquaredError = function(predicted, actual){
     value <- sqrt(mean((predicted - actual)^2, na.rm = TRUE))
     return(value)
   }
 
-  #Mean Percentage Error
+  # Mean Percentage Error (MPE)
   meanPercentageError = function(predicted, actual, dropUndefined = dropUndefined){
     percentageError <- 100 * (actual - predicted) / actual
 
@@ -97,7 +104,7 @@ accuracyOverall <- function(predicted, actual, dropUndefined = FALSE){
     return(value)
   }
 
-  #Mean Absolute Percentage Error (MAPE)
+  # Mean Absolute Percentage Error (MAPE)
   meanAbsolutePercentageError = function(predicted, actual, dropUndefined = dropUndefined){
     percentageError <- 100 * (actual - predicted) / actual
 
@@ -109,7 +116,7 @@ accuracyOverall <- function(predicted, actual, dropUndefined = FALSE){
     return(value)
   }
 
-  #Symmetric Mean Absolute Percentage Error (sMAPE)
+  # Symmetric Mean Absolute Percentage Error (sMAPE)
   symmetricMeanAbsolutePercentageError = function(predicted, actual, dropUndefined = dropUndefined){
     relativeError <- abs(predicted - actual)/(abs(predicted) + abs(actual))
 
@@ -121,7 +128,7 @@ accuracyOverall <- function(predicted, actual, dropUndefined = FALSE){
     return(value)
   }
 
-  #Mean Absolute Scaled Error (MASE)
+  # Mean Absolute Scaled Error (MASE)
   meanAbsoluteScaledError <- function(predicted, actual){
     mydata <- data.frame(na.omit(cbind(predicted, actual)))
 
@@ -133,7 +140,7 @@ accuracyOverall <- function(predicted, actual, dropUndefined = FALSE){
     return(value)
   }
 
-  #Root Mean Squared Log Error
+  # Root Mean Squared Log Error (RMSLE)
   rootMeanSquaredLogError <- function(predicted, actual, dropUndefined = dropUndefined){
     logError <- log(predicted + 1) - log(actual + 1)
 
@@ -146,7 +153,7 @@ accuracyOverall <- function(predicted, actual, dropUndefined = FALSE){
     return(value)
   }
 
-  #predictive residual sum of squares (PRESS)
+  # Predictive residual sum of squares (PRESS)
   PRESS <- function(linear.model){
     # calculate the predictive residuals
     pr <- residuals(linear.model)/(1-lm.influence(linear.model)$hat)
@@ -156,9 +163,9 @@ accuracyOverall <- function(predicted, actual, dropUndefined = FALSE){
     return(PRESS)
   }
 
-  #Predictive R-squared
+  # Predictive R-squared
   predictiveRSquared <- function(predicted, actual){
-    #fit linear model
+    # fit linear model
     linear.model <- lm(actual ~ predicted)
 
     # use anova() to get the sum of squares for the linear model
@@ -173,43 +180,46 @@ accuracyOverall <- function(predicted, actual, dropUndefined = FALSE){
     return(value)
   }
 
-  #Mean Error
+  # Mean Error (ME)
   ME <- meanError(predicted = predicted, actual = actual)
 
-  #Mean Absolute Error
+  # Mean Absolute Error (MAE)
   MAE <- meanAbsoluteError(predicted = predicted, actual = actual)
 
-  #Mean Squared Error
+  # Median Absolute Error (MdAE)
+  MdAE <- medianAbsoluteError(predicted = predicted, actual = actual)
+
+  # Mean Squared Error (MSE)
   MSE <- meanSquaredError(predicted = predicted, actual = actual)
 
-  #Root Mean Squared Error
+  # Root Mean Squared Error (RMSE)
   RMSE <- rootMeanSquaredError(predicted = predicted, actual = actual)
 
-  #Mean Percentage Error
+  # Mean Percentage Error (MPE)
   MPE <- meanPercentageError(predicted = predicted, actual = actual, dropUndefined = dropUndefined)
 
-  #Mean Absolute Percentage Error
+  # Mean Absolute Percentage Error (MAPE)
   MAPE <- meanAbsolutePercentageError(predicted = predicted, actual = actual, dropUndefined = dropUndefined)
 
-  #Symmetric Mean Absolute Percentage Error
+  # Symmetric Mean Absolute Percentage Error (sMAPE)
   sMAPE <- symmetricMeanAbsolutePercentageError(predicted = predicted, actual = actual, dropUndefined = dropUndefined)
 
-  #Mean Absolute Scaled Error
+  # Mean Absolute Scaled Error (MASE)
   MASE <- meanAbsoluteScaledError(predicted = predicted, actual = actual)
 
-  #Root Mean Squared Log Error
+  # Root Mean Squared Log Error (RMSLE)
   RMSLE <- rootMeanSquaredLogError(predicted = predicted, actual = actual, dropUndefined = dropUndefined)
 
-  #Coefficient of Determination (R-squared)
+  # Coefficient of Determination (R-squared)
   rsquared <- summary(lm(actual ~ predicted))$r.squared
 
-  #Adjusted R-squared
+  # Adjusted R-squared
   rsquaredAdj <- summary(lm(actual ~ predicted))$adj.r.squared
 
-  #Predictive R-squared
+  # Predictive R-squared
   rsquaredPredictive <- predictiveRSquared(predicted = predicted, actual = actual)
 
-  accuracyTable <- data.frame(cbind(ME, MAE, MSE, RMSE, MPE, MAPE, sMAPE, MASE, RMSLE, rsquared, rsquaredAdj, rsquaredPredictive))
+  accuracyTable <- data.frame(cbind(ME, MAE, MdAE, MSE, RMSE, MPE, MAPE, sMAPE, MASE, RMSLE, rsquared, rsquaredAdj, rsquaredPredictive))
 
   return(accuracyTable)
 }

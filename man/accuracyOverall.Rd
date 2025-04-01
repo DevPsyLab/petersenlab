@@ -21,6 +21,7 @@ any undefined values calculated with the accuracy indices.}
 \itemize{
   \item \code{ME} = mean error
   \item \code{MAE} = mean absolute error
+  \item \code{MdAE} = median absolute error
   \item \code{MSE} = mean squared error
   \item \code{RMSE} = root mean squared error
   \item \code{MPE} = mean percentage error
