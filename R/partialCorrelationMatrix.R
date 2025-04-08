@@ -394,13 +394,10 @@ partialcor.table <- function(x, y, z = NULL, type = "none", dig = 2, correlation
   r.manuscriptBig <- data.frame(r.manuscriptBig)
 
   if(missing(type)){
-    print(r.table, quote = FALSE)
     returnTable <- r.table
   } else if(type=="none"){
-    print(r.table, quote = FALSE)
     returnTable <- r.table
   } else if(type=="latexSPSS"){
-    print(r.table, quote = FALSE)
     returnTable <- r.table
   } else if (type=="latex"){
     returnTable <- xtable(r.table[1:(dim(r.table)[1]/3)*3-2,])
