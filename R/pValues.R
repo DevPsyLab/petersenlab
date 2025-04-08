@@ -25,7 +25,10 @@ pValue <- function(value, digits = 3){
   if(value < .001){
     newValue <- "< .001"
   } else {
-    newValue <- paste("=", suppressLeadingZero(specify_decimal(value, digits)), sep = "")
+    newValue <- paste(
+      "=",
+      apa(value, decimals = digits, leading = FALSE),
+      sep = "")
   }
   return(newValue)
 }
