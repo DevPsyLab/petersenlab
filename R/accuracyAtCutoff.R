@@ -169,12 +169,37 @@ accuracyAtCutoff <- function(predicted, actual, cutoff, UH = NULL, UM = NULL, UC
 
     bin <- NULL
 
-    calibrationTable <- mutate(data, bin = cut_number(predicted, n = bins)) |>
+    # Determine adaptively how many bins to use (if errors out with 10 bins)
+    adaptive_num_bins <- function(x, min_bins = 1) {
+      current_bins <- bins
+
+      repeat {
+        try_result <- tryCatch(
+          cut_number(x, n = current_bins),
+          error = function(e) NULL
+        )
+
+        if (!is.null(try_result)) {
+          return(current_bins)
+        }
+
+        current_bins <- current_bins - 1
+        if (current_bins < min_bins) {
+          stop("Could not find a valid binning using cut_number() with the given range of bins.")
+        }
+      }
+    }
+
+    # Get the number of bins used
+    binsToUse <- adaptive_num_bins(predicted)
+
+    calibrationTable <- mutate(data, bin = cut_number(predicted, n = binsToUse)) |>
       group_by(bin) |>
-      summarise(n = length(predicted),
-                meanPredicted = mean(predicted, na.rm = TRUE),
-                meanObserved = mean(actual, na.rm = TRUE),
-                .groups = "drop")
+      summarise(
+        n = length(predicted),
+        meanPredicted = mean(predicted, na.rm = TRUE),
+        meanObserved = mean(actual, na.rm = TRUE),
+        .groups = "drop")
 
     calibrationTable$cutoffMin <- as.numeric(str_replace_all(str_split(calibrationTable$bin, pattern = ",", simplify = T)[,1], "[^0-9.]",""))
     calibrationTable$cutoffMax <- as.numeric(str_replace_all(str_split(calibrationTable$bin, pattern = ",", simplify = T)[,2], "[^0-9.]",""))
@@ -196,7 +221,10 @@ accuracyAtCutoff <- function(predicted, actual, cutoff, UH = NULL, UM = NULL, UC
     return(differenceBetweenPredictedAndObserved)
   }
 
-  differenceBetweenPredictedAndObserved <- miscalibration(predicted = predicted, actual = actual, cutoff = cutoff)
+  differenceBetweenPredictedAndObserved <- miscalibration(
+    predicted = predicted,
+    actual = actual,
+    cutoff = cutoff)
 
   G <- BR*(HR) + (1 - BR)*(FAR)
   informationGain <- (BR*HR*log2(HR/G)) +
@@ -204,8 +232,9 @@ accuracyAtCutoff <- function(predicted, actual, cutoff, UH = NULL, UM = NULL, UC
     ((1 - BR)*FAR*(log2(FAR/G))) +
     ((1 - BR)*(1 - FAR)*(log2((1 - FAR)/(1 - G))))
 
-  accuracyTable <- data.frame(cbind(cutoff, TP, TN, FP, FN, SR, BR, percentAccuracy, percentAccuracyByChance, percentAccuracyPredictingFromBaseRate, RIOC, relativeImprovementOverPredictingFromBaseRate, SN, SP, TPrate, TNrate, FNrate, FPrate, HR, FAR, PPV, NPV, FDR, FOR,
-                                    youdenJ, balancedAccuracy, f1Score, mcc, diagnosticOddsRatio, positiveLikelihoodRatio, negativeLikelihoodRatio, dPrimeSDT, betaSDT, cSDT, aSDT, bSDT, differenceBetweenPredictedAndObserved, informationGain))
+  accuracyTable <- data.frame(cbind(
+    cutoff, TP, TN, FP, FN, SR, BR, percentAccuracy, percentAccuracyByChance, percentAccuracyPredictingFromBaseRate, RIOC, relativeImprovementOverPredictingFromBaseRate, SN, SP, TPrate, TNrate, FNrate, FPrate, HR, FAR, PPV, NPV, FDR, FOR,
+    youdenJ, balancedAccuracy, f1Score, mcc, diagnosticOddsRatio, positiveLikelihoodRatio, negativeLikelihoodRatio, dPrimeSDT, betaSDT, cSDT, aSDT, bSDT, differenceBetweenPredictedAndObserved, informationGain))
 
   if(!is.null(UH) & !is.null(UM) & !is.null(UCR) & !is.null(UFA)){
     accuracyTable$overallUtility <- (BR*HR*UH) + (BR*(1 - HR)*UM) + ((1 - BR)*FAR*UFA) + ((1 - BR)*(1 - FAR)*(UCR))
