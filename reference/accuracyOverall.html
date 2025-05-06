@@ -13,7 +13,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">petersenlab</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.1.3</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.1.4</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -80,8 +80,9 @@ any undefined values calculated with the accuracy indices.</p></dd>
 <li><p><code>MASE</code> = mean absolute scaled error</p></li>
 <li><p><code>RMSLE</code> = root mean squared log error</p></li>
 <li><p><code>rsquared</code> = <em>R</em>-squared</p></li>
-<li><p><code>rsquaredAdj</code> = adjusted <em>R</em>-squared</p></li>
-<li><p><code>rsquaredPredictive</code> = predictive <em>R</em>-squared</p></li>
+<li><p><code>rsquaredAsPredictor</code> = <em>R</em>-squared using the values as a predictor</p></li>
+<li><p><code>rsquaredAdjAsPredictor</code> = adjusted <em>R</em>-squared using the values as a predictor</p></li>
+<li><p><code>rsquaredPredictiveAsPredictor</code> = predictive <em>R</em>-squared using the values as a predictor</p></li>
 </ul></div>
     <div class="section level2">
     <h2 id="details">Details<a class="anchor" aria-label="anchor" href="#details"></a></h2>
@@ -113,8 +114,10 @@ option at your own risk!</p>
 <span class="r-in"><span><span class="fu">accuracyOverall</span><span class="op">(</span>predicted <span class="op">=</span> <span class="va">USArrests</span><span class="op">$</span><span class="va">Assault</span>, actual <span class="op">=</span> <span class="va">USArrests</span><span class="op">$</span><span class="va">Murder</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>        ME     MAE   MdAE      MSE    RMSE       MPE     MAPE    sMAPE    MASE</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 1 162.972 162.972 152.85 32814.24 181.147 -2382.823 2382.823 91.16591 44.6861</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      RMSLE  rsquared rsquaredAdj rsquaredPredictive</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1 2.990233 0.6430008   0.6355633          0.6163406</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      RMSLE  rsquared rsquaredAsPredictor rsquaredAdjAsPredictor</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1 2.990233 -1764.055           0.6430008              0.6355633</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   rsquaredPredictiveAsPredictor</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1                     0.6163406</span>
 <span class="r-in"><span><span class="fu">wisdomOfCrowd</span><span class="op">(</span>predicted <span class="op">=</span> <span class="va">USArrests</span><span class="op">$</span><span class="va">Assault</span>, actual <span class="op">=</span> <span class="fl">200</span><span class="op">)</span></span></span>
 <span class="r-wrn co"><span class="r-pr">#&gt;</span> <span class="warning">Warning: </span>essentially perfect fit: summary may be unreliable</span>
 <span class="r-wrn co"><span class="r-pr">#&gt;</span> <span class="warning">Warning: </span>essentially perfect fit: summary may be unreliable</span>
@@ -140,7 +143,7 @@ option at your own risk!</p>
 </div>
 
 <div class="pkgdown-footer-right">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.2.</p>
 </div>
 
     </footer></div>
