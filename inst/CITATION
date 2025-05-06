@@ -7,7 +7,7 @@ bibentry(
            comment = c(ORCID = "0000-0003-3072-6673"))),
   year     = 2025,
   doi      = "10.32614/CRAN.package.petersenlab",
-  note     = "R package version 1.1.3, https://devpsylab.github.io/petersenlab/",
+  note     = "R package version 1.1.4, https://devpsylab.github.io/petersenlab/",
   url      = "https://github.com/DevPsyLab/petersenlab",
   key      = "petersenlab"
 )
