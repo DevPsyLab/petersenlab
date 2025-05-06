@@ -30,8 +30,9 @@ any undefined values calculated with the accuracy indices.}
   \item \code{MASE} = mean absolute scaled error
   \item \code{RMSLE} = root mean squared log error
   \item \code{rsquared} = \emph{R}-squared
-  \item \code{rsquaredAdj} = adjusted \emph{R}-squared
-  \item \code{rsquaredPredictive} = predictive \emph{R}-squared
+  \item \code{rsquaredAsPredictor} = \emph{R}-squared using the values as a predictor
+  \item \code{rsquaredAdjAsPredictor} = adjusted \emph{R}-squared using the values as a predictor
+  \item \code{rsquaredPredictiveAsPredictor} = predictive \emph{R}-squared using the values as a predictor
 }
 }
 \description{

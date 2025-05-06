@@ -30,8 +30,9 @@
 #'   \item \code{MASE} = mean absolute scaled error
 #'   \item \code{RMSLE} = root mean squared log error
 #'   \item \code{rsquared} = \emph{R}-squared
-#'   \item \code{rsquaredAdj} = adjusted \emph{R}-squared
-#'   \item \code{rsquaredPredictive} = predictive \emph{R}-squared
+#'   \item \code{rsquaredAsPredictor} = \emph{R}-squared using the values as a predictor
+#'   \item \code{rsquaredAdjAsPredictor} = adjusted \emph{R}-squared using the values as a predictor
+#'   \item \code{rsquaredPredictiveAsPredictor} = predictive \emph{R}-squared using the values as a predictor
 #' }
 #'
 #' @family accuracy
@@ -153,6 +154,17 @@ accuracyOverall <- function(predicted, actual, dropUndefined = FALSE){
     return(value)
   }
 
+  rsquare <- function(predicted, actual){
+    mydata <- data.frame(na.omit(cbind(predicted, actual)))
+
+    ss_res <- sum((mydata$actual - mydata$predicted)^2)
+    ss_tot <- sum((mydata$actual - mean(mydata$actual))^2)
+
+    value <- 1 - (ss_res / ss_tot)
+
+    return(value)
+  }
+
   # Predictive residual sum of squares (PRESS)
   PRESS <- function(linear.model){
     # calculate the predictive residuals
@@ -210,16 +222,21 @@ accuracyOverall <- function(predicted, actual, dropUndefined = FALSE){
   # Root Mean Squared Log Error (RMSLE)
   RMSLE <- rootMeanSquaredLogError(predicted = predicted, actual = actual, dropUndefined = dropUndefined)
 
-  # Coefficient of Determination (R-squared)
-  rsquared <- summary(lm(actual ~ predicted))$r.squared
+  #Coefficient of Determination (R-squared)
+  rsquared <- rsquare(predicted = predicted, actual = actual)
 
-  # Adjusted R-squared
-  rsquaredAdj <- summary(lm(actual ~ predicted))$adj.r.squared
+  # Coefficient of Determination (R-squared) with the values as a predictor
+  rsquaredAsPredictor <- summary(lm(actual ~ predicted))$r.squared
 
-  # Predictive R-squared
-  rsquaredPredictive <- predictiveRSquared(predicted = predicted, actual = actual)
+  # Adjusted R-squared with the values as a predictor
+  rsquaredAdjAsPredictor <- summary(lm(actual ~ predicted))$adj.r.squared
 
-  accuracyTable <- data.frame(cbind(ME, MAE, MdAE, MSE, RMSE, MPE, MAPE, sMAPE, MASE, RMSLE, rsquared, rsquaredAdj, rsquaredPredictive))
+  # Predictive R-squared with the values as a predictor
+  rsquaredPredictiveAsPredictor <- predictiveRSquared(predicted = predicted, actual = actual)
+
+  accuracyTable <- data.frame(cbind(
+    ME, MAE, MdAE, MSE, RMSE, MPE, MAPE, sMAPE, MASE, RMSLE,
+    rsquared, rsquaredAsPredictor, rsquaredAdjAsPredictor, rsquaredPredictiveAsPredictor))
 
   return(accuracyTable)
 }
@@ -258,7 +275,7 @@ wisdomOfCrowd <- function(predicted, actual, dropUndefined = FALSE){
     accuracyTable_crowdAverage
   )
 
-  accuracyTableOverall <- accuracyTableOverall[,!(names(accuracyTableOverall) %in% c("rsquared","rsquaredAdj","rsquaredPredictive"))]
+  accuracyTableOverall <- accuracyTableOverall[,!(names(accuracyTableOverall) %in% c("rsquared","rsquaredAsPredictor","rsquaredAdjAsPredictor","rsquaredPredictiveAsPredictor"))]
 
   accuracyTableOverall$bracketingRate <- bracketing_rate(
     predicted = predicted,
