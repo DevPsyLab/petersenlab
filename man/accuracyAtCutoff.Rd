@@ -5,9 +5,13 @@
 \title{Accuracy at a Given Cutoff.}
 \usage{
 accuracyAtCutoff(
-  predicted,
-  actual,
-  cutoff,
+  predicted = NULL,
+  actual = NULL,
+  cutoff = NULL,
+  TP = NULL,
+  TN = NULL,
+  FP = NULL,
+  FN = NULL,
   UH = NULL,
   UM = NULL,
   UCR = NULL,
@@ -22,6 +26,14 @@ accuracyAtCutoff(
 
 \item{cutoff}{numeric value at or above which the target condition is
 considered present.}
+
+\item{TP}{number of true positive cases.}
+
+\item{TN}{number of true negative cases.}
+
+\item{FP}{number of false positive cases.}
+
+\item{FN}{number of false negative cases.}
 
 \item{UH}{(optional) utility of hits (true positives), specified as a value
 from 0-1, where 1 is the most highly valued and 0 is the least valued.}
@@ -77,10 +89,10 @@ valued.}
   \item \code{cSDT} = c index from signal detection theory
   \item \code{aSDT} = a index from signal detection theory
   \item \code{bSDT} = b index from signal detection theory
-  \item \code{differenceBetweenPredictedAndObserved} = difference between
-  predicted and observed values
   \item \code{informationGain} = information gain
   \item \code{overallUtility} = overall utility (if utilities were specified)
+  \item \code{differenceBetweenPredictedAndObserved} = difference between
+  predicted and observed values
 }
 }
 \description{
@@ -89,12 +101,13 @@ Find the accuracy at a given cutoff. Actuals should be binary, where \code{1}
 }
 \details{
 Compute accuracy indices of predicted values in relation to actual values
-at a given cutoff by specifying the predicted values, actual values, and
-cutoff value. The target condition is considered present at or above the
-cutoff value. Optionally, you can also specify the utility of hits, misses,
-correct rejections, and false alarms to calculate the overall utility of the
-cutoff. To compute accuracy at each possible cutoff, see
-\link{accuracyAtEachCutoff}.
+at a given cutoff by specifying either a) the predicted values, actual
+values, and cutoff value, or b) the number of true positives (TP), true
+negatives (TN), false positives (FPs), and false negatives (FN). The target
+condition is considered present at or above the cutoff value. Optionally, you
+can also specify the utility of hits, misses, correct rejections, and false
+alarms to calculate the overall utility of the cutoff. To compute accuracy at
+each possible cutoff, see \link{accuracyAtEachCutoff}.
 }
 \examples{
 # Prepare Data
@@ -106,8 +119,12 @@ USArrests$highMurderState[which(USArrests$Murder < 10)] <- 0
 # Calculate Accuracy
 accuracyAtCutoff(predicted = USArrests$Assault,
   actual = USArrests$highMurderState, cutoff = 200)
+
 accuracyAtCutoff(predicted = USArrests$Assault,
   actual = USArrests$highMurderState, cutoff = 200,
+  UH = 1, UM = 0, UCR = .9, UFA = 0)
+
+accuracyAtCutoff(TP = 30, TN = 20, FP = 15, FN = 35,
   UH = 1, UM = 0, UCR = .9, UFA = 0)
 }
 \seealso{

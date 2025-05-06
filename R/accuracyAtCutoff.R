@@ -7,18 +7,23 @@
 #'
 #' @details
 #' Compute accuracy indices of predicted values in relation to actual values
-#' at a given cutoff by specifying the predicted values, actual values, and
-#' cutoff value. The target condition is considered present at or above the
-#' cutoff value. Optionally, you can also specify the utility of hits, misses,
-#' correct rejections, and false alarms to calculate the overall utility of the
-#' cutoff. To compute accuracy at each possible cutoff, see
-#' \link{accuracyAtEachCutoff}.
+#' at a given cutoff by specifying either a) the predicted values, actual
+#' values, and cutoff value, or b) the number of true positives (TP), true
+#' negatives (TN), false positives (FPs), and false negatives (FN). The target
+#' condition is considered present at or above the cutoff value. Optionally, you
+#' can also specify the utility of hits, misses, correct rejections, and false
+#' alarms to calculate the overall utility of the cutoff. To compute accuracy at
+#' each possible cutoff, see \link{accuracyAtEachCutoff}.
 #'
 #' @param predicted vector of continuous predicted values.
 #' @param actual vector of binary actual values (\code{1} = present and \code{0}
 #' = absent).
 #' @param cutoff numeric value at or above which the target condition is
 #' considered present.
+#' @param TP number of true positive cases.
+#' @param TN number of true negative cases.
+#' @param FP number of false positive cases.
+#' @param FN number of false negative cases.
 #' @param UH (optional) utility of hits (true positives), specified as a value
 #' from 0-1, where 1 is the most highly valued and 0 is the least valued.
 #' @param UM (optional) utility of misses (false negatives), specified as a
@@ -70,10 +75,10 @@
 #'   \item \code{cSDT} = c index from signal detection theory
 #'   \item \code{aSDT} = a index from signal detection theory
 #'   \item \code{bSDT} = b index from signal detection theory
-#'   \item \code{differenceBetweenPredictedAndObserved} = difference between
-#'   predicted and observed values
 #'   \item \code{informationGain} = information gain
 #'   \item \code{overallUtility} = overall utility (if utilities were specified)
+#'   \item \code{differenceBetweenPredictedAndObserved} = difference between
+#'   predicted and observed values
 #' }
 #'
 #' @family accuracy
@@ -95,19 +100,87 @@
 #' # Calculate Accuracy
 #' accuracyAtCutoff(predicted = USArrests$Assault,
 #'   actual = USArrests$highMurderState, cutoff = 200)
+#'
 #' accuracyAtCutoff(predicted = USArrests$Assault,
 #'   actual = USArrests$highMurderState, cutoff = 200,
 #'   UH = 1, UM = 0, UCR = .9, UFA = 0)
+#'
+#' accuracyAtCutoff(TP = 30, TN = 20, FP = 15, FN = 35,
+#'   UH = 1, UM = 0, UCR = .9, UFA = 0)
 
-accuracyAtCutoff <- function(predicted, actual, cutoff, UH = NULL, UM = NULL, UCR = NULL, UFA = NULL){
-  decision <- NA
-  decision[predicted < cutoff] <- 0
-  decision[predicted >= cutoff] <- 1
+accuracyAtCutoff <- function(predicted = NULL, actual = NULL, cutoff = NULL, TP = NULL, TN = NULL, FP = NULL, FN = NULL, UH = NULL, UM = NULL, UCR = NULL, UFA = NULL){
+  miscalibration <- function(predicted, actual, cutoff, bins = 10){
+    data <- data.frame(na.omit(cbind(predicted, actual)))
 
-  TP <- as.double(length(which(decision == 1 & actual == 1)))
-  TN <- as.double(length(which(decision == 0 & actual == 0)))
-  FP <- as.double(length(which(decision == 1 & actual == 0)))
-  FN <- as.double(length(which(decision == 0 & actual == 1)))
+    bin <- NULL
+
+    # Determine adaptively how many bins to use (if errors out with 10 bins)
+    adaptive_num_bins <- function(x, min_bins = 1) {
+      current_bins <- bins
+
+      repeat {
+        try_result <- tryCatch(
+          ggplot2::cut_number(x, n = current_bins),
+          error = function(e) NULL
+        )
+
+        if (!is.null(try_result)) {
+          return(current_bins)
+        }
+
+        current_bins <- current_bins - 1
+        if (current_bins < min_bins) {
+          stop("Could not find a valid binning using cut_number() with the given range of bins.")
+        }
+      }
+    }
+
+    # Get the number of bins used
+    binsToUse <- adaptive_num_bins(predicted)
+
+    calibrationTable <- mutate(data, bin = ggplot2::cut_number(predicted, n = binsToUse)) |>
+      group_by(bin) |>
+      summarise(
+        n = length(predicted),
+        meanPredicted = mean(predicted, na.rm = TRUE),
+        meanObserved = mean(actual, na.rm = TRUE),
+        .groups = "drop")
+
+    calibrationTable$cutoffMin <- as.numeric(str_replace_all(str_split(calibrationTable$bin, pattern = ",", simplify = T)[,1], "[^0-9.]",""))
+    calibrationTable$cutoffMax <- as.numeric(str_replace_all(str_split(calibrationTable$bin, pattern = ",", simplify = T)[,2], "[^0-9.]",""))
+
+    calibrationTable$inRange <- with(calibrationTable, cutoff >= cutoffMin & cutoff <= cutoffMax)
+
+    if(length(which(calibrationTable$inRange == TRUE)) > 0){
+      nearestCutoff <- calibrationTable$bin[min(which(calibrationTable$inRange == TRUE))]
+      calibrationAtNearestCutoff <- calibrationTable[which(calibrationTable$bin == nearestCutoff),]
+      calibrationAtNearestCutoff <- as.data.frame(calibrationTable[max(which(calibrationTable$inRange == TRUE)),])
+
+      meanPredicted <- calibrationAtNearestCutoff[, "meanPredicted"]
+      meanObserved <- calibrationAtNearestCutoff[, "meanObserved"]
+      differenceBetweenPredictedAndObserved <- meanPredicted - meanObserved
+    } else{
+      differenceBetweenPredictedAndObserved <- NA
+    }
+
+    return(differenceBetweenPredictedAndObserved)
+  }
+
+  if(!is.null(predicted) & !is.null(actual) & !is.null(cutoff)){
+    decision <- NA
+    decision[predicted < cutoff] <- 0
+    decision[predicted >= cutoff] <- 1
+
+    TP <- as.double(length(which(decision == 1 & actual == 1)))
+    TN <- as.double(length(which(decision == 0 & actual == 0)))
+    FP <- as.double(length(which(decision == 1 & actual == 0)))
+    FN <- as.double(length(which(decision == 0 & actual == 1)))
+
+    differenceBetweenPredictedAndObserved <- miscalibration(
+      predicted = predicted,
+      actual = actual,
+      cutoff = cutoff)
+  }
 
   N <- TP + TN + FP + FN
 
@@ -162,70 +235,6 @@ accuracyAtCutoff <- function(predicted, actual, cutoff, UH = NULL, UM = NULL, UC
   ifelse(FAR >= .5 & FAR <= HR, bSDT <- ((1 - FAR)^2 + (1 - HR))/((1 - FAR)^2 + (1 - FAR)), NA)
   ifelse(FAR > HR, bSDT <- NA, NA)
 
-  data <- data.frame(na.omit(cbind(predicted, actual, decision)))
-
-  miscalibration <- function(predicted, actual, cutoff, bins = 10){
-    data <- data.frame(na.omit(cbind(predicted, actual)))
-
-    bin <- NULL
-
-    # Determine adaptively how many bins to use (if errors out with 10 bins)
-    adaptive_num_bins <- function(x, min_bins = 1) {
-      current_bins <- bins
-
-      repeat {
-        try_result <- tryCatch(
-          cut_number(x, n = current_bins),
-          error = function(e) NULL
-        )
-
-        if (!is.null(try_result)) {
-          return(current_bins)
-        }
-
-        current_bins <- current_bins - 1
-        if (current_bins < min_bins) {
-          stop("Could not find a valid binning using cut_number() with the given range of bins.")
-        }
-      }
-    }
-
-    # Get the number of bins used
-    binsToUse <- adaptive_num_bins(predicted)
-
-    calibrationTable <- mutate(data, bin = cut_number(predicted, n = binsToUse)) |>
-      group_by(bin) |>
-      summarise(
-        n = length(predicted),
-        meanPredicted = mean(predicted, na.rm = TRUE),
-        meanObserved = mean(actual, na.rm = TRUE),
-        .groups = "drop")
-
-    calibrationTable$cutoffMin <- as.numeric(str_replace_all(str_split(calibrationTable$bin, pattern = ",", simplify = T)[,1], "[^0-9.]",""))
-    calibrationTable$cutoffMax <- as.numeric(str_replace_all(str_split(calibrationTable$bin, pattern = ",", simplify = T)[,2], "[^0-9.]",""))
-
-    calibrationTable$inRange <- with(calibrationTable, cutoff >= cutoffMin & cutoff <= cutoffMax)
-
-    if(length(which(calibrationTable$inRange == TRUE)) > 0){
-      nearestCutoff <- calibrationTable$bin[min(which(calibrationTable$inRange == TRUE))]
-      calibrationAtNearestCutoff <- calibrationTable[which(calibrationTable$bin == nearestCutoff),]
-      calibrationAtNearestCutoff <- as.data.frame(calibrationTable[max(which(calibrationTable$inRange == TRUE)),])
-
-      meanPredicted <- calibrationAtNearestCutoff[, "meanPredicted"]
-      meanObserved <- calibrationAtNearestCutoff[, "meanObserved"]
-      differenceBetweenPredictedAndObserved <- meanPredicted - meanObserved
-    } else{
-      differenceBetweenPredictedAndObserved <- NA
-    }
-
-    return(differenceBetweenPredictedAndObserved)
-  }
-
-  differenceBetweenPredictedAndObserved <- miscalibration(
-    predicted = predicted,
-    actual = actual,
-    cutoff = cutoff)
-
   G <- BR*(HR) + (1 - BR)*(FAR)
   informationGain <- (BR*HR*log2(HR/G)) +
     (BR*(1 - HR)*(log2((1 - HR)/(1 - G)))) +
@@ -234,10 +243,14 @@ accuracyAtCutoff <- function(predicted, actual, cutoff, UH = NULL, UM = NULL, UC
 
   accuracyTable <- data.frame(cbind(
     cutoff, TP, TN, FP, FN, SR, BR, percentAccuracy, percentAccuracyByChance, percentAccuracyPredictingFromBaseRate, RIOC, relativeImprovementOverPredictingFromBaseRate, SN, SP, TPrate, TNrate, FNrate, FPrate, HR, FAR, PPV, NPV, FDR, FOR,
-    youdenJ, balancedAccuracy, f1Score, mcc, diagnosticOddsRatio, positiveLikelihoodRatio, negativeLikelihoodRatio, dPrimeSDT, betaSDT, cSDT, aSDT, bSDT, differenceBetweenPredictedAndObserved, informationGain))
+    youdenJ, balancedAccuracy, f1Score, mcc, diagnosticOddsRatio, positiveLikelihoodRatio, negativeLikelihoodRatio, dPrimeSDT, betaSDT, cSDT, aSDT, bSDT, informationGain))
 
   if(!is.null(UH) & !is.null(UM) & !is.null(UCR) & !is.null(UFA)){
     accuracyTable$overallUtility <- (BR*HR*UH) + (BR*(1 - HR)*UM) + ((1 - BR)*FAR*UFA) + ((1 - BR)*(1 - FAR)*(UCR))
+  }
+
+  if(!is.null(predicted) & !is.null(actual) & !is.null(cutoff)){
+    accuracyTable$differenceBetweenPredictedAndObserved <- differenceBetweenPredictedAndObserved
   }
 
   return(accuracyTable)

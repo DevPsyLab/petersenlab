@@ -54,10 +54,10 @@
 #'   \item \code{cSDT} = c index from signal detection theory
 #'   \item \code{aSDT} = a index from signal detection theory
 #'   \item \code{bSDT} = b index from signal detection theory
-#'   \item \code{differenceBetweenPredictedAndObserved} = difference between
-#'   predicted and observed values
 #'   \item \code{informationGain} = information gain
 #'   \item \code{overallUtility} = overall utility (if utilities were specified)
+#'   \item \code{differenceBetweenPredictedAndObserved} = difference between
+#'   predicted and observed values
 #' }
 #'
 #' @family accuracy
