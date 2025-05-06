@@ -15,7 +15,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">petersenlab</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.1.4</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.1.5</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -48,9 +48,13 @@
     <div class="section level2">
     <h2 id="ref-usage">Usage<a class="anchor" aria-label="anchor" href="#ref-usage"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">accuracyAtCutoff</span><span class="op">(</span></span>
-<span>  <span class="va">predicted</span>,</span>
-<span>  <span class="va">actual</span>,</span>
-<span>  <span class="va">cutoff</span>,</span>
+<span>  predicted <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  actual <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  cutoff <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  TP <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  TN <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  FP <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  FN <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  UH <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  UM <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  UCR <span class="op">=</span> <span class="cn">NULL</span>,</span>
@@ -74,6 +78,22 @@
 <dt id="arg-cutoff">cutoff<a class="anchor" aria-label="anchor" href="#arg-cutoff"></a></dt>
 <dd><p>numeric value at or above which the target condition is
 considered present.</p></dd>
+
+
+<dt id="arg-tp">TP<a class="anchor" aria-label="anchor" href="#arg-tp"></a></dt>
+<dd><p>number of true positive cases.</p></dd>
+
+
+<dt id="arg-tn">TN<a class="anchor" aria-label="anchor" href="#arg-tn"></a></dt>
+<dd><p>number of true negative cases.</p></dd>
+
+
+<dt id="arg-fp">FP<a class="anchor" aria-label="anchor" href="#arg-fp"></a></dt>
+<dd><p>number of false positive cases.</p></dd>
+
+
+<dt id="arg-fn">FN<a class="anchor" aria-label="anchor" href="#arg-fn"></a></dt>
+<dd><p>number of false negative cases.</p></dd>
 
 
 <dt id="arg-uh">UH<a class="anchor" aria-label="anchor" href="#arg-uh"></a></dt>
@@ -139,20 +159,21 @@ valued.</p></dd>
 <li><p><code>cSDT</code> = c index from signal detection theory</p></li>
 <li><p><code>aSDT</code> = a index from signal detection theory</p></li>
 <li><p><code>bSDT</code> = b index from signal detection theory</p></li>
-<li><p><code>differenceBetweenPredictedAndObserved</code> = difference between
-  predicted and observed values</p></li>
 <li><p><code>informationGain</code> = information gain</p></li>
 <li><p><code>overallUtility</code> = overall utility (if utilities were specified)</p></li>
+<li><p><code>differenceBetweenPredictedAndObserved</code> = difference between
+  predicted and observed values</p></li>
 </ul></div>
     <div class="section level2">
     <h2 id="details">Details<a class="anchor" aria-label="anchor" href="#details"></a></h2>
     <p>Compute accuracy indices of predicted values in relation to actual values
-at a given cutoff by specifying the predicted values, actual values, and
-cutoff value. The target condition is considered present at or above the
-cutoff value. Optionally, you can also specify the utility of hits, misses,
-correct rejections, and false alarms to calculate the overall utility of the
-cutoff. To compute accuracy at each possible cutoff, see
-<a href="accuracyAtEachCutoff.html">accuracyAtEachCutoff</a>.</p>
+at a given cutoff by specifying either a) the predicted values, actual
+values, and cutoff value, or b) the number of true positives (TP), true
+negatives (TN), false positives (FPs), and false negatives (FN). The target
+condition is considered present at or above the cutoff value. Optionally, you
+can also specify the utility of hits, misses, correct rejections, and false
+alarms to calculate the overall utility of the cutoff. To compute accuracy at
+each possible cutoff, see <a href="accuracyAtEachCutoff.html">accuracyAtEachCutoff</a>.</p>
     </div>
     <div class="section level2">
     <h2 id="see-also">See also<a class="anchor" aria-label="anchor" href="#see-also"></a></h2>
@@ -187,10 +208,11 @@ cutoff. To compute accuracy at each possible cutoff, see
 <span class="r-out co"><span class="r-pr">#&gt;</span> 1 0.03225806 0.8198529        0.9099265 0.8571429 0.7879121               112.5</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   positiveLikelihoodRatio negativeLikelihoodRatio dPrimeSDT   betaSDT</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 1                 7.96875              0.07083333  2.720952 0.6234551</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>         cSDT      aSDT bSDT differenceBetweenPredictedAndObserved</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1 -0.1736446 0.9476103 0.85                                 207.8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   informationGain</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1       0.4947688</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>         cSDT      aSDT bSDT informationGain</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1 -0.1736446 0.9476103 0.85       0.4947688</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   differenceBetweenPredictedAndObserved</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1                                 207.8</span>
+<span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="fu">accuracyAtCutoff</span><span class="op">(</span>predicted <span class="op">=</span> <span class="va">USArrests</span><span class="op">$</span><span class="va">Assault</span>,</span></span>
 <span class="r-in"><span>  actual <span class="op">=</span> <span class="va">USArrests</span><span class="op">$</span><span class="va">highMurderState</span>, cutoff <span class="op">=</span> <span class="fl">200</span>,</span></span>
 <span class="r-in"><span>  UH <span class="op">=</span> <span class="fl">1</span>, UM <span class="op">=</span> <span class="fl">0</span>, UCR <span class="op">=</span> <span class="fl">.9</span>, UFA <span class="op">=</span> <span class="fl">0</span><span class="op">)</span></span></span>
@@ -206,10 +228,29 @@ cutoff. To compute accuracy at each possible cutoff, see
 <span class="r-out co"><span class="r-pr">#&gt;</span> 1 0.03225806 0.8198529        0.9099265 0.8571429 0.7879121               112.5</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   positiveLikelihoodRatio negativeLikelihoodRatio dPrimeSDT   betaSDT</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 1                 7.96875              0.07083333  2.720952 0.6234551</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>         cSDT      aSDT bSDT differenceBetweenPredictedAndObserved</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1 -0.1736446 0.9476103 0.85                                 207.8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   informationGain overallUtility</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1       0.4947688           0.84</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>         cSDT      aSDT bSDT informationGain overallUtility</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1 -0.1736446 0.9476103 0.85       0.4947688           0.84</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   differenceBetweenPredictedAndObserved</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1                                 207.8</span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="fu">accuracyAtCutoff</span><span class="op">(</span>TP <span class="op">=</span> <span class="fl">30</span>, TN <span class="op">=</span> <span class="fl">20</span>, FP <span class="op">=</span> <span class="fl">15</span>, FN <span class="op">=</span> <span class="fl">35</span>,</span></span>
+<span class="r-in"><span>  UH <span class="op">=</span> <span class="fl">1</span>, UM <span class="op">=</span> <span class="fl">0</span>, UCR <span class="op">=</span> <span class="fl">.9</span>, UFA <span class="op">=</span> <span class="fl">0</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   TP TN FP FN   SR   BR percentAccuracy percentAccuracyByChance</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1 30 20 15 35 0.45 0.65              50                    48.5</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   percentAccuracyPredictingFromBaseRate       RIOC</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1                                    65 0.02097902</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   relativeImprovementOverPredictingFromBaseRate        SN        SP    TPrate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1                                          -Inf 0.4615385 0.5714286 0.4615385</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      TNrate    FNrate    FPrate        HR       FAR       PPV       NPV</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1 0.5714286 0.5384615 0.4285714 0.4615385 0.4285714 0.6666667 0.3636364</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>         FDR       FOR    youdenJ balancedAccuracy   f1Score        mcc</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1 0.3333333 0.6363636 0.03296703        0.5164835 0.5454545 0.03160698</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   diagnosticOddsRatio positiveLikelihoodRatio negativeLikelihoodRatio</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1            1.142857                1.076923               0.9423077</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    dPrimeSDT  betaSDT      cSDT      aSDT     bSDT informationGain</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1 0.08345375 1.011607 0.1382855 0.5260989 1.051383    0.0007217625</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   overallUtility</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1           0.48</span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>

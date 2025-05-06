@@ -15,7 +15,7 @@ where 1 = present and 0 = absent."><!-- Global site tag (gtag.js) - Google Analy
 
     <a class="navbar-brand me-2" href="../index.html">petersenlab</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.1.4</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.1.5</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -133,10 +133,10 @@ valued.</p></dd>
 <li><p><code>cSDT</code> = c index from signal detection theory</p></li>
 <li><p><code>aSDT</code> = a index from signal detection theory</p></li>
 <li><p><code>bSDT</code> = b index from signal detection theory</p></li>
-<li><p><code>differenceBetweenPredictedAndObserved</code> = difference between
-  predicted and observed values</p></li>
 <li><p><code>informationGain</code> = information gain</p></li>
 <li><p><code>overallUtility</code> = overall utility (if utilities were specified)</p></li>
+<li><p><code>differenceBetweenPredictedAndObserved</code> = difference between
+  predicted and observed values</p></li>
 </ul></div>
     <div class="section level2">
     <h2 id="details">Details<a class="anchor" aria-label="anchor" href="#details"></a></h2>
@@ -449,100 +449,100 @@ and false alarms to calculate the overall utility of each possible cutoff.</p>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 44                  NA                      NA              0.87500000</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 45                  NA                      NA              0.93750000</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 46                  NA                      NA              1.00000000</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    dPrimeSDT   betaSDT        cSDT      aSDT        bSDT</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1         NA        NA          NA        NA          NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2         NA 0.0000000          NA 0.7573529  0.02857143</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3         NA 0.0000000          NA 0.7647059  0.05555556</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4         NA 0.0000000          NA 0.7720588  0.08108108</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5         NA 0.0000000          NA 0.7794118  0.10526316</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6         NA 0.0000000          NA 0.7867647  0.12820513</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 7         NA 0.0000000          NA 0.7941176  0.15000000</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 8         NA 0.0000000          NA 0.8014706  0.17073171</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9         NA 0.0000000          NA 0.8088235  0.19047619</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 10        NA 0.0000000          NA 0.8161765  0.20930233</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 11        NA 0.0000000          NA 0.8235294  0.22727273</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 12        NA 0.0000000          NA 0.8308824  0.24444444</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 13        NA 0.0000000          NA 0.8382353  0.26086957</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 14        NA 0.0000000          NA 0.8529412  0.29166667</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 15        NA 0.0000000          NA 0.8602941  0.30612245</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 16        NA 0.0000000          NA 0.8676471  0.32000000</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 17        NA 0.0000000          NA 0.8750000  0.33333333</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 18        NA 0.0000000          NA 0.8970588  0.37777778</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 19        NA 0.0000000          NA 0.9044118  0.39534884</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 20        NA 0.0000000          NA 0.9117647  0.41463415</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 21        NA 0.0000000          NA 0.9191176  0.43589744</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 22        NA 0.0000000          NA 0.9264706  0.45945946</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 23        NA 0.0000000          NA 0.9411765  0.51515152</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 24        NA 0.0000000          NA 0.9485294  0.54838710</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 25        NA 0.0000000          NA 0.9558824  0.58620690</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 26        NA 0.0000000          NA 0.9632353  0.62962963</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 27  2.583252 0.5344995 -0.24249457 0.9384191  0.78703704</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 28  2.720952 0.6234551 -0.17364456 0.9476103  0.85000000</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 29  2.337181 1.0435544  0.01824103 0.9246324  1.02000000</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 30  2.502052 1.2864643  0.10067643 0.9356618  1.10869565</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 31  2.238849 1.6820865  0.23227784 0.9145221  1.29347826</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 32  2.026192 1.9859180  0.33860624 0.8933824  1.47826087</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 33  2.239216 2.7093703  0.44511836 0.9080882  1.61904762</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 34  1.883366 3.2330273  0.62304355 0.8694853  2.02380952</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 35  1.722037 3.3595638  0.70370789 0.8501838  2.22619048</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 36  1.564726 3.4013910  0.78236324 0.8308824  2.42857143</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 37  1.407416 3.3595638  0.86101858 0.8110557  2.51331497</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 38  1.246087 3.2330273  0.94168292 0.7898284  2.58525346</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 39  1.075950 3.0184193  1.02675144 0.7663603  2.62114537</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 40  1.400734 5.2892304  1.18914319 0.7972426  3.22784810</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 41  1.215020 4.7476784  1.28199986 0.7757353  3.40000000</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 42  1.002363 4.0213169  1.38832826 0.7503064  3.44839858</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 43        NA        NA          NA 0.7968750  6.33333333</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 44        NA        NA          NA 0.7812500  9.00000000</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 45        NA        NA          NA 0.7656250 17.00000000</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 46        NA        NA          NA        NA          NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    differenceBetweenPredictedAndObserved informationGain</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1                                49.6000              NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2                                49.6000              NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3                                49.6000              NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4                                49.6000              NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5                                49.6000              NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6                                75.8000              NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 7                                75.8000              NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 8                                75.8000              NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9                                75.8000              NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 10                               75.8000              NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 11                              107.2000              NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 12                              107.2000              NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 13                              107.2000              NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 14                              107.2000              NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 15                              117.6000              NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 16                              117.6000              NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 17                              117.6000              NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 18                              153.1667              NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 19                              153.1667              NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 20                              153.1667              NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 21                              153.1667              NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 22                              175.0000              NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 23                              175.0000              NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 24                              175.0000              NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 25                              175.0000              NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 26                              175.0000              NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 27                              207.8000      0.45336483</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 28                              207.8000      0.49476883</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 29                              207.8000      0.41340219</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 30                              207.8000      0.45810281</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 31                              207.8000      0.38881826</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 32                              247.6000      0.32890663</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 33                              247.6000      0.37636708</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 34                              247.6000      0.27014667</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 35                              265.6000      0.22430896</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 36                              265.6000      0.18245336</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 37                              265.6000      0.14421850</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 38                              265.6000      0.10941594</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 39                              265.6000      0.07803185</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 40                              265.6000      0.11245402</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 41                              309.4000      0.07921198</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 42                              309.4000      0.04921665</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 43                              309.4000              NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 44                              309.4000              NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 45                              309.4000              NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 46                                    NA              NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    dPrimeSDT   betaSDT        cSDT      aSDT        bSDT informationGain</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1         NA        NA          NA        NA          NA              NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2         NA 0.0000000          NA 0.7573529  0.02857143              NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3         NA 0.0000000          NA 0.7647059  0.05555556              NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4         NA 0.0000000          NA 0.7720588  0.08108108              NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5         NA 0.0000000          NA 0.7794118  0.10526316              NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6         NA 0.0000000          NA 0.7867647  0.12820513              NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 7         NA 0.0000000          NA 0.7941176  0.15000000              NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 8         NA 0.0000000          NA 0.8014706  0.17073171              NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9         NA 0.0000000          NA 0.8088235  0.19047619              NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 10        NA 0.0000000          NA 0.8161765  0.20930233              NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 11        NA 0.0000000          NA 0.8235294  0.22727273              NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 12        NA 0.0000000          NA 0.8308824  0.24444444              NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 13        NA 0.0000000          NA 0.8382353  0.26086957              NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 14        NA 0.0000000          NA 0.8529412  0.29166667              NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 15        NA 0.0000000          NA 0.8602941  0.30612245              NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 16        NA 0.0000000          NA 0.8676471  0.32000000              NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 17        NA 0.0000000          NA 0.8750000  0.33333333              NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 18        NA 0.0000000          NA 0.8970588  0.37777778              NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 19        NA 0.0000000          NA 0.9044118  0.39534884              NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 20        NA 0.0000000          NA 0.9117647  0.41463415              NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 21        NA 0.0000000          NA 0.9191176  0.43589744              NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 22        NA 0.0000000          NA 0.9264706  0.45945946              NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 23        NA 0.0000000          NA 0.9411765  0.51515152              NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 24        NA 0.0000000          NA 0.9485294  0.54838710              NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 25        NA 0.0000000          NA 0.9558824  0.58620690              NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 26        NA 0.0000000          NA 0.9632353  0.62962963              NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 27  2.583252 0.5344995 -0.24249457 0.9384191  0.78703704      0.45336483</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 28  2.720952 0.6234551 -0.17364456 0.9476103  0.85000000      0.49476883</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 29  2.337181 1.0435544  0.01824103 0.9246324  1.02000000      0.41340219</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 30  2.502052 1.2864643  0.10067643 0.9356618  1.10869565      0.45810281</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 31  2.238849 1.6820865  0.23227784 0.9145221  1.29347826      0.38881826</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 32  2.026192 1.9859180  0.33860624 0.8933824  1.47826087      0.32890663</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 33  2.239216 2.7093703  0.44511836 0.9080882  1.61904762      0.37636708</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 34  1.883366 3.2330273  0.62304355 0.8694853  2.02380952      0.27014667</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 35  1.722037 3.3595638  0.70370789 0.8501838  2.22619048      0.22430896</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 36  1.564726 3.4013910  0.78236324 0.8308824  2.42857143      0.18245336</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 37  1.407416 3.3595638  0.86101858 0.8110557  2.51331497      0.14421850</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 38  1.246087 3.2330273  0.94168292 0.7898284  2.58525346      0.10941594</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 39  1.075950 3.0184193  1.02675144 0.7663603  2.62114537      0.07803185</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 40  1.400734 5.2892304  1.18914319 0.7972426  3.22784810      0.11245402</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 41  1.215020 4.7476784  1.28199986 0.7757353  3.40000000      0.07921198</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 42  1.002363 4.0213169  1.38832826 0.7503064  3.44839858      0.04921665</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 43        NA        NA          NA 0.7968750  6.33333333              NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 44        NA        NA          NA 0.7812500  9.00000000              NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 45        NA        NA          NA 0.7656250 17.00000000              NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 46        NA        NA          NA        NA          NA              NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    differenceBetweenPredictedAndObserved</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1                                49.6000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2                                49.6000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3                                49.6000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4                                49.6000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5                                49.6000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6                                75.8000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 7                                75.8000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 8                                75.8000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9                                75.8000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 10                               75.8000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 11                              107.2000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 12                              107.2000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 13                              107.2000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 14                              107.2000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 15                              117.6000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 16                              117.6000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 17                              117.6000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 18                              153.1667</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 19                              153.1667</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 20                              153.1667</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 21                              153.1667</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 22                              175.0000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 23                              175.0000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 24                              175.0000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 25                              175.0000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 26                              175.0000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 27                              207.8000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 28                              207.8000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 29                              207.8000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 30                              207.8000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 31                              207.8000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 32                              247.6000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 33                              247.6000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 34                              247.6000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 35                              265.6000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 36                              265.6000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 37                              265.6000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 38                              265.6000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 39                              265.6000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 40                              265.6000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 41                              309.4000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 42                              309.4000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 43                              309.4000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 44                              309.4000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 45                              309.4000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 46                                    NA</span>
 <span class="r-in"><span><span class="fu">accuracyAtEachCutoff</span><span class="op">(</span>predicted <span class="op">=</span> <span class="va">USArrests</span><span class="op">$</span><span class="va">Assault</span>,</span></span>
 <span class="r-in"><span>  actual <span class="op">=</span> <span class="va">USArrests</span><span class="op">$</span><span class="va">highMurderState</span>,</span></span>
 <span class="r-in"><span>  UH <span class="op">=</span> <span class="fl">1</span>, UM <span class="op">=</span> <span class="fl">0</span>, UCR <span class="op">=</span> <span class="fl">.9</span>, UFA <span class="op">=</span> <span class="fl">0</span><span class="op">)</span></span></span>
@@ -828,100 +828,100 @@ and false alarms to calculate the overall utility of each possible cutoff.</p>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 44                  NA                      NA              0.87500000</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 45                  NA                      NA              0.93750000</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 46                  NA                      NA              1.00000000</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    dPrimeSDT   betaSDT        cSDT      aSDT        bSDT</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1         NA        NA          NA        NA          NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2         NA 0.0000000          NA 0.7573529  0.02857143</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3         NA 0.0000000          NA 0.7647059  0.05555556</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4         NA 0.0000000          NA 0.7720588  0.08108108</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5         NA 0.0000000          NA 0.7794118  0.10526316</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6         NA 0.0000000          NA 0.7867647  0.12820513</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 7         NA 0.0000000          NA 0.7941176  0.15000000</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 8         NA 0.0000000          NA 0.8014706  0.17073171</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9         NA 0.0000000          NA 0.8088235  0.19047619</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 10        NA 0.0000000          NA 0.8161765  0.20930233</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 11        NA 0.0000000          NA 0.8235294  0.22727273</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 12        NA 0.0000000          NA 0.8308824  0.24444444</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 13        NA 0.0000000          NA 0.8382353  0.26086957</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 14        NA 0.0000000          NA 0.8529412  0.29166667</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 15        NA 0.0000000          NA 0.8602941  0.30612245</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 16        NA 0.0000000          NA 0.8676471  0.32000000</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 17        NA 0.0000000          NA 0.8750000  0.33333333</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 18        NA 0.0000000          NA 0.8970588  0.37777778</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 19        NA 0.0000000          NA 0.9044118  0.39534884</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 20        NA 0.0000000          NA 0.9117647  0.41463415</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 21        NA 0.0000000          NA 0.9191176  0.43589744</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 22        NA 0.0000000          NA 0.9264706  0.45945946</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 23        NA 0.0000000          NA 0.9411765  0.51515152</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 24        NA 0.0000000          NA 0.9485294  0.54838710</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 25        NA 0.0000000          NA 0.9558824  0.58620690</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 26        NA 0.0000000          NA 0.9632353  0.62962963</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 27  2.583252 0.5344995 -0.24249457 0.9384191  0.78703704</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 28  2.720952 0.6234551 -0.17364456 0.9476103  0.85000000</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 29  2.337181 1.0435544  0.01824103 0.9246324  1.02000000</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 30  2.502052 1.2864643  0.10067643 0.9356618  1.10869565</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 31  2.238849 1.6820865  0.23227784 0.9145221  1.29347826</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 32  2.026192 1.9859180  0.33860624 0.8933824  1.47826087</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 33  2.239216 2.7093703  0.44511836 0.9080882  1.61904762</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 34  1.883366 3.2330273  0.62304355 0.8694853  2.02380952</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 35  1.722037 3.3595638  0.70370789 0.8501838  2.22619048</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 36  1.564726 3.4013910  0.78236324 0.8308824  2.42857143</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 37  1.407416 3.3595638  0.86101858 0.8110557  2.51331497</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 38  1.246087 3.2330273  0.94168292 0.7898284  2.58525346</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 39  1.075950 3.0184193  1.02675144 0.7663603  2.62114537</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 40  1.400734 5.2892304  1.18914319 0.7972426  3.22784810</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 41  1.215020 4.7476784  1.28199986 0.7757353  3.40000000</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 42  1.002363 4.0213169  1.38832826 0.7503064  3.44839858</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 43        NA        NA          NA 0.7968750  6.33333333</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 44        NA        NA          NA 0.7812500  9.00000000</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 45        NA        NA          NA 0.7656250 17.00000000</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 46        NA        NA          NA        NA          NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    differenceBetweenPredictedAndObserved informationGain overallUtility</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1                                49.6000              NA          0.320</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2                                49.6000              NA          0.338</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3                                49.6000              NA          0.356</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4                                49.6000              NA          0.374</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5                                49.6000              NA          0.392</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6                                75.8000              NA          0.410</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 7                                75.8000              NA          0.428</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 8                                75.8000              NA          0.446</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9                                75.8000              NA          0.464</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 10                               75.8000              NA          0.482</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 11                              107.2000              NA          0.500</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 12                              107.2000              NA          0.518</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 13                              107.2000              NA          0.536</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 14                              107.2000              NA          0.572</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 15                              117.6000              NA          0.590</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 16                              117.6000              NA          0.608</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 17                              117.6000              NA          0.626</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 18                              153.1667              NA          0.680</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 19                              153.1667              NA          0.698</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 20                              153.1667              NA          0.716</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 21                              153.1667              NA          0.734</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 22                              175.0000              NA          0.752</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 23                              175.0000              NA          0.788</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 24                              175.0000              NA          0.806</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 25                              175.0000              NA          0.824</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 26                              175.0000              NA          0.842</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 27                              207.8000      0.45336483          0.822</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 28                              207.8000      0.49476883          0.840</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 29                              207.8000      0.41340219          0.820</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 30                              207.8000      0.45810281          0.838</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 31                              207.8000      0.38881826          0.818</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 32                              247.6000      0.32890663          0.798</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 33                              247.6000      0.37636708          0.816</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 34                              247.6000      0.27014667          0.776</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 35                              265.6000      0.22430896          0.756</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 36                              265.6000      0.18245336          0.736</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 37                              265.6000      0.14421850          0.716</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 38                              265.6000      0.10941594          0.696</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 39                              265.6000      0.07803185          0.676</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 40                              265.6000      0.11245402          0.694</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 41                              309.4000      0.07921198          0.674</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 42                              309.4000      0.04921665          0.654</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 43                              309.4000              NA          0.672</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 44                              309.4000              NA          0.652</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 45                              309.4000              NA          0.632</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 46                                    NA              NA          0.612</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    dPrimeSDT   betaSDT        cSDT      aSDT        bSDT informationGain</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1         NA        NA          NA        NA          NA              NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2         NA 0.0000000          NA 0.7573529  0.02857143              NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3         NA 0.0000000          NA 0.7647059  0.05555556              NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4         NA 0.0000000          NA 0.7720588  0.08108108              NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5         NA 0.0000000          NA 0.7794118  0.10526316              NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6         NA 0.0000000          NA 0.7867647  0.12820513              NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 7         NA 0.0000000          NA 0.7941176  0.15000000              NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 8         NA 0.0000000          NA 0.8014706  0.17073171              NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9         NA 0.0000000          NA 0.8088235  0.19047619              NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 10        NA 0.0000000          NA 0.8161765  0.20930233              NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 11        NA 0.0000000          NA 0.8235294  0.22727273              NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 12        NA 0.0000000          NA 0.8308824  0.24444444              NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 13        NA 0.0000000          NA 0.8382353  0.26086957              NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 14        NA 0.0000000          NA 0.8529412  0.29166667              NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 15        NA 0.0000000          NA 0.8602941  0.30612245              NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 16        NA 0.0000000          NA 0.8676471  0.32000000              NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 17        NA 0.0000000          NA 0.8750000  0.33333333              NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 18        NA 0.0000000          NA 0.8970588  0.37777778              NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 19        NA 0.0000000          NA 0.9044118  0.39534884              NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 20        NA 0.0000000          NA 0.9117647  0.41463415              NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 21        NA 0.0000000          NA 0.9191176  0.43589744              NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 22        NA 0.0000000          NA 0.9264706  0.45945946              NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 23        NA 0.0000000          NA 0.9411765  0.51515152              NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 24        NA 0.0000000          NA 0.9485294  0.54838710              NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 25        NA 0.0000000          NA 0.9558824  0.58620690              NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 26        NA 0.0000000          NA 0.9632353  0.62962963              NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 27  2.583252 0.5344995 -0.24249457 0.9384191  0.78703704      0.45336483</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 28  2.720952 0.6234551 -0.17364456 0.9476103  0.85000000      0.49476883</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 29  2.337181 1.0435544  0.01824103 0.9246324  1.02000000      0.41340219</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 30  2.502052 1.2864643  0.10067643 0.9356618  1.10869565      0.45810281</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 31  2.238849 1.6820865  0.23227784 0.9145221  1.29347826      0.38881826</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 32  2.026192 1.9859180  0.33860624 0.8933824  1.47826087      0.32890663</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 33  2.239216 2.7093703  0.44511836 0.9080882  1.61904762      0.37636708</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 34  1.883366 3.2330273  0.62304355 0.8694853  2.02380952      0.27014667</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 35  1.722037 3.3595638  0.70370789 0.8501838  2.22619048      0.22430896</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 36  1.564726 3.4013910  0.78236324 0.8308824  2.42857143      0.18245336</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 37  1.407416 3.3595638  0.86101858 0.8110557  2.51331497      0.14421850</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 38  1.246087 3.2330273  0.94168292 0.7898284  2.58525346      0.10941594</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 39  1.075950 3.0184193  1.02675144 0.7663603  2.62114537      0.07803185</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 40  1.400734 5.2892304  1.18914319 0.7972426  3.22784810      0.11245402</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 41  1.215020 4.7476784  1.28199986 0.7757353  3.40000000      0.07921198</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 42  1.002363 4.0213169  1.38832826 0.7503064  3.44839858      0.04921665</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 43        NA        NA          NA 0.7968750  6.33333333              NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 44        NA        NA          NA 0.7812500  9.00000000              NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 45        NA        NA          NA 0.7656250 17.00000000              NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 46        NA        NA          NA        NA          NA              NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    overallUtility differenceBetweenPredictedAndObserved</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1           0.320                               49.6000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2           0.338                               49.6000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3           0.356                               49.6000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4           0.374                               49.6000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5           0.392                               49.6000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6           0.410                               75.8000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 7           0.428                               75.8000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 8           0.446                               75.8000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9           0.464                               75.8000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 10          0.482                               75.8000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 11          0.500                              107.2000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 12          0.518                              107.2000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 13          0.536                              107.2000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 14          0.572                              107.2000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 15          0.590                              117.6000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 16          0.608                              117.6000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 17          0.626                              117.6000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 18          0.680                              153.1667</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 19          0.698                              153.1667</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 20          0.716                              153.1667</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 21          0.734                              153.1667</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 22          0.752                              175.0000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 23          0.788                              175.0000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 24          0.806                              175.0000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 25          0.824                              175.0000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 26          0.842                              175.0000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 27          0.822                              207.8000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 28          0.840                              207.8000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 29          0.820                              207.8000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 30          0.838                              207.8000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 31          0.818                              207.8000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 32          0.798                              247.6000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 33          0.816                              247.6000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 34          0.776                              247.6000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 35          0.756                              265.6000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 36          0.736                              265.6000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 37          0.716                              265.6000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 38          0.696                              265.6000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 39          0.676                              265.6000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 40          0.694                              265.6000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 41          0.674                              309.4000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 42          0.654                              309.4000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 43          0.672                              309.4000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 44          0.652                              309.4000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 45          0.632                              309.4000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 46          0.612                                    NA</span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
