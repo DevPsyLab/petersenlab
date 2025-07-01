@@ -220,6 +220,7 @@ reference:
 - subtitle: Mixed Model
   contents:
   - lmeSummary
+  - lm.beta.lmer
 
 - title: Simulation
   contents:
