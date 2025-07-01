@@ -32,4 +32,8 @@ model <- lme(distance ~ age + Sex, data = Orthodont, random = ~ 1 + age)
 summary(model)
 lmeSummary(model)
 }
+\seealso{
+Other mixedModel: 
+\code{\link{lm.beta.lmer}()}
+}
 \concept{mixedModel}
