@@ -168,6 +168,10 @@ reference:
 
 - title: Miscellaneous
 
+- subtitle: Baking
+  contents:
+  - adjust_sourdough_time
+
 - subtitle: Fantasy Football
   contents:
   - cleanUpNames
