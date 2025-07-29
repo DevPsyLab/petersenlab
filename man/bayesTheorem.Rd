@@ -61,10 +61,12 @@ pB(pBgivenA = .95, pA = .285, pBgivenNotA = .007171515)
 pAgivenB(pBgivenA = .95, pA = .285, pB = .2758776)
 pAgivenB(pBgivenA = .95, pA = .285, pBgivenNotA = .007171515)
 pAgivenB(pBgivenA = .95, pA = .003, pBgivenNotA = .007171515)
+pAgivenB(pBgivenA = 1/3, pA = 9/10, pBgivenNotA = 1)
 
 pBgivenA(pAgivenB = .95, pB = .285, pA = .2758776)
 pBgivenA(pAgivenB = .95, pB = .285, pAgivenNotB = .007171515)
 pBgivenA(pAgivenB = .95, pB = .003, pAgivenNotB = .007171515)
+pBgivenA(pAgivenB = 1/3, pB = 9/10, pAgivenNotB = 1)
 
 pAgivenNotB(pAgivenB = .95, pB = .003, pA = .01)
 
