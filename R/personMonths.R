@@ -63,7 +63,7 @@
 #'              effortSummer = percentEffortSummer)
 #'
 #' @seealso
-#' \url{https://nexus.od.nih.gov/all/2015/05/27/how-do-you-convert-percent-effort-into-person-months/}
+#' \url{https://web.archive.org/web/20250211141002/https://nexus.od.nih.gov/all/2015/05/27/how-do-you-convert-percent-effort-into-person-months/}
 
 #' @rdname personMonths
 #' @export

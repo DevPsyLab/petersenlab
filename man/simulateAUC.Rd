@@ -27,12 +27,12 @@ Simulates data with a specified area under the receiver operating
 characteristic curve—i.e., the AUC of an ROC curve.
 }
 \examples{
-simulateAUC(.60, 50000)
-simulateAUC(.70, 50000)
-simulateAUC(.80, 50000)
-simulateAUC(.90, 50000)
-simulateAUC(.95, 50000)
-simulateAUC(.99, 50000)
+simulateAUC(.60, 10000)
+simulateAUC(.70, 10000)
+simulateAUC(.80, 10000)
+simulateAUC(.90, 10000)
+simulateAUC(.95, 10000)
+simulateAUC(.99, 10000)
 
 }
 \seealso{
