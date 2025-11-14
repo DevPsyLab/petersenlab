@@ -1,4 +1,4 @@
-cff-version: 1.2.0
+cff-version: 1.2.1
 title: 'petersenlab: A Collection of R Functions by the Petersen Lab'
 message: >-
   If you use this software, please cite it as below.
@@ -30,5 +30,5 @@ keywords:
   - R-package
   - psychometrics
 license: MIT
-version: 1.2.0
+version: 1.2.1
 date-released: '2025-02-02'
