@@ -219,6 +219,7 @@ reference:
 - subtitle: Reliability
   contents:
   - reliabilityOfDifferenceScore
+  - reliabilityOfProductTerm
   - reliabilityIRT
   - reliability_NB
   - repeatability

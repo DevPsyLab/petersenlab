@@ -35,6 +35,7 @@ reliabilityOfDifferenceScore(x = v1, y = v2,
 }
 \seealso{
 Other reliability: 
+\code{\link{reliabilityOfProductTerm}()},
 \code{\link{repeatability}()}
 }
 \concept{reliability}

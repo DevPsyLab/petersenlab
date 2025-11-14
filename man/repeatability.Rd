@@ -33,6 +33,7 @@ repeatability(v1, v2)
 }
 \seealso{
 Other reliability: 
-\code{\link{reliabilityOfDifferenceScore}()}
+\code{\link{reliabilityOfDifferenceScore}()},
+\code{\link{reliabilityOfProductTerm}()}
 }
 \concept{reliability}
