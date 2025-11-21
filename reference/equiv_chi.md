@@ -52,6 +52,7 @@ measurement invariance. Multivariate Behavioral Research, 55(2),
 
 Other structural equation modeling:
 [`make_esem_model()`](https://devpsylab.github.io/petersenlab/reference/make_esem_model.md),
+[`measurementNoninvarianceEffectSize()`](https://devpsylab.github.io/petersenlab/reference/measurementNoninvarianceEffectSize.md),
 [`puc()`](https://devpsylab.github.io/petersenlab/reference/puc.md),
 [`satorraBentlerScaledChiSquareDifferenceTestStatistic()`](https://devpsylab.github.io/petersenlab/reference/satorraBentlerScaledChiSquareDifferenceTestStatistic.md),
 [`semPlotInteraction()`](https://devpsylab.github.io/petersenlab/reference/semPlotInteraction.md)

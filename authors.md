@@ -30,7 +30,7 @@ Source:
 Petersen I (2025). “petersenlab: A collection of R functions by the
 Petersen Lab.”
 [doi:10.32614/CRAN.package.petersenlab](https://doi.org/10.32614/CRAN.package.petersenlab),
-R package version 1.2.1, https://devpsylab.github.io/petersenlab/,
+R package version 1.2.2, https://devpsylab.github.io/petersenlab/,
 <https://github.com/DevPsyLab/petersenlab>.
 
     @Misc{petersenlab,
@@ -38,6 +38,6 @@ R package version 1.2.1, https://devpsylab.github.io/petersenlab/,
       author = {Isaac T. Petersen},
       year = {2025},
       doi = {10.32614/CRAN.package.petersenlab},
-      note = {R package version 1.2.1, https://devpsylab.github.io/petersenlab/},
+      note = {R package version 1.2.2, https://devpsylab.github.io/petersenlab/},
       url = {https://github.com/DevPsyLab/petersenlab},
     }

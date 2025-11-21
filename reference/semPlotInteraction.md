@@ -117,6 +117,7 @@ Other multipleRegression:
 Other structural equation modeling:
 [`equiv_chi()`](https://devpsylab.github.io/petersenlab/reference/equiv_chi.md),
 [`make_esem_model()`](https://devpsylab.github.io/petersenlab/reference/make_esem_model.md),
+[`measurementNoninvarianceEffectSize()`](https://devpsylab.github.io/petersenlab/reference/measurementNoninvarianceEffectSize.md),
 [`puc()`](https://devpsylab.github.io/petersenlab/reference/puc.md),
 [`satorraBentlerScaledChiSquareDifferenceTestStatistic()`](https://devpsylab.github.io/petersenlab/reference/satorraBentlerScaledChiSquareDifferenceTestStatistic.md)
 

@@ -233,6 +233,9 @@
   : Make ESEM Model.
 - [`equiv_chi()`](https://devpsylab.github.io/petersenlab/reference/equiv_chi.md)
   : Chi-Square Equivalence Test for Structural Equation Models.
+- [`measurementNoninvarianceEffectSize()`](https://devpsylab.github.io/petersenlab/reference/measurementNoninvarianceEffectSize.md)
+  : Indexes of Effect Size for Measurement Noninvariance in Structural
+  Equation Models.
 - [`puc()`](https://devpsylab.github.io/petersenlab/reference/puc.md) :
   Percent of Uncontaminated Correlations (PUC).
 - [`satorraBentlerScaledChiSquareDifferenceTestStatistic()`](https://devpsylab.github.io/petersenlab/reference/satorraBentlerScaledChiSquareDifferenceTestStatistic.md)

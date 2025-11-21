@@ -40,6 +40,7 @@ multidimensionality.
 Other structural equation modeling:
 [`equiv_chi()`](https://devpsylab.github.io/petersenlab/reference/equiv_chi.md),
 [`make_esem_model()`](https://devpsylab.github.io/petersenlab/reference/make_esem_model.md),
+[`measurementNoninvarianceEffectSize()`](https://devpsylab.github.io/petersenlab/reference/measurementNoninvarianceEffectSize.md),
 [`satorraBentlerScaledChiSquareDifferenceTestStatistic()`](https://devpsylab.github.io/petersenlab/reference/satorraBentlerScaledChiSquareDifferenceTestStatistic.md),
 [`semPlotInteraction()`](https://devpsylab.github.io/petersenlab/reference/semPlotInteraction.md)
 

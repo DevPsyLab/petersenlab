@@ -41,6 +41,7 @@ in `lavaan`.
 
 Other structural equation modeling:
 [`equiv_chi()`](https://devpsylab.github.io/petersenlab/reference/equiv_chi.md),
+[`measurementNoninvarianceEffectSize()`](https://devpsylab.github.io/petersenlab/reference/measurementNoninvarianceEffectSize.md),
 [`puc()`](https://devpsylab.github.io/petersenlab/reference/puc.md),
 [`satorraBentlerScaledChiSquareDifferenceTestStatistic()`](https://devpsylab.github.io/petersenlab/reference/satorraBentlerScaledChiSquareDifferenceTestStatistic.md),
 [`semPlotInteraction()`](https://devpsylab.github.io/petersenlab/reference/semPlotInteraction.md)
