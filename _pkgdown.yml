@@ -14,6 +14,7 @@ authors:
 
 template:
   bootstrap: 5
+  math-rendering: katex
 
 reference:
 - title: Accuracy of Judgments/Predictions
