@@ -21,7 +21,7 @@ measurementNoninvarianceEffectSize(model_unconstrained, model_constrained)
 
 ## Value
 
-ww and M_CDelta M_C.
+\\w\\ and \\\Delta \mathrm{M}\_{\mathrm{C}}\\ .
 
 ## Details
 
