@@ -15,10 +15,7 @@ model.}
 model.}
 }
 \value{
-\if{html}{\out{\(w\)}}\if{latex}{\eqn{w}}
-and
-\if{html}{\out{\(\Delta \mathrm{M}_{\mathrm{C}}\)}}
-\if{latex}{\eqn{\Delta \mathrm{M}_{\mathrm{C}}}}.
+\eqn{w} and \eqn{\Delta \mathrm{M}_{\mathrm{C}}}.
 }
 \description{
 Function that estimates effect size indices for measurement noninvariance in
