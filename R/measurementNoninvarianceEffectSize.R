@@ -16,7 +16,7 @@
 #' @param model_constrained \code{lavaan} model object for constrained
 #' model.
 #'
-#' @return \eqn{w} and \eqn{\Delta \mathrm{M}_{\mathrm{C}}}.
+#' @return \mjeqn{w}{w} and \mjeqn{\Delta \mathrm{M}_{\mathrm{C}}}{Delta M_C}.
 #'
 #' @family structural equation modeling
 #'

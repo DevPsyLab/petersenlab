@@ -15,7 +15,7 @@ model.}
 model.}
 }
 \value{
-\eqn{w} and \eqn{\Delta \mathrm{M}_{\mathrm{C}}}.
+\mjeqn{w}{w} and \mjeqn{\Delta \mathrm{M}_{\mathrm{C}}}{Delta M_C}.
 }
 \description{
 Function that estimates effect size indices for measurement noninvariance in
