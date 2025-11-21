@@ -142,6 +142,7 @@ Other multipleRegression:
 Other structural equation modeling: 
 \code{\link{equiv_chi}()},
 \code{\link{make_esem_model}()},
+\code{\link{measurementNoninvarianceEffectSize}()},
 \code{\link{puc}()},
 \code{\link{satorraBentlerScaledChiSquareDifferenceTestStatistic}()}
 }

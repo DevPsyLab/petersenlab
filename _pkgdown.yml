@@ -166,6 +166,7 @@ reference:
   contents:
   - make_esem_model
   - equiv_chi
+  - measurementNoninvarianceEffectSize
   - puc
   - satorraBentlerScaledChiSquareDifferenceTestStatistic
   - semPlotInteraction

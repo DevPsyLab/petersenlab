@@ -89,6 +89,7 @@ lavaan::sem(
 
 Other structural equation modeling: 
 \code{\link{equiv_chi}()},
+\code{\link{measurementNoninvarianceEffectSize}()},
 \code{\link{puc}()},
 \code{\link{satorraBentlerScaledChiSquareDifferenceTestStatistic}()},
 \code{\link{semPlotInteraction}()}

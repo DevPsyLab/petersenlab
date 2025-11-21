@@ -53,6 +53,7 @@ equiv_chi(alpha = .05, chi = Tml1, df = df1, m = 1, N_sample = N1, popRMSEA = .0
 \seealso{
 Other structural equation modeling: 
 \code{\link{make_esem_model}()},
+\code{\link{measurementNoninvarianceEffectSize}()},
 \code{\link{puc}()},
 \code{\link{satorraBentlerScaledChiSquareDifferenceTestStatistic}()},
 \code{\link{semPlotInteraction}()}
