@@ -101,7 +101,7 @@ lavaan::sem(
   data = HolzingerSwineford1939,
   missing = "ML",
   estimator = "MLR")
-#> lavaan 0.6-20 ended normally after 146 iterations
+#> lavaan 0.6-21 ended normally after 146 iterations
 #> 
 #>   Estimator                                         ML
 #>   Optimization method                           NLMINB
