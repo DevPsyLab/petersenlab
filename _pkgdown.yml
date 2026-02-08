@@ -149,13 +149,16 @@ reference:
 
 - subtitle: Item Response Theory (IRT)
   contents:
+  - calc_grm_probs
   - fourPL
   - discriminationToFactorLoading
   - error_variance_4PL
   - error_variance_NB
+  - get_thresholds
   - item_info_NB_zero_analytical
   - item_info_NB_analytical
   - itemInformation
+  - itemInformationGRM
   - reliabilityIRT
   - reliability_4PL
   - reliability_NB
