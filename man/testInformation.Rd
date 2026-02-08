@@ -113,6 +113,7 @@ plot(theta, test_info_4PL(theta, alpha, beta, gamma, delta))
 }
 \seealso{
 Other IRT: 
+\code{\link{calc_grm_probs}()},
 \code{\link{deriv_d_negBinom}()},
 \code{\link{discriminationToFactorLoading}()},
 \code{\link{fourPL}()},

@@ -1,12 +1,13 @@
 #' @title
-#' Item Information.
+#' Item Information in logistic item response theory model.
 #'
 #' @description
-#' Item information in item response theory.
+#' Item information in logistic model in item response theory.
 #'
 #' @details
-#' Estimates the amount of information provided by a given item as function of
-#' the item parameters and the person's level on the construct (theta).
+#' Estimates the amount of information in a logistic item response theory model
+#' provided by a given item as function of the item parameters and the person's
+#' level on the construct (theta).
 #'
 #' @param b Difficulty (severity) parameter (inflection point).
 #' @param a Discrimination parameter (slope).

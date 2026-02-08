@@ -183,6 +183,7 @@ Other bayesian:
 \code{\link{pA}()}
 
 Other IRT: 
+\code{\link{calc_grm_probs}()},
 \code{\link{discriminationToFactorLoading}()},
 \code{\link{fourPL}()},
 \code{\link{itemInformation}()},

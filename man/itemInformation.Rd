@@ -2,7 +2,7 @@
 % Please edit documentation in R/itemInformation.R
 \name{itemInformation}
 \alias{itemInformation}
-\title{Item Information.}
+\title{Item Information in logistic item response theory model.}
 \usage{
 itemInformation(a = 1, b, c = 0, d = 1, theta)
 }
@@ -21,11 +21,12 @@ itemInformation(a = 1, b, c = 0, d = 1, theta)
 Amount of item information.
 }
 \description{
-Item information in item response theory.
+Item information in logistic model in item response theory.
 }
 \details{
-Estimates the amount of information provided by a given item as function of
-the item parameters and the person's level on the construct (theta).
+Estimates the amount of information in a logistic item response theory model
+provided by a given item as function of the item parameters and the person's
+level on the construct (theta).
 }
 \examples{
 itemInformation(b = 2, theta = -4:4) #1PL
@@ -38,6 +39,7 @@ itemInformation(b = 2, a = 1.5, c = 0.10, d = 0.95, theta = -4:4) #4PL
 \doi{10.1177/0146621613475471}
 
 Other IRT: 
+\code{\link{calc_grm_probs}()},
 \code{\link{deriv_d_negBinom}()},
 \code{\link{discriminationToFactorLoading}()},
 \code{\link{fourPL}()},
