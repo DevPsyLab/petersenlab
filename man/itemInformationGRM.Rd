@@ -2,9 +2,15 @@
 % Please edit documentation in R/itemInformationGRM.R
 \name{calc_grm_probs}
 \alias{calc_grm_probs}
+\alias{itemInformationGRM}
+\alias{get_thresholds}
 \title{Item Information in graded response model in item response theory.}
 \usage{
 calc_grm_probs(a, b_thresholds, theta)
+
+itemInformationGRM(a, b_thresholds, theta)
+
+get_thresholds(x)
 }
 \arguments{
 \item{a}{Discrimination parameter (slope).}
@@ -14,6 +20,8 @@ be provided either as a vector (for a given item) or as a list (for multiple
 items).}
 
 \item{theta}{Person's level on the construct.}
+
+\item{x}{Dataframe.}
 }
 \value{
 \code{calc_grm_probs()} returns the probability of each response category;

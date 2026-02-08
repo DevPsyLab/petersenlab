@@ -14,6 +14,7 @@
 #' be provided either as a vector (for a given item) or as a list (for multiple
 #' items).
 #' @param theta Person's level on the construct.
+#' @param x Dataframe.
 #'
 #' @return
 #' \code{calc_grm_probs()} returns the probability of each response category;
@@ -70,6 +71,8 @@
 #'  theta = -4:4)
 #'
 
+#' @rdname itemInformationGRM
+#' @export
 # Calculate probability of each response category
 calc_grm_probs <- function(a, b_thresholds, theta) {
   if (!is.list(b_thresholds)) b_thresholds <- list(b_thresholds)
@@ -94,6 +97,8 @@ calc_grm_probs <- function(a, b_thresholds, theta) {
   return(probs_list)
 }
 
+#' @rdname itemInformationGRM
+#' @export
 # Calculate item information
 itemInformationGRM <- function(a, b_thresholds, theta) {
   if (!is.list(b_thresholds)) b_thresholds_ <- list(b_thresholds)
@@ -123,6 +128,8 @@ itemInformationGRM <- function(a, b_thresholds, theta) {
   return(info_list)
 }
 
+#' @rdname itemInformationGRM
+#' @export
 # Helper function to extract thresholds from item parameters data frame
 get_thresholds <- function(x) {
   if (is.data.frame(x)) {
