@@ -38,6 +38,7 @@ standardized factor loading
 <https://stats.stackexchange.com/questions/228629/conversion-of-irt-logit-discrimination-parameter-to-factor-loading-metric>
 
 Other IRT:
+[`calc_grm_probs()`](https://devpsylab.github.io/petersenlab/reference/itemInformationGRM.md),
 [`deriv_d_negBinom()`](https://devpsylab.github.io/petersenlab/reference/itemInformationZINB.md),
 [`fourPL()`](https://devpsylab.github.io/petersenlab/reference/fourPL.md),
 [`itemInformation()`](https://devpsylab.github.io/petersenlab/reference/itemInformation.md),

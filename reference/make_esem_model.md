@@ -101,7 +101,7 @@ lavaan::sem(
   data = HolzingerSwineford1939,
   missing = "ML",
   estimator = "MLR")
-#> lavaan 0.6-21 ended normally after 150 iterations
+#> lavaan 0.6-21 ended normally after 147 iterations
 #> 
 #>   Estimator                                         ML
 #>   Optimization method                           NLMINB
@@ -112,9 +112,9 @@ lavaan::sem(
 #> 
 #> Model Test User Model:
 #>                                               Standard      Scaled
-#>   Test Statistic                                22.897      23.785
+#>   Test Statistic                                22.897      23.734
 #>   Degrees of freedom                                12          12
 #>   P-value (Chi-square)                           0.029       0.022
-#>   Scaling correction factor                                  0.963
+#>   Scaling correction factor                                  0.965
 #>     Yuan-Bentler correction (Mplus variant)                       
 ```

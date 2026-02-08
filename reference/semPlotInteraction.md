@@ -150,9 +150,8 @@ moderationFit <- lavaan::sem(
   fixed.x = FALSE)
 #> Warning: lavaan->lav_model_vcov():  
 #>    The variance-covariance matrix of the estimated parameters (vcov) does not 
-#>    appear to be positive definite! The smallest eigenvalue (= -3.116676e-16) 
-#>    is smaller than zero. This may be a symptom that the model is not 
-#>    identified.
+#>    appear to be positive definite! The smallest eigenvalue (= 1.282391e-16) 
+#>    is close to zero. This may be a symptom that the model is not identified.
 
 # Pass model to function (unlabeled plot)
 semPlotInteraction(

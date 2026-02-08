@@ -200,6 +200,10 @@
 
 ### Item Response Theory (IRT)
 
+- [`calc_grm_probs()`](https://devpsylab.github.io/petersenlab/reference/itemInformationGRM.md)
+  [`itemInformationGRM()`](https://devpsylab.github.io/petersenlab/reference/itemInformationGRM.md)
+  [`get_thresholds()`](https://devpsylab.github.io/petersenlab/reference/itemInformationGRM.md)
+  : Item Information in graded response model in item response theory.
 - [`fourPL()`](https://devpsylab.github.io/petersenlab/reference/fourPL.md)
   : 4-Parameter Logistic Curve.
 - [`discriminationToFactorLoading()`](https://devpsylab.github.io/petersenlab/reference/discriminationToFactorLoading.md)
@@ -221,7 +225,7 @@
   : Item and Test Information from Zero-Inflated Negative Binomial
   Model.
 - [`itemInformation()`](https://devpsylab.github.io/petersenlab/reference/itemInformation.md)
-  : Item Information.
+  : Item Information in logistic item response theory model.
 - [`reliabilityIRT()`](https://devpsylab.github.io/petersenlab/reference/reliabilityIRT.md)
   : Reliability (IRT).
 - [`standardErrorIRT()`](https://devpsylab.github.io/petersenlab/reference/standardErrorIRT.md)

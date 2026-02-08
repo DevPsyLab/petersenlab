@@ -104,6 +104,7 @@ Other bayesian:
 [`pA()`](https://devpsylab.github.io/petersenlab/reference/bayesTheorem.md)
 
 Other IRT:
+[`calc_grm_probs()`](https://devpsylab.github.io/petersenlab/reference/itemInformationGRM.md),
 [`discriminationToFactorLoading()`](https://devpsylab.github.io/petersenlab/reference/discriminationToFactorLoading.md),
 [`fourPL()`](https://devpsylab.github.io/petersenlab/reference/fourPL.md),
 [`itemInformation()`](https://devpsylab.github.io/petersenlab/reference/itemInformation.md),

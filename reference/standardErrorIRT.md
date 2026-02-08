@@ -28,6 +28,7 @@ the test information (i.e., the sum of all items' information).
 [doi:10.1177/0146621613475471](https://doi.org/10.1177/0146621613475471)
 
 Other IRT:
+[`calc_grm_probs()`](https://devpsylab.github.io/petersenlab/reference/itemInformationGRM.md),
 [`deriv_d_negBinom()`](https://devpsylab.github.io/petersenlab/reference/itemInformationZINB.md),
 [`discriminationToFactorLoading()`](https://devpsylab.github.io/petersenlab/reference/discriminationToFactorLoading.md),
 [`fourPL()`](https://devpsylab.github.io/petersenlab/reference/fourPL.md),

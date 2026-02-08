@@ -32,6 +32,7 @@ information (i.e., the sum of all items' information).
 <https://groups.google.com/g/mirt-package/c/ZAgpt6nq5V8/m/R3OEeEqdAQAJ>
 
 Other IRT:
+[`calc_grm_probs()`](https://devpsylab.github.io/petersenlab/reference/itemInformationGRM.md),
 [`deriv_d_negBinom()`](https://devpsylab.github.io/petersenlab/reference/itemInformationZINB.md),
 [`discriminationToFactorLoading()`](https://devpsylab.github.io/petersenlab/reference/discriminationToFactorLoading.md),
 [`fourPL()`](https://devpsylab.github.io/petersenlab/reference/fourPL.md),

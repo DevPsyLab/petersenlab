@@ -95,6 +95,7 @@ Sabel (loreen.sabel@tu-dortmund.de).
 ## See also
 
 Other IRT:
+[`calc_grm_probs()`](https://devpsylab.github.io/petersenlab/reference/itemInformationGRM.md),
 [`deriv_d_negBinom()`](https://devpsylab.github.io/petersenlab/reference/itemInformationZINB.md),
 [`discriminationToFactorLoading()`](https://devpsylab.github.io/petersenlab/reference/discriminationToFactorLoading.md),
 [`fourPL()`](https://devpsylab.github.io/petersenlab/reference/fourPL.md),

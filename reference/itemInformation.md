@@ -1,6 +1,6 @@
-# Item Information.
+# Item Information in logistic item response theory model.
 
-Item information in item response theory.
+Item information in logistic model in item response theory.
 
 ## Usage
 
@@ -36,14 +36,16 @@ Amount of item information.
 
 ## Details
 
-Estimates the amount of information provided by a given item as function
-of the item parameters and the person's level on the construct (theta).
+Estimates the amount of information in a logistic item response theory
+model provided by a given item as function of the item parameters and
+the person's level on the construct (theta).
 
 ## See also
 
 [doi:10.1177/0146621613475471](https://doi.org/10.1177/0146621613475471)
 
 Other IRT:
+[`calc_grm_probs()`](https://devpsylab.github.io/petersenlab/reference/itemInformationGRM.md),
 [`deriv_d_negBinom()`](https://devpsylab.github.io/petersenlab/reference/itemInformationZINB.md),
 [`discriminationToFactorLoading()`](https://devpsylab.github.io/petersenlab/reference/discriminationToFactorLoading.md),
 [`fourPL()`](https://devpsylab.github.io/petersenlab/reference/fourPL.md),

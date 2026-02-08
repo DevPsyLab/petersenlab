@@ -52,5 +52,5 @@ v1 <- rnorm(1000, mean = 100, sd = 15)
 v2 <- rnorm(1000, mean = 1, sd = 15)
 reliabilityOfProductTerm(x = v1, y = v2,
  reliabilityX = .7, reliabilityY = .8)
-#> [1] 0.5601278
+#> [1] 0.5601508
 ```

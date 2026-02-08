@@ -46,5 +46,5 @@ v2 <- v1 + rnorm(1000, mean = 1, sd = 3)
 repeatability(v1, v2)
 
 #>        cr     bias  lowerLOA upperLOA
-#> 1 5.77654 1.054825 -4.721716 6.831365
+#> 1 5.76795 1.049423 -4.718527 6.817373
 ```
