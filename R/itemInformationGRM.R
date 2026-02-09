@@ -101,7 +101,7 @@ calc_grm_probs <- function(a, b_thresholds, theta) {
 #' @export
 # Calculate item information
 itemInformationGRM <- function(a, b_thresholds, theta) {
-  if (!is.list(b_thresholds)) b_thresholds_ <- list(b_thresholds)
+  if (!is.list(b_thresholds)) b_thresholds <- list(b_thresholds)
 
   info_list <- vector("list", length(a))
 
