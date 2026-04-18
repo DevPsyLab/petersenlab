@@ -112,9 +112,9 @@ lavaan::sem(
 #> 
 #> Model Test User Model:
 #>                                               Standard      Scaled
-#>   Test Statistic                                22.897      23.734
+#>   Test Statistic                                22.897      23.672
 #>   Degrees of freedom                                12          12
-#>   P-value (Chi-square)                           0.029       0.022
-#>   Scaling correction factor                                  0.965
+#>   P-value (Chi-square)                           0.029       0.023
+#>   Scaling correction factor                                  0.967
 #>     Yuan-Bentler correction (Mplus variant)                       
 ```

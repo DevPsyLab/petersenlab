@@ -59,12 +59,12 @@ crossTimeCorrelation(id = "ID", time = "time", variable = "score", data = df)
 #>  Pearson's product-moment correlation
 #> 
 #> data:  fullMatrix$time1 and fullMatrix$time2
-#> t = -0.088467, df = 198, p-value = 0.9296
+#> t = 0.83592, df = 198, p-value = 0.4042
 #> alternative hypothesis: true correlation is not equal to 0
 #> 95 percent confidence interval:
-#>  -0.1449016  0.1325697
+#>  -0.08009842  0.19642652
 #> sample estimates:
-#>          cor 
-#> -0.006286946 
+#>        cor 
+#> 0.05930162 
 #> 
 ```

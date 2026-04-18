@@ -50,5 +50,5 @@ v1 <- rnorm(1000, mean = 100, sd = 15)
 v2 <- v1 + rnorm(1000, mean = 1, sd = 15)
 reliabilityOfDifferenceScore(x = v1, y = v2,
  reliabilityX = .7, reliabilityY = .8)
-#> [1] 0.322694
+#> [1] 0.2800199
 ```

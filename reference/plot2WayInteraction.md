@@ -161,20 +161,20 @@ summary(lmModel)
 #> 
 #> Residuals:
 #>      Min       1Q   Median       3Q      Max 
-#> -10.3264  -2.0181   0.0738   1.9260   9.9847 
+#> -10.0469  -1.9395  -0.0028   2.0349   8.8112 
 #> 
 #> Coefficients:
-#>                     Estimate Std. Error t value Pr(>|t|)    
-#> (Intercept)         3.731043   1.911170   1.952   0.0512 .  
-#> predictor           1.342935   0.184102   7.294 6.11e-13 ***
-#> moderator           1.227713   0.037473  32.763  < 2e-16 ***
-#> predictor:moderator 1.507044   0.003615 416.903  < 2e-16 ***
+#>                      Estimate Std. Error t value Pr(>|t|)    
+#> (Intercept)         -1.292154   1.653594  -0.781    0.435    
+#> predictor            1.844856   0.159356  11.577   <2e-16 ***
+#> moderator            1.335923   0.032719  40.830   <2e-16 ***
+#> predictor:moderator  1.496369   0.003161 473.359   <2e-16 ***
 #> ---
 #> Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 #> 
-#> Residual standard error: 3.008 on 996 degrees of freedom
+#> Residual standard error: 2.975 on 996 degrees of freedom
 #> Multiple R-squared:  0.9999, Adjusted R-squared:  0.9999 
-#> F-statistic: 2.814e+06 on 3 and 996 DF,  p-value: < 2.2e-16
+#> F-statistic: 3.024e+06 on 3 and 996 DF,  p-value: < 2.2e-16
 #> 
 
 # 1. Plot 2-Way Interaction
@@ -191,21 +191,21 @@ plot2WayInteraction(predictor = "predictor",
 #> 
 #> Residuals:
 #>      Min       1Q   Median       3Q      Max 
-#> -10.3153  -2.0199   0.0733   1.9282   9.9801 
+#> -10.1060  -1.8959  -0.0078   2.0585   9.1758 
 #> 
 #> Coefficients:
-#>                      Estimate Std. Error t value Pr(>|t|)    
-#> (Intercept)          3.728853   1.912453   1.950   0.0515 .  
-#> predictor            1.343106   0.184215   7.291 6.27e-13 ***
-#> moderator            1.227771   0.037503  32.738  < 2e-16 ***
-#> covariate           -0.005692   0.091811  -0.062   0.9506    
-#> predictor:moderator  1.507039   0.003618 416.595  < 2e-16 ***
+#>                     Estimate Std. Error t value Pr(>|t|)    
+#> (Intercept)         -1.23944    1.65299   -0.75    0.454    
+#> predictor            1.84174    0.15927   11.56   <2e-16 ***
+#> moderator            1.33465    0.03271   40.80   <2e-16 ***
+#> covariate           -0.14444    0.09758   -1.48    0.139    
+#> predictor:moderator  1.49645    0.00316  473.59   <2e-16 ***
 #> ---
 #> Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 #> 
-#> Residual standard error: 3.009 on 995 degrees of freedom
+#> Residual standard error: 2.973 on 995 degrees of freedom
 #> Multiple R-squared:  0.9999, Adjusted R-squared:  0.9999 
-#> F-statistic: 2.108e+06 on 4 and 995 DF,  p-value: < 2.2e-16
+#> F-statistic: 2.271e+06 on 4 and 995 DF,  p-value: < 2.2e-16
 #> 
 
 # 2. Specify y-axis Range
@@ -223,21 +223,21 @@ plot2WayInteraction(predictor = "predictor",
 #> 
 #> Residuals:
 #>      Min       1Q   Median       3Q      Max 
-#> -10.3153  -2.0199   0.0733   1.9282   9.9801 
+#> -10.1060  -1.8959  -0.0078   2.0585   9.1758 
 #> 
 #> Coefficients:
-#>                      Estimate Std. Error t value Pr(>|t|)    
-#> (Intercept)          3.728853   1.912453   1.950   0.0515 .  
-#> predictor            1.343106   0.184215   7.291 6.27e-13 ***
-#> moderator            1.227771   0.037503  32.738  < 2e-16 ***
-#> covariate           -0.005692   0.091811  -0.062   0.9506    
-#> predictor:moderator  1.507039   0.003618 416.595  < 2e-16 ***
+#>                     Estimate Std. Error t value Pr(>|t|)    
+#> (Intercept)         -1.23944    1.65299   -0.75    0.454    
+#> predictor            1.84174    0.15927   11.56   <2e-16 ***
+#> moderator            1.33465    0.03271   40.80   <2e-16 ***
+#> covariate           -0.14444    0.09758   -1.48    0.139    
+#> predictor:moderator  1.49645    0.00316  473.59   <2e-16 ***
 #> ---
 #> Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 #> 
-#> Residual standard error: 3.009 on 995 degrees of freedom
+#> Residual standard error: 2.973 on 995 degrees of freedom
 #> Multiple R-squared:  0.9999, Adjusted R-squared:  0.9999 
-#> F-statistic: 2.108e+06 on 4 and 995 DF,  p-value: < 2.2e-16
+#> F-statistic: 2.271e+06 on 4 and 995 DF,  p-value: < 2.2e-16
 #> 
 
 # 3. Add Variable Labels
@@ -258,21 +258,21 @@ plot2WayInteraction(predictor = "predictor",
 #> 
 #> Residuals:
 #>      Min       1Q   Median       3Q      Max 
-#> -10.3153  -2.0199   0.0733   1.9282   9.9801 
+#> -10.1060  -1.8959  -0.0078   2.0585   9.1758 
 #> 
 #> Coefficients:
-#>                      Estimate Std. Error t value Pr(>|t|)    
-#> (Intercept)          3.728853   1.912453   1.950   0.0515 .  
-#> predictor            1.343106   0.184215   7.291 6.27e-13 ***
-#> moderator            1.227771   0.037503  32.738  < 2e-16 ***
-#> covariate           -0.005692   0.091811  -0.062   0.9506    
-#> predictor:moderator  1.507039   0.003618 416.595  < 2e-16 ***
+#>                     Estimate Std. Error t value Pr(>|t|)    
+#> (Intercept)         -1.23944    1.65299   -0.75    0.454    
+#> predictor            1.84174    0.15927   11.56   <2e-16 ***
+#> moderator            1.33465    0.03271   40.80   <2e-16 ***
+#> covariate           -0.14444    0.09758   -1.48    0.139    
+#> predictor:moderator  1.49645    0.00316  473.59   <2e-16 ***
 #> ---
 #> Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 #> 
-#> Residual standard error: 3.009 on 995 degrees of freedom
+#> Residual standard error: 2.973 on 995 degrees of freedom
 #> Multiple R-squared:  0.9999, Adjusted R-squared:  0.9999 
-#> F-statistic: 2.108e+06 on 4 and 995 DF,  p-value: < 2.2e-16
+#> F-statistic: 2.271e+06 on 4 and 995 DF,  p-value: < 2.2e-16
 #> 
 
 # 4. Change Legend Labels
@@ -294,21 +294,21 @@ plot2WayInteraction(predictor = "predictor",
 #> 
 #> Residuals:
 #>      Min       1Q   Median       3Q      Max 
-#> -10.3153  -2.0199   0.0733   1.9282   9.9801 
+#> -10.1060  -1.8959  -0.0078   2.0585   9.1758 
 #> 
 #> Coefficients:
-#>                      Estimate Std. Error t value Pr(>|t|)    
-#> (Intercept)          3.728853   1.912453   1.950   0.0515 .  
-#> predictor            1.343106   0.184215   7.291 6.27e-13 ***
-#> moderator            1.227771   0.037503  32.738  < 2e-16 ***
-#> covariate           -0.005692   0.091811  -0.062   0.9506    
-#> predictor:moderator  1.507039   0.003618 416.595  < 2e-16 ***
+#>                     Estimate Std. Error t value Pr(>|t|)    
+#> (Intercept)         -1.23944    1.65299   -0.75    0.454    
+#> predictor            1.84174    0.15927   11.56   <2e-16 ***
+#> moderator            1.33465    0.03271   40.80   <2e-16 ***
+#> covariate           -0.14444    0.09758   -1.48    0.139    
+#> predictor:moderator  1.49645    0.00316  473.59   <2e-16 ***
 #> ---
 #> Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 #> 
-#> Residual standard error: 3.009 on 995 degrees of freedom
+#> Residual standard error: 2.973 on 995 degrees of freedom
 #> Multiple R-squared:  0.9999, Adjusted R-squared:  0.9999 
-#> F-statistic: 2.108e+06 on 4 and 995 DF,  p-value: < 2.2e-16
+#> F-statistic: 2.271e+06 on 4 and 995 DF,  p-value: < 2.2e-16
 #> 
 
 # 5. Move Legend Location
@@ -331,21 +331,21 @@ plot2WayInteraction(predictor = "predictor",
 #> 
 #> Residuals:
 #>      Min       1Q   Median       3Q      Max 
-#> -10.3153  -2.0199   0.0733   1.9282   9.9801 
+#> -10.1060  -1.8959  -0.0078   2.0585   9.1758 
 #> 
 #> Coefficients:
-#>                      Estimate Std. Error t value Pr(>|t|)    
-#> (Intercept)          3.728853   1.912453   1.950   0.0515 .  
-#> predictor            1.343106   0.184215   7.291 6.27e-13 ***
-#> moderator            1.227771   0.037503  32.738  < 2e-16 ***
-#> covariate           -0.005692   0.091811  -0.062   0.9506    
-#> predictor:moderator  1.507039   0.003618 416.595  < 2e-16 ***
+#>                     Estimate Std. Error t value Pr(>|t|)    
+#> (Intercept)         -1.23944    1.65299   -0.75    0.454    
+#> predictor            1.84174    0.15927   11.56   <2e-16 ***
+#> moderator            1.33465    0.03271   40.80   <2e-16 ***
+#> covariate           -0.14444    0.09758   -1.48    0.139    
+#> predictor:moderator  1.49645    0.00316  473.59   <2e-16 ***
 #> ---
 #> Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 #> 
-#> Residual standard error: 3.009 on 995 degrees of freedom
+#> Residual standard error: 2.973 on 995 degrees of freedom
 #> Multiple R-squared:  0.9999, Adjusted R-squared:  0.9999 
-#> F-statistic: 2.108e+06 on 4 and 995 DF,  p-value: < 2.2e-16
+#> F-statistic: 2.271e+06 on 4 and 995 DF,  p-value: < 2.2e-16
 #> 
 
 #6. Turn Off p-Values
@@ -369,21 +369,21 @@ plot2WayInteraction(predictor = "predictor",
 #> 
 #> Residuals:
 #>      Min       1Q   Median       3Q      Max 
-#> -10.3153  -2.0199   0.0733   1.9282   9.9801 
+#> -10.1060  -1.8959  -0.0078   2.0585   9.1758 
 #> 
 #> Coefficients:
-#>                      Estimate Std. Error t value Pr(>|t|)    
-#> (Intercept)          3.728853   1.912453   1.950   0.0515 .  
-#> predictor            1.343106   0.184215   7.291 6.27e-13 ***
-#> moderator            1.227771   0.037503  32.738  < 2e-16 ***
-#> covariate           -0.005692   0.091811  -0.062   0.9506    
-#> predictor:moderator  1.507039   0.003618 416.595  < 2e-16 ***
+#>                     Estimate Std. Error t value Pr(>|t|)    
+#> (Intercept)         -1.23944    1.65299   -0.75    0.454    
+#> predictor            1.84174    0.15927   11.56   <2e-16 ***
+#> moderator            1.33465    0.03271   40.80   <2e-16 ***
+#> covariate           -0.14444    0.09758   -1.48    0.139    
+#> predictor:moderator  1.49645    0.00316  473.59   <2e-16 ***
 #> ---
 #> Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 #> 
-#> Residual standard error: 3.009 on 995 degrees of freedom
+#> Residual standard error: 2.973 on 995 degrees of freedom
 #> Multiple R-squared:  0.9999, Adjusted R-squared:  0.9999 
-#> F-statistic: 2.108e+06 on 4 and 995 DF,  p-value: < 2.2e-16
+#> F-statistic: 2.271e+06 on 4 and 995 DF,  p-value: < 2.2e-16
 #> 
 
 #7. Get Regression Output from Mean-Centered Predictor and Moderator
@@ -407,21 +407,21 @@ plot2WayInteraction(predictor = "predictor",
 #> 
 #> Residuals:
 #>      Min       1Q   Median       3Q      Max 
-#> -10.3153  -2.0199   0.0733   1.9282   9.9801 
+#> -10.1060  -1.8959  -0.0078   2.0585   9.1758 
 #> 
 #> Coefficients:
-#>                       Estimate Std. Error  t value Pr(>|t|)    
-#> (Intercept)         837.833289   0.095178 8802.779   <2e-16 ***
-#> predictor            76.931990   0.032615 2358.771   <2e-16 ***
-#> moderator            16.360910   0.009773 1674.108   <2e-16 ***
-#> covariate            -0.005692   0.091811   -0.062    0.951    
-#> predictor:moderator   1.507039   0.003618  416.595   <2e-16 ***
+#>                       Estimate Std. Error t value Pr(>|t|)    
+#> (Intercept)         824.867155   0.094035 8771.96   <2e-16 ***
+#> predictor            76.623395   0.031112 2462.79   <2e-16 ***
+#> moderator            16.165927   0.009308 1736.77   <2e-16 ***
+#> covariate            -0.144440   0.097581   -1.48    0.139    
+#> predictor:moderator   1.496454   0.003160  473.59   <2e-16 ***
 #> ---
 #> Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 #> 
-#> Residual standard error: 3.009 on 995 degrees of freedom
+#> Residual standard error: 2.973 on 995 degrees of freedom
 #> Multiple R-squared:  0.9999, Adjusted R-squared:  0.9999 
-#> F-statistic: 2.108e+06 on 4 and 995 DF,  p-value: < 2.2e-16
+#> F-statistic: 2.271e+06 on 4 and 995 DF,  p-value: < 2.2e-16
 #> 
 
 #8. Get Regression Output from Orthogonalized Interaction Term
@@ -444,20 +444,20 @@ plot2WayInteraction(predictor = "predictor",
 #> 
 #> Residuals:
 #>      Min       1Q   Median       3Q      Max 
-#> -10.3153  -2.0199   0.0733   1.9282   9.9801 
+#> -10.1060  -1.8959  -0.0078   2.0585   9.1758 
 #> 
 #> Coefficients:
-#>                       Estimate Std. Error   t value Pr(>|t|)    
-#> (Intercept)         -7.528e+02  6.001e-01 -1254.453   <2e-16 ***
-#> predictor            7.688e+01  3.261e-02  2357.335   <2e-16 ***
-#> moderator            1.631e+01  9.772e-03  1669.050   <2e-16 ***
-#> covariate           -5.692e-03  9.181e-02    -0.062    0.951    
-#> predictorXmoderator  1.507e+00  3.618e-03   416.595   <2e-16 ***
+#>                       Estimate Std. Error  t value Pr(>|t|)    
+#> (Intercept)         -7.361e+02  5.694e-01 -1292.82   <2e-16 ***
+#> predictor            7.583e+01  3.107e-02  2440.90   <2e-16 ***
+#> moderator            1.618e+01  9.308e-03  1738.64   <2e-16 ***
+#> covariate           -1.444e-01  9.758e-02    -1.48    0.139    
+#> predictorXmoderator  1.496e+00  3.160e-03   473.59   <2e-16 ***
 #> ---
 #> Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 #> 
-#> Residual standard error: 3.009 on 995 degrees of freedom
+#> Residual standard error: 2.973 on 995 degrees of freedom
 #> Multiple R-squared:  0.9999, Adjusted R-squared:  0.9999 
-#> F-statistic: 2.108e+06 on 4 and 995 DF,  p-value: < 2.2e-16
+#> F-statistic: 2.271e+06 on 4 and 995 DF,  p-value: < 2.2e-16
 #> 
 ```
