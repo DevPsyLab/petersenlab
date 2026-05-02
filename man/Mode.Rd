@@ -39,9 +39,9 @@ Mode(v1, multipleModes = "first")
 \seealso{
 \url{https://stackoverflow.com/questions/2547402/how-to-find-the-statistical-mode/8189441#8189441}
 
-Other computations: 
-\code{\link{kish_ess}()},
-\code{\link{meanSum}()},
-\code{\link{mySum}()}
+Other computations:
+\code{\link[=kish_ess]{kish_ess()}},
+\code{\link[=meanSum]{meanSum()}},
+\code{\link[=mySum]{mySum()}}
 }
 \concept{computations}

@@ -97,11 +97,11 @@ partialcor.table(mtcars[,c("mpg","cyl","disp")], mtcars[,c("drat","qsec")],
   mtcars[,c("hp","wt")], type = "manuscript", dig = 3)
 }
 \seealso{
-Other correlations: 
-\code{\link{addText}()},
-\code{\link{cor.table}()},
-\code{\link{crossTimeCorrelation}()},
-\code{\link{crossTimeCorrelationDF}()},
-\code{\link{vwReg}()}
+Other correlations:
+\code{\link[=addText]{addText()}},
+\code{\link[=cor.table]{cor.table()}},
+\code{\link[=crossTimeCorrelation]{crossTimeCorrelation()}},
+\code{\link[=crossTimeCorrelationDF]{crossTimeCorrelationDF()}},
+\code{\link[=vwReg]{vwReg()}}
 }
 \concept{correlations}

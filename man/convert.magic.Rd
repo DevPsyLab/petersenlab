@@ -37,19 +37,19 @@ convert.magic(USArrests, "character")
 \seealso{
 \url{https://stackoverflow.com/questions/11261399/function-for-converting-dataframe-column-type/11263399#11263399}
 
-Other dataManipulation: 
-\code{\link{columnBindFill}()},
-\code{\link{dropColsWithAllNA}()},
-\code{\link{dropRowsWithAllNA}()},
-\code{\link{varsDifferentTypes}()}
+Other dataManipulation:
+\code{\link[=columnBindFill]{columnBindFill()}},
+\code{\link[=dropColsWithAllNA]{dropColsWithAllNA()}},
+\code{\link[=dropRowsWithAllNA]{dropRowsWithAllNA()}},
+\code{\link[=varsDifferentTypes]{varsDifferentTypes()}}
 
-Other conversion: 
-\code{\link{convertHoursAMPM}()},
-\code{\link{convertToHours}()},
-\code{\link{convertToMinutes}()},
-\code{\link{convertToSeconds}()},
-\code{\link{percentileToTScore}()},
-\code{\link{pom}()}
+Other conversion:
+\code{\link[=convertHoursAMPM]{convertHoursAMPM()}},
+\code{\link[=convertToHours]{convertToHours()}},
+\code{\link[=convertToMinutes]{convertToMinutes()}},
+\code{\link[=convertToSeconds]{convertToSeconds()}},
+\code{\link[=percentileToTScore]{percentileToTScore()}},
+\code{\link[=pom]{pom()}}
 }
 \concept{conversion}
 \concept{dataManipulation}

@@ -112,13 +112,13 @@ theta <- seq(-4, 4, length.out = 101)
 plot(theta, test_info_4PL(theta, alpha, beta, gamma, delta))
 }
 \seealso{
-Other IRT: 
-\code{\link{calc_grm_probs}()},
-\code{\link{deriv_d_negBinom}()},
-\code{\link{discriminationToFactorLoading}()},
-\code{\link{fourPL}()},
-\code{\link{itemInformation}()},
-\code{\link{reliabilityIRT}()},
-\code{\link{standardErrorIRT}()}
+Other IRT:
+\code{\link[=calc_grm_probs]{calc_grm_probs()}},
+\code{\link[=deriv_d_negBinom]{deriv_d_negBinom()}},
+\code{\link[=discriminationToFactorLoading]{discriminationToFactorLoading()}},
+\code{\link[=fourPL]{fourPL()}},
+\code{\link[=itemInformation]{itemInformation()}},
+\code{\link[=reliabilityIRT]{reliabilityIRT()}},
+\code{\link[=standardErrorIRT]{standardErrorIRT()}}
 }
 \concept{IRT}

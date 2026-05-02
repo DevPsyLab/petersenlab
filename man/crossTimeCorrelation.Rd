@@ -36,11 +36,11 @@ df$score <- rnorm(nrow(df))
 crossTimeCorrelation(id = "ID", time = "time", variable = "score", data = df)
 }
 \seealso{
-Other correlations: 
-\code{\link{addText}()},
-\code{\link{cor.table}()},
-\code{\link{crossTimeCorrelationDF}()},
-\code{\link{partialcor.table}()},
-\code{\link{vwReg}()}
+Other correlations:
+\code{\link[=addText]{addText()}},
+\code{\link[=cor.table]{cor.table()}},
+\code{\link[=crossTimeCorrelationDF]{crossTimeCorrelationDF()}},
+\code{\link[=partialcor.table]{partialcor.table()}},
+\code{\link[=vwReg]{vwReg()}}
 }
 \concept{correlations}

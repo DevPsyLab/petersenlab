@@ -207,17 +207,17 @@ plot2WayInteraction(predictor = "predictor",
                     data = df)
 }
 \seealso{
-Other plot: 
-\code{\link{addText}()},
-\code{\link{ppPlot}()},
-\code{\link{semPlotInteraction}()},
-\code{\link{vwReg}()}
+Other plot:
+\code{\link[=addText]{addText()}},
+\code{\link[=ppPlot]{ppPlot()}},
+\code{\link[=semPlotInteraction]{semPlotInteraction()}},
+\code{\link[=vwReg]{vwReg()}}
 
-Other multipleRegression: 
-\code{\link{lmCombine}()},
-\code{\link{ppPlot}()},
-\code{\link{semPlotInteraction}()},
-\code{\link{update_nested}()}
+Other multipleRegression:
+\code{\link[=lmCombine]{lmCombine()}},
+\code{\link[=ppPlot]{ppPlot()}},
+\code{\link[=semPlotInteraction]{semPlotInteraction()}},
+\code{\link[=update_nested]{update_nested()}}
 }
 \concept{multipleRegression}
 \concept{plot}

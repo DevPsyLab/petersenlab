@@ -29,9 +29,9 @@ v1 <- rnorm(1000)
 specify_decimal(v1, 2)
 }
 \seealso{
-Other formatting: 
-\code{\link{apa}()},
-\code{\link{pValue}()},
-\code{\link{suppressLeadingZero}()}
+Other formatting:
+\code{\link[=apa]{apa()}},
+\code{\link[=pValue]{pValue()}},
+\code{\link[=suppressLeadingZero]{suppressLeadingZero()}}
 }
 \concept{formatting}

@@ -127,24 +127,24 @@ semPlotInteraction(
   outStr = "Income")
 }
 \seealso{
-Other plot: 
-\code{\link{addText}()},
-\code{\link{plot2WayInteraction}()},
-\code{\link{ppPlot}()},
-\code{\link{vwReg}()}
+Other plot:
+\code{\link[=addText]{addText()}},
+\code{\link[=plot2WayInteraction]{plot2WayInteraction()}},
+\code{\link[=ppPlot]{ppPlot()}},
+\code{\link[=vwReg]{vwReg()}}
 
-Other multipleRegression: 
-\code{\link{lmCombine}()},
-\code{\link{plot2WayInteraction}()},
-\code{\link{ppPlot}()},
-\code{\link{update_nested}()}
+Other multipleRegression:
+\code{\link[=lmCombine]{lmCombine()}},
+\code{\link[=plot2WayInteraction]{plot2WayInteraction()}},
+\code{\link[=ppPlot]{ppPlot()}},
+\code{\link[=update_nested]{update_nested()}}
 
-Other structural equation modeling: 
-\code{\link{equiv_chi}()},
-\code{\link{make_esem_model}()},
-\code{\link{measurementNoninvarianceEffectSize}()},
-\code{\link{puc}()},
-\code{\link{satorraBentlerScaledChiSquareDifferenceTestStatistic}()}
+Other structural equation modeling:
+\code{\link[=equiv_chi]{equiv_chi()}},
+\code{\link[=make_esem_model]{make_esem_model()}},
+\code{\link[=measurementNoninvarianceEffectSize]{measurementNoninvarianceEffectSize()}},
+\code{\link[=puc]{puc()}},
+\code{\link[=satorraBentlerScaledChiSquareDifferenceTestStatistic]{satorraBentlerScaledChiSquareDifferenceTestStatistic()}}
 }
 \concept{multipleRegression}
 \concept{plot}

@@ -24,12 +24,12 @@ percentileRanks <- c(1, 10, 20, 30, 40, 50, 60, 70, 80, 90, 99)
 percentileToTScore(percentileRanks)
 }
 \seealso{
-Other conversion: 
-\code{\link{convert.magic}()},
-\code{\link{convertHoursAMPM}()},
-\code{\link{convertToHours}()},
-\code{\link{convertToMinutes}()},
-\code{\link{convertToSeconds}()},
-\code{\link{pom}()}
+Other conversion:
+\code{\link[=convert.magic]{convert.magic()}},
+\code{\link[=convertHoursAMPM]{convertHoursAMPM()}},
+\code{\link[=convertToHours]{convertToHours()}},
+\code{\link[=convertToMinutes]{convertToMinutes()}},
+\code{\link[=convertToSeconds]{convertToSeconds()}},
+\code{\link[=pom]{pom()}}
 }
 \concept{conversion}

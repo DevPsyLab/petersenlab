@@ -87,12 +87,12 @@ lavaan::sem(
 \seealso{
 \url{https://msilvestrin.me/post/esem/}
 
-Other structural equation modeling: 
-\code{\link{equiv_chi}()},
-\code{\link{measurementNoninvarianceEffectSize}()},
-\code{\link{puc}()},
-\code{\link{satorraBentlerScaledChiSquareDifferenceTestStatistic}()},
-\code{\link{semPlotInteraction}()}
+Other structural equation modeling:
+\code{\link[=equiv_chi]{equiv_chi()}},
+\code{\link[=measurementNoninvarianceEffectSize]{measurementNoninvarianceEffectSize()}},
+\code{\link[=puc]{puc()}},
+\code{\link[=satorraBentlerScaledChiSquareDifferenceTestStatistic]{satorraBentlerScaledChiSquareDifferenceTestStatistic()}},
+\code{\link[=semPlotInteraction]{semPlotInteraction()}}
 }
 \concept{lavaan}
 \concept{structural equation modeling}

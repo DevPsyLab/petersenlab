@@ -53,18 +53,18 @@ plot(USArrests$Assault, USArrests$Murder)
 addText(x = USArrests$Assault, y = USArrests$Murder)
 }
 \seealso{
-Other plot: 
-\code{\link{plot2WayInteraction}()},
-\code{\link{ppPlot}()},
-\code{\link{semPlotInteraction}()},
-\code{\link{vwReg}()}
+Other plot:
+\code{\link[=plot2WayInteraction]{plot2WayInteraction()}},
+\code{\link[=ppPlot]{ppPlot()}},
+\code{\link[=semPlotInteraction]{semPlotInteraction()}},
+\code{\link[=vwReg]{vwReg()}}
 
-Other correlations: 
-\code{\link{cor.table}()},
-\code{\link{crossTimeCorrelation}()},
-\code{\link{crossTimeCorrelationDF}()},
-\code{\link{partialcor.table}()},
-\code{\link{vwReg}()}
+Other correlations:
+\code{\link[=cor.table]{cor.table()}},
+\code{\link[=crossTimeCorrelation]{crossTimeCorrelation()}},
+\code{\link[=crossTimeCorrelationDF]{crossTimeCorrelationDF()}},
+\code{\link[=partialcor.table]{partialcor.table()}},
+\code{\link[=vwReg]{vwReg()}}
 }
 \concept{correlations}
 \concept{plot}

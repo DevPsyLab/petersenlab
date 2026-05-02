@@ -46,9 +46,7 @@
 #'
 #' @family accuracy
 #'
-#' @importFrom ggplot2 theme_set theme_bw theme element_blank element_text
-#' geom_line geom_vline annotate scale_x_continuous scale_y_continuous sec_axis
-#' rel coord_cartesian
+#' @importFrom ggplot2 theme_set theme_bw theme element_blank element_text geom_line geom_vline annotate scale_x_continuous scale_y_continuous sec_axis rel coord_cartesian
 #' @importFrom scales percent
 #'
 #' @export

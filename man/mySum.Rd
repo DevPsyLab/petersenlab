@@ -30,9 +30,9 @@ df[sample(1:nrow(df), size = 100), c("item1","item2","item3")] <- NA
 df$sum <- mySum(df)
 }
 \seealso{
-Other computations: 
-\code{\link{Mode}()},
-\code{\link{kish_ess}()},
-\code{\link{meanSum}()}
+Other computations:
+\code{\link[=Mode]{Mode()}},
+\code{\link[=kish_ess]{kish_ess()}},
+\code{\link[=meanSum]{meanSum()}}
 }
 \concept{computations}

@@ -35,7 +35,7 @@ options(old)
 \url{https://www.r-bloggers.com/2012/05/loading-andor-installing-packages-programmatically/}
 \url{https://stackoverflow.com/questions/4090169/elegant-way-to-check-for-missing-packages-and-install-them}
 
-Other packages: 
-\code{\link{getDependencies}()}
+Other packages:
+\code{\link[=getDependencies]{getDependencies()}}
 }
 \concept{packages}

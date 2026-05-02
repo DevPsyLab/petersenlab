@@ -36,17 +36,17 @@ ppPlot(lmModel)
 \seealso{
 \url{https://www.r-bloggers.com/2009/12/r-tutorial-series-graphic-analysis-of-regression-assumptions/}
 
-Other plot: 
-\code{\link{addText}()},
-\code{\link{plot2WayInteraction}()},
-\code{\link{semPlotInteraction}()},
-\code{\link{vwReg}()}
+Other plot:
+\code{\link[=addText]{addText()}},
+\code{\link[=plot2WayInteraction]{plot2WayInteraction()}},
+\code{\link[=semPlotInteraction]{semPlotInteraction()}},
+\code{\link[=vwReg]{vwReg()}}
 
-Other multipleRegression: 
-\code{\link{lmCombine}()},
-\code{\link{plot2WayInteraction}()},
-\code{\link{semPlotInteraction}()},
-\code{\link{update_nested}()}
+Other multipleRegression:
+\code{\link[=lmCombine]{lmCombine()}},
+\code{\link[=plot2WayInteraction]{plot2WayInteraction()}},
+\code{\link[=semPlotInteraction]{semPlotInteraction()}},
+\code{\link[=update_nested]{update_nested()}}
 }
 \concept{multipleRegression}
 \concept{plot}

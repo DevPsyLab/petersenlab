@@ -66,8 +66,8 @@ Co-created by Robert G. Moulder Jr. and Isaac T. Petersen
 #INSERT
 }
 \seealso{
-Other simulation: 
-\code{\link{complement}()},
-\code{\link{simulateAUC}()}
+Other simulation:
+\code{\link[=complement]{complement()}},
+\code{\link[=simulateAUC]{simulateAUC()}}
 }
 \concept{simulation}

@@ -39,9 +39,9 @@ Calculate the proportional reduction of variance in imputation models.
 #INSERT
 }
 \seealso{
-Other multipleImputation: 
-\code{\link{imputationCombine}()},
-\code{\link{imputationModelCompare}()},
-\code{\link{lmCombine}()}
+Other multipleImputation:
+\code{\link[=imputationCombine]{imputationCombine()}},
+\code{\link[=imputationModelCompare]{imputationModelCompare()}},
+\code{\link[=lmCombine]{lmCombine()}}
 }
 \concept{multipleImputation}

@@ -32,8 +32,8 @@ v2 <- v1 + rnorm(1000, mean = 1, sd = 3)
 repeatability(v1, v2)
 }
 \seealso{
-Other reliability: 
-\code{\link{reliabilityOfDifferenceScore}()},
-\code{\link{reliabilityOfProductTerm}()}
+Other reliability:
+\code{\link[=reliabilityOfDifferenceScore]{reliabilityOfDifferenceScore()}},
+\code{\link[=reliabilityOfProductTerm]{reliabilityOfProductTerm()}}
 }
 \concept{reliability}

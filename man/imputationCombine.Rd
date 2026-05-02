@@ -24,9 +24,9 @@ Function that combines lme results across multiple imputation runs.
 #INSERT
 }
 \seealso{
-Other multipleImputation: 
-\code{\link{imputationModelCompare}()},
-\code{\link{imputationPRV}()},
-\code{\link{lmCombine}()}
+Other multipleImputation:
+\code{\link[=imputationModelCompare]{imputationModelCompare()}},
+\code{\link[=imputationPRV]{imputationPRV()}},
+\code{\link[=lmCombine]{lmCombine()}}
 }
 \concept{multipleImputation}

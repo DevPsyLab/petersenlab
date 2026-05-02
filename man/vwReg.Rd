@@ -165,18 +165,18 @@ vwReg(y ~ x, df, quantize = "SD") # 1-2-3-SD plot
 
 \url{https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2265501}
 
-Other plot: 
-\code{\link{addText}()},
-\code{\link{plot2WayInteraction}()},
-\code{\link{ppPlot}()},
-\code{\link{semPlotInteraction}()}
+Other plot:
+\code{\link[=addText]{addText()}},
+\code{\link[=plot2WayInteraction]{plot2WayInteraction()}},
+\code{\link[=ppPlot]{ppPlot()}},
+\code{\link[=semPlotInteraction]{semPlotInteraction()}}
 
-Other correlations: 
-\code{\link{addText}()},
-\code{\link{cor.table}()},
-\code{\link{crossTimeCorrelation}()},
-\code{\link{crossTimeCorrelationDF}()},
-\code{\link{partialcor.table}()}
+Other correlations:
+\code{\link[=addText]{addText()}},
+\code{\link[=cor.table]{cor.table()}},
+\code{\link[=crossTimeCorrelation]{crossTimeCorrelation()}},
+\code{\link[=crossTimeCorrelationDF]{crossTimeCorrelationDF()}},
+\code{\link[=partialcor.table]{partialcor.table()}}
 }
 \concept{correlations}
 \concept{plot}

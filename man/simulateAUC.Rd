@@ -38,8 +38,8 @@ simulateAUC(.99, 10000)
 \seealso{
 \url{https://stats.stackexchange.com/questions/422926/generate-synthetic-data-given-auc/424213}
 
-Other simulation: 
-\code{\link{complement}()},
-\code{\link{simulateIndirectEffect}()}
+Other simulation:
+\code{\link[=complement]{complement()}},
+\code{\link[=simulateIndirectEffect]{simulateIndirectEffect()}}
 }
 \concept{simulation}

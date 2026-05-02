@@ -27,10 +27,10 @@ data("USArrests")
 not_all_na(USArrests$Murder)
 }
 \seealso{
-Other dataEvaluations: 
-\code{\link{dropColsWithAllNA}()},
-\code{\link{dropRowsWithAllNA}()},
-\code{\link{is.nan.data.frame}()},
-\code{\link{not_any_na}()}
+Other dataEvaluations:
+\code{\link[=dropColsWithAllNA]{dropColsWithAllNA()}},
+\code{\link[=dropRowsWithAllNA]{dropRowsWithAllNA()}},
+\code{\link[=is.nan.data.frame]{is.nan.data.frame()}},
+\code{\link[=not_any_na]{not_any_na()}}
 }
 \concept{dataEvaluations}

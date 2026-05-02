@@ -37,17 +37,17 @@ df[sample(1:nrow(df), size = 100), c("score1","score2","score3")] <- NA
 dropRowsWithAllNA(df, ignore = c("ID","time"))
 }
 \seealso{
-Other dataManipulation: 
-\code{\link{columnBindFill}()},
-\code{\link{convert.magic}()},
-\code{\link{dropColsWithAllNA}()},
-\code{\link{varsDifferentTypes}()}
+Other dataManipulation:
+\code{\link[=columnBindFill]{columnBindFill()}},
+\code{\link[=convert.magic]{convert.magic()}},
+\code{\link[=dropColsWithAllNA]{dropColsWithAllNA()}},
+\code{\link[=varsDifferentTypes]{varsDifferentTypes()}}
 
-Other dataEvaluations: 
-\code{\link{dropColsWithAllNA}()},
-\code{\link{is.nan.data.frame}()},
-\code{\link{not_all_na}()},
-\code{\link{not_any_na}()}
+Other dataEvaluations:
+\code{\link[=dropColsWithAllNA]{dropColsWithAllNA()}},
+\code{\link[=is.nan.data.frame]{is.nan.data.frame()}},
+\code{\link[=not_all_na]{not_all_na()}},
+\code{\link[=not_any_na]{not_any_na()}}
 }
 \concept{dataEvaluations}
 \concept{dataManipulation}

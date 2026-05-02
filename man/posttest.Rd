@@ -88,11 +88,11 @@ posttestProbability(
   likelihoodRatio = 3.25)
 }
 \seealso{
-Other accuracy: 
-\code{\link{accuracyAtCutoff}()},
-\code{\link{accuracyAtEachCutoff}()},
-\code{\link{accuracyOverall}()},
-\code{\link{nomogrammer}()},
-\code{\link{optimalCutoff}()}
+Other accuracy:
+\code{\link[=accuracyAtCutoff]{accuracyAtCutoff()}},
+\code{\link[=accuracyAtEachCutoff]{accuracyAtEachCutoff()}},
+\code{\link[=accuracyOverall]{accuracyOverall()}},
+\code{\link[=nomogrammer]{nomogrammer()}},
+\code{\link[=optimalCutoff]{optimalCutoff()}}
 }
 \concept{accuracy}

@@ -31,10 +31,10 @@ is.nan(df)
 \seealso{
 \url{https://stackoverflow.com/questions/18142117/how-to-replace-nan-value-with-zero-in-a-huge-data-frame/18143097#18143097}
 
-Other dataEvaluations: 
-\code{\link{dropColsWithAllNA}()},
-\code{\link{dropRowsWithAllNA}()},
-\code{\link{not_all_na}()},
-\code{\link{not_any_na}()}
+Other dataEvaluations:
+\code{\link[=dropColsWithAllNA]{dropColsWithAllNA()}},
+\code{\link[=dropRowsWithAllNA]{dropRowsWithAllNA()}},
+\code{\link[=not_all_na]{not_all_na()}},
+\code{\link[=not_any_na]{not_any_na()}}
 }
 \concept{dataEvaluations}

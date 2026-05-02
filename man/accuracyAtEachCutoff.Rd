@@ -105,11 +105,11 @@ accuracyAtEachCutoff(predicted = USArrests$Assault,
   UH = 1, UM = 0, UCR = .9, UFA = 0)
 }
 \seealso{
-Other accuracy: 
-\code{\link{accuracyAtCutoff}()},
-\code{\link{accuracyOverall}()},
-\code{\link{nomogrammer}()},
-\code{\link{optimalCutoff}()},
-\code{\link{posttestOdds}()}
+Other accuracy:
+\code{\link[=accuracyAtCutoff]{accuracyAtCutoff()}},
+\code{\link[=accuracyOverall]{accuracyOverall()}},
+\code{\link[=nomogrammer]{nomogrammer()}},
+\code{\link[=optimalCutoff]{optimalCutoff()}},
+\code{\link[=posttestOdds]{posttestOdds()}}
 }
 \concept{accuracy}

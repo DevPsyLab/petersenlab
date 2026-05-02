@@ -39,17 +39,17 @@ dropColsWithAllNA(df)
 dropColsWithAllNA(df, ignore = c("naCol2"))
 }
 \seealso{
-Other dataManipulation: 
-\code{\link{columnBindFill}()},
-\code{\link{convert.magic}()},
-\code{\link{dropRowsWithAllNA}()},
-\code{\link{varsDifferentTypes}()}
+Other dataManipulation:
+\code{\link[=columnBindFill]{columnBindFill()}},
+\code{\link[=convert.magic]{convert.magic()}},
+\code{\link[=dropRowsWithAllNA]{dropRowsWithAllNA()}},
+\code{\link[=varsDifferentTypes]{varsDifferentTypes()}}
 
-Other dataEvaluations: 
-\code{\link{dropRowsWithAllNA}()},
-\code{\link{is.nan.data.frame}()},
-\code{\link{not_all_na}()},
-\code{\link{not_any_na}()}
+Other dataEvaluations:
+\code{\link[=dropRowsWithAllNA]{dropRowsWithAllNA()}},
+\code{\link[=is.nan.data.frame]{is.nan.data.frame()}},
+\code{\link[=not_all_na]{not_all_na()}},
+\code{\link[=not_any_na]{not_any_na()}}
 }
 \concept{dataEvaluations}
 \concept{dataManipulation}

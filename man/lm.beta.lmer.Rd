@@ -34,7 +34,7 @@ lm.beta.lmer(model)
 \seealso{
 \url{https://stats.stackexchange.com/a/123448}
 
-Other mixedModel: 
-\code{\link{lmeSummary}()}
+Other mixedModel:
+\code{\link[=lmeSummary]{lmeSummary()}}
 }
 \concept{mixedModel}

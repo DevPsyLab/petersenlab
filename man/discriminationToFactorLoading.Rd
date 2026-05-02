@@ -36,13 +36,13 @@ discriminationToFactorLoading(1.3, model = "logit")
 \url{https://aidenloe.github.io/introToIRT.html}
 \url{https://stats.stackexchange.com/questions/228629/conversion-of-irt-logit-discrimination-parameter-to-factor-loading-metric}
 
-Other IRT: 
-\code{\link{calc_grm_probs}()},
-\code{\link{deriv_d_negBinom}()},
-\code{\link{fourPL}()},
-\code{\link{itemInformation}()},
-\code{\link{reliabilityIRT}()},
-\code{\link{standardErrorIRT}()},
-\code{\link{test_info_4PL}()}
+Other IRT:
+\code{\link[=calc_grm_probs]{calc_grm_probs()}},
+\code{\link[=deriv_d_negBinom]{deriv_d_negBinom()}},
+\code{\link[=fourPL]{fourPL()}},
+\code{\link[=itemInformation]{itemInformation()}},
+\code{\link[=reliabilityIRT]{reliabilityIRT()}},
+\code{\link[=standardErrorIRT]{standardErrorIRT()}},
+\code{\link[=test_info_4PL]{test_info_4PL()}}
 }
 \concept{IRT}

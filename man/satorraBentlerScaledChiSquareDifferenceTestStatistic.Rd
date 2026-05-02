@@ -54,11 +54,11 @@ satorraBentlerScaledChiSquareDifferenceTestStatistic(
  d1 = lavaan::fitMeasures(fit1)["df.scaled"])
 }
 \seealso{
-Other structural equation modeling: 
-\code{\link{equiv_chi}()},
-\code{\link{make_esem_model}()},
-\code{\link{measurementNoninvarianceEffectSize}()},
-\code{\link{puc}()},
-\code{\link{semPlotInteraction}()}
+Other structural equation modeling:
+\code{\link[=equiv_chi]{equiv_chi()}},
+\code{\link[=make_esem_model]{make_esem_model()}},
+\code{\link[=measurementNoninvarianceEffectSize]{measurementNoninvarianceEffectSize()}},
+\code{\link[=puc]{puc()}},
+\code{\link[=semPlotInteraction]{semPlotInteraction()}}
 }
 \concept{structural equation modeling}

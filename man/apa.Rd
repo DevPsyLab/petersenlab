@@ -40,9 +40,9 @@ apa(value = 0.54674, decimals = 3, leading = TRUE)
 \seealso{
 \url{https://github.com/doomlab/MOTE}
 
-Other formatting: 
-\code{\link{pValue}()},
-\code{\link{specify_decimal}()},
-\code{\link{suppressLeadingZero}()}
+Other formatting:
+\code{\link[=pValue]{pValue()}},
+\code{\link[=specify_decimal]{specify_decimal()}},
+\code{\link[=suppressLeadingZero]{suppressLeadingZero()}}
 }
 \concept{formatting}

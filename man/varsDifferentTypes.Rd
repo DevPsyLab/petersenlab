@@ -41,10 +41,10 @@ df2 <- data.frame(
 varsDifferentTypes(df1, df2)
 }
 \seealso{
-Other dataManipulation: 
-\code{\link{columnBindFill}()},
-\code{\link{convert.magic}()},
-\code{\link{dropColsWithAllNA}()},
-\code{\link{dropRowsWithAllNA}()}
+Other dataManipulation:
+\code{\link[=columnBindFill]{columnBindFill()}},
+\code{\link[=convert.magic]{convert.magic()}},
+\code{\link[=dropColsWithAllNA]{dropColsWithAllNA()}},
+\code{\link[=dropRowsWithAllNA]{dropRowsWithAllNA()}}
 }
 \concept{dataManipulation}

@@ -38,13 +38,13 @@ fourPL(b = 2, a = 1.5, c = 0.10, d = 0.95, theta = -4:4) #4PL
 \seealso{
 \doi{10.1177/0146621613475471}
 
-Other IRT: 
-\code{\link{calc_grm_probs}()},
-\code{\link{deriv_d_negBinom}()},
-\code{\link{discriminationToFactorLoading}()},
-\code{\link{itemInformation}()},
-\code{\link{reliabilityIRT}()},
-\code{\link{standardErrorIRT}()},
-\code{\link{test_info_4PL}()}
+Other IRT:
+\code{\link[=calc_grm_probs]{calc_grm_probs()}},
+\code{\link[=deriv_d_negBinom]{deriv_d_negBinom()}},
+\code{\link[=discriminationToFactorLoading]{discriminationToFactorLoading()}},
+\code{\link[=itemInformation]{itemInformation()}},
+\code{\link[=reliabilityIRT]{reliabilityIRT()}},
+\code{\link[=standardErrorIRT]{standardErrorIRT()}},
+\code{\link[=test_info_4PL]{test_info_4PL()}}
 }
 \concept{IRT}

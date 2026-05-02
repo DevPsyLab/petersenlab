@@ -39,12 +39,12 @@ pom(v1, min = 0, max = 10)
 pom(v1)
 }
 \seealso{
-Other conversion: 
-\code{\link{convert.magic}()},
-\code{\link{convertHoursAMPM}()},
-\code{\link{convertToHours}()},
-\code{\link{convertToMinutes}()},
-\code{\link{convertToSeconds}()},
-\code{\link{percentileToTScore}()}
+Other conversion:
+\code{\link[=convert.magic]{convert.magic()}},
+\code{\link[=convertHoursAMPM]{convertHoursAMPM()}},
+\code{\link[=convertToHours]{convertToHours()}},
+\code{\link[=convertToMinutes]{convertToMinutes()}},
+\code{\link[=convertToSeconds]{convertToSeconds()}},
+\code{\link[=percentileToTScore]{percentileToTScore()}}
 }
 \concept{conversion}

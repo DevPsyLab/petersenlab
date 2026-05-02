@@ -40,8 +40,8 @@ plot(v1, v2)
 \seealso{
 \url{https://stats.stackexchange.com/a/313138/20338}
 
-Other simulation: 
-\code{\link{simulateAUC}()},
-\code{\link{simulateIndirectEffect}()}
+Other simulation:
+\code{\link[=simulateAUC]{simulateAUC()}},
+\code{\link[=simulateIndirectEffect]{simulateIndirectEffect()}}
 }
 \concept{simulation}

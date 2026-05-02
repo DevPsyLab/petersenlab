@@ -64,7 +64,7 @@ rm(key)
 \seealso{
 \url{https://stackoverflow.com/questions/25318800/how-do-i-read-an-encrypted-file-from-disk-with-r/25321586#25321586}
 
-Other encrypted: 
-\code{\link{read.aes}()}
+Other encrypted:
+\code{\link[=read.aes]{read.aes()}}
 }
 \concept{encrypted}

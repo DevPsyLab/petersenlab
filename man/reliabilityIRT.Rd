@@ -40,13 +40,13 @@ reliabilityIRT(items$testInformation)
 \seealso{
 \url{https://groups.google.com/g/mirt-package/c/ZAgpt6nq5V8/m/R3OEeEqdAQAJ}
 
-Other IRT: 
-\code{\link{calc_grm_probs}()},
-\code{\link{deriv_d_negBinom}()},
-\code{\link{discriminationToFactorLoading}()},
-\code{\link{fourPL}()},
-\code{\link{itemInformation}()},
-\code{\link{standardErrorIRT}()},
-\code{\link{test_info_4PL}()}
+Other IRT:
+\code{\link[=calc_grm_probs]{calc_grm_probs()}},
+\code{\link[=deriv_d_negBinom]{deriv_d_negBinom()}},
+\code{\link[=discriminationToFactorLoading]{discriminationToFactorLoading()}},
+\code{\link[=fourPL]{fourPL()}},
+\code{\link[=itemInformation]{itemInformation()}},
+\code{\link[=standardErrorIRT]{standardErrorIRT()}},
+\code{\link[=test_info_4PL]{test_info_4PL()}}
 }
 \concept{IRT}

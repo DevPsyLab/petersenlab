@@ -77,11 +77,11 @@ cor.table(mtcars[,c("mpg","cyl","disp")], mtcars[,c("drat","qsec")])
 cor.table(mtcars[,c("mpg","cyl","disp")], mtcars[,c("drat","qsec")], type = "manuscript", dig = 3)
 }
 \seealso{
-Other correlations: 
-\code{\link{addText}()},
-\code{\link{crossTimeCorrelation}()},
-\code{\link{crossTimeCorrelationDF}()},
-\code{\link{partialcor.table}()},
-\code{\link{vwReg}()}
+Other correlations:
+\code{\link[=addText]{addText()}},
+\code{\link[=crossTimeCorrelation]{crossTimeCorrelation()}},
+\code{\link[=crossTimeCorrelationDF]{crossTimeCorrelationDF()}},
+\code{\link[=partialcor.table]{partialcor.table()}},
+\code{\link[=vwReg]{vwReg()}}
 }
 \concept{correlations}

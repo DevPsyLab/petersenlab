@@ -86,9 +86,9 @@ wquantile(
 \seealso{
 \doi{10.48550/arXiv.2304.07265}
 
-Other computations: 
-\code{\link{Mode}()},
-\code{\link{meanSum}()},
-\code{\link{mySum}()}
+Other computations:
+\code{\link[=Mode]{Mode()}},
+\code{\link[=meanSum]{meanSum()}},
+\code{\link[=mySum]{mySum()}}
 }
 \concept{computations}

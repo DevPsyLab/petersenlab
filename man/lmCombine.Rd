@@ -24,16 +24,16 @@ Function that combines \code{lm()} results across multiple imputation runs.
 #INSERT
 }
 \seealso{
-Other multipleImputation: 
-\code{\link{imputationCombine}()},
-\code{\link{imputationModelCompare}()},
-\code{\link{imputationPRV}()}
+Other multipleImputation:
+\code{\link[=imputationCombine]{imputationCombine()}},
+\code{\link[=imputationModelCompare]{imputationModelCompare()}},
+\code{\link[=imputationPRV]{imputationPRV()}}
 
-Other multipleRegression: 
-\code{\link{plot2WayInteraction}()},
-\code{\link{ppPlot}()},
-\code{\link{semPlotInteraction}()},
-\code{\link{update_nested}()}
+Other multipleRegression:
+\code{\link[=plot2WayInteraction]{plot2WayInteraction()}},
+\code{\link[=ppPlot]{ppPlot()}},
+\code{\link[=semPlotInteraction]{semPlotInteraction()}},
+\code{\link[=update_nested]{update_nested()}}
 }
 \concept{multipleImputation}
 \concept{multipleRegression}

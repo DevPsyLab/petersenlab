@@ -33,7 +33,7 @@ summary(model)
 lmeSummary(model)
 }
 \seealso{
-Other mixedModel: 
-\code{\link{lm.beta.lmer}()}
+Other mixedModel:
+\code{\link[=lm.beta.lmer]{lm.beta.lmer()}}
 }
 \concept{mixedModel}

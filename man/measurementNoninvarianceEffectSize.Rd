@@ -70,11 +70,11 @@ measurementNoninvarianceEffectSize(
   model_constrained = fit3)
 }
 \seealso{
-Other structural equation modeling: 
-\code{\link{equiv_chi}()},
-\code{\link{make_esem_model}()},
-\code{\link{puc}()},
-\code{\link{satorraBentlerScaledChiSquareDifferenceTestStatistic}()},
-\code{\link{semPlotInteraction}()}
+Other structural equation modeling:
+\code{\link[=equiv_chi]{equiv_chi()}},
+\code{\link[=make_esem_model]{make_esem_model()}},
+\code{\link[=puc]{puc()}},
+\code{\link[=satorraBentlerScaledChiSquareDifferenceTestStatistic]{satorraBentlerScaledChiSquareDifferenceTestStatistic()}},
+\code{\link[=semPlotInteraction]{semPlotInteraction()}}
 }
 \concept{structural equation modeling}

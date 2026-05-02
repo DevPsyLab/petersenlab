@@ -28,9 +28,9 @@ df <- data.frame(item1 = rnorm(1000), item2 = rnorm(1000), item3 = rnorm(1000))
 df$missingnessAdjustedSum <- meanSum(df)
 }
 \seealso{
-Other computations: 
-\code{\link{Mode}()},
-\code{\link{kish_ess}()},
-\code{\link{mySum}()}
+Other computations:
+\code{\link[=Mode]{Mode()}},
+\code{\link[=kish_ess]{kish_ess()}},
+\code{\link[=mySum]{mySum()}}
 }
 \concept{computations}

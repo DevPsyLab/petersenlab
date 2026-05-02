@@ -30,10 +30,10 @@ columnBindFill(df1, df2)
 \seealso{
 \url{https://stackoverflow.com/questions/7962267/cbind-a-dataframe-with-an-empty-dataframe-cbind-fill/7962286#7962286}
 
-Other dataManipulation: 
-\code{\link{convert.magic}()},
-\code{\link{dropColsWithAllNA}()},
-\code{\link{dropRowsWithAllNA}()},
-\code{\link{varsDifferentTypes}()}
+Other dataManipulation:
+\code{\link[=convert.magic]{convert.magic()}},
+\code{\link[=dropColsWithAllNA]{dropColsWithAllNA()}},
+\code{\link[=dropRowsWithAllNA]{dropRowsWithAllNA()}},
+\code{\link[=varsDifferentTypes]{varsDifferentTypes()}}
 }
 \concept{dataManipulation}

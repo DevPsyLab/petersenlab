@@ -65,11 +65,11 @@ Mean absolute scaled error (MASE): \cr
 Predictive R-squared: \cr
 \url{https://www.r-bloggers.com/2014/05/can-we-do-better-than-r-squared/} \cr
 
-Other accuracy: 
-\code{\link{accuracyAtCutoff}()},
-\code{\link{accuracyAtEachCutoff}()},
-\code{\link{nomogrammer}()},
-\code{\link{optimalCutoff}()},
-\code{\link{posttestOdds}()}
+Other accuracy:
+\code{\link[=accuracyAtCutoff]{accuracyAtCutoff()}},
+\code{\link[=accuracyAtEachCutoff]{accuracyAtEachCutoff()}},
+\code{\link[=nomogrammer]{nomogrammer()}},
+\code{\link[=optimalCutoff]{optimalCutoff()}},
+\code{\link[=posttestOdds]{posttestOdds()}}
 }
 \concept{accuracy}

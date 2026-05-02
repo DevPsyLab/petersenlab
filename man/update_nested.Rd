@@ -56,10 +56,10 @@ anova(m1, m2, m3, m4, m5)
 
 \url{https://stackoverflow.com/a/47195348}
 
-Other multipleRegression: 
-\code{\link{lmCombine}()},
-\code{\link{plot2WayInteraction}()},
-\code{\link{ppPlot}()},
-\code{\link{semPlotInteraction}()}
+Other multipleRegression:
+\code{\link[=lmCombine]{lmCombine()}},
+\code{\link[=plot2WayInteraction]{plot2WayInteraction()}},
+\code{\link[=ppPlot]{ppPlot()}},
+\code{\link[=semPlotInteraction]{semPlotInteraction()}}
 }
 \concept{multipleRegression}

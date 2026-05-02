@@ -43,18 +43,18 @@ convertToSeconds(HHMM = df$HHMM)
 convertToSeconds(MMSS = df$MMSS)
 }
 \seealso{
-Other times: 
-\code{\link{convertHoursAMPM}()},
-\code{\link{convertToHours}()},
-\code{\link{convertToMinutes}()}
+Other times:
+\code{\link[=convertHoursAMPM]{convertHoursAMPM()}},
+\code{\link[=convertToHours]{convertToHours()}},
+\code{\link[=convertToMinutes]{convertToMinutes()}}
 
-Other conversion: 
-\code{\link{convert.magic}()},
-\code{\link{convertHoursAMPM}()},
-\code{\link{convertToHours}()},
-\code{\link{convertToMinutes}()},
-\code{\link{percentileToTScore}()},
-\code{\link{pom}()}
+Other conversion:
+\code{\link[=convert.magic]{convert.magic()}},
+\code{\link[=convertHoursAMPM]{convertHoursAMPM()}},
+\code{\link[=convertToHours]{convertToHours()}},
+\code{\link[=convertToMinutes]{convertToMinutes()}},
+\code{\link[=percentileToTScore]{percentileToTScore()}},
+\code{\link[=pom]{pom()}}
 }
 \concept{conversion}
 \concept{times}

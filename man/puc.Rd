@@ -46,11 +46,11 @@ puc(
 \doi{10.1177/0013164412449831}
 \doi{10.1037/met0000045}
 
-Other structural equation modeling: 
-\code{\link{equiv_chi}()},
-\code{\link{make_esem_model}()},
-\code{\link{measurementNoninvarianceEffectSize}()},
-\code{\link{satorraBentlerScaledChiSquareDifferenceTestStatistic}()},
-\code{\link{semPlotInteraction}()}
+Other structural equation modeling:
+\code{\link[=equiv_chi]{equiv_chi()}},
+\code{\link[=make_esem_model]{make_esem_model()}},
+\code{\link[=measurementNoninvarianceEffectSize]{measurementNoninvarianceEffectSize()}},
+\code{\link[=satorraBentlerScaledChiSquareDifferenceTestStatistic]{satorraBentlerScaledChiSquareDifferenceTestStatistic()}},
+\code{\link[=semPlotInteraction]{semPlotInteraction()}}
 }
 \concept{structural equation modeling}

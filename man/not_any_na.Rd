@@ -31,10 +31,10 @@ not_any_na(df$item2)
 not_any_na(df$item3)
 }
 \seealso{
-Other dataEvaluations: 
-\code{\link{dropColsWithAllNA}()},
-\code{\link{dropRowsWithAllNA}()},
-\code{\link{is.nan.data.frame}()},
-\code{\link{not_all_na}()}
+Other dataEvaluations:
+\code{\link[=dropColsWithAllNA]{dropColsWithAllNA()}},
+\code{\link[=dropRowsWithAllNA]{dropRowsWithAllNA()}},
+\code{\link[=is.nan.data.frame]{is.nan.data.frame()}},
+\code{\link[=not_all_na]{not_all_na()}}
 }
 \concept{dataEvaluations}

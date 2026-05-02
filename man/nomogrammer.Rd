@@ -112,11 +112,11 @@ nomogrammer(
 \seealso{
 \url{https://github.com/achekroud/nomogrammer}
 
-Other accuracy: 
-\code{\link{accuracyAtCutoff}()},
-\code{\link{accuracyAtEachCutoff}()},
-\code{\link{accuracyOverall}()},
-\code{\link{optimalCutoff}()},
-\code{\link{posttestOdds}()}
+Other accuracy:
+\code{\link[=accuracyAtCutoff]{accuracyAtCutoff()}},
+\code{\link[=accuracyAtEachCutoff]{accuracyAtEachCutoff()}},
+\code{\link[=accuracyOverall]{accuracyOverall()}},
+\code{\link[=optimalCutoff]{optimalCutoff()}},
+\code{\link[=posttestOdds]{posttestOdds()}}
 }
 \concept{accuracy}

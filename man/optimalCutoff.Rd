@@ -81,11 +81,11 @@ optimalCutoff(predicted = USArrests$Assault,
   UH = 1, UM = 0, UCR = .9, UFA = 0)
 }
 \seealso{
-Other accuracy: 
-\code{\link{accuracyAtCutoff}()},
-\code{\link{accuracyAtEachCutoff}()},
-\code{\link{accuracyOverall}()},
-\code{\link{nomogrammer}()},
-\code{\link{posttestOdds}()}
+Other accuracy:
+\code{\link[=accuracyAtCutoff]{accuracyAtCutoff()}},
+\code{\link[=accuracyAtEachCutoff]{accuracyAtEachCutoff()}},
+\code{\link[=accuracyOverall]{accuracyOverall()}},
+\code{\link[=nomogrammer]{nomogrammer()}},
+\code{\link[=posttestOdds]{posttestOdds()}}
 }
 \concept{accuracy}

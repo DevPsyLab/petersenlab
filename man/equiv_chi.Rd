@@ -51,11 +51,11 @@ df1 <- 80
 equiv_chi(alpha = .05, chi = Tml1, df = df1, m = 1, N_sample = N1, popRMSEA = .08)
 }
 \seealso{
-Other structural equation modeling: 
-\code{\link{make_esem_model}()},
-\code{\link{measurementNoninvarianceEffectSize}()},
-\code{\link{puc}()},
-\code{\link{satorraBentlerScaledChiSquareDifferenceTestStatistic}()},
-\code{\link{semPlotInteraction}()}
+Other structural equation modeling:
+\code{\link[=make_esem_model]{make_esem_model()}},
+\code{\link[=measurementNoninvarianceEffectSize]{measurementNoninvarianceEffectSize()}},
+\code{\link[=puc]{puc()}},
+\code{\link[=satorraBentlerScaledChiSquareDifferenceTestStatistic]{satorraBentlerScaledChiSquareDifferenceTestStatistic()}},
+\code{\link[=semPlotInteraction]{semPlotInteraction()}}
 }
 \concept{structural equation modeling}

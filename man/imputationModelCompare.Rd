@@ -28,9 +28,9 @@ imputation using likelihood ratio test.
 #INSERT
 }
 \seealso{
-Other multipleImputation: 
-\code{\link{imputationCombine}()},
-\code{\link{imputationPRV}()},
-\code{\link{lmCombine}()}
+Other multipleImputation:
+\code{\link[=imputationCombine]{imputationCombine()}},
+\code{\link[=imputationPRV]{imputationPRV()}},
+\code{\link[=lmCombine]{lmCombine()}}
 }
 \concept{multipleImputation}

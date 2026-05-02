@@ -37,7 +37,7 @@ attenuationCorrelation(
   reliabilityOfCriterion = .85)
 }
 \seealso{
-Other correlation: 
-\code{\link{disattenuationCorrelation}()}
+Other correlation:
+\code{\link[=disattenuationCorrelation]{disattenuationCorrelation()}}
 }
 \concept{correlation}

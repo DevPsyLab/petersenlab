@@ -38,13 +38,13 @@ standardErrorIRT(items$testInformation)
 \seealso{
 \doi{10.1177/0146621613475471}
 
-Other IRT: 
-\code{\link{calc_grm_probs}()},
-\code{\link{deriv_d_negBinom}()},
-\code{\link{discriminationToFactorLoading}()},
-\code{\link{fourPL}()},
-\code{\link{itemInformation}()},
-\code{\link{reliabilityIRT}()},
-\code{\link{test_info_4PL}()}
+Other IRT:
+\code{\link[=calc_grm_probs]{calc_grm_probs()}},
+\code{\link[=deriv_d_negBinom]{deriv_d_negBinom()}},
+\code{\link[=discriminationToFactorLoading]{discriminationToFactorLoading()}},
+\code{\link[=fourPL]{fourPL()}},
+\code{\link[=itemInformation]{itemInformation()}},
+\code{\link[=reliabilityIRT]{reliabilityIRT()}},
+\code{\link[=test_info_4PL]{test_info_4PL()}}
 }
 \concept{IRT}
