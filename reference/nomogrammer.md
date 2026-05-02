@@ -128,6 +128,7 @@ Other accuracy:
 ## Examples
 
 ``` r
+
 nomogrammer(
   TP = 253,
   TN = 386,

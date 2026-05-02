@@ -29,7 +29,7 @@ Source:
 
 Petersen I (2026). “petersenlab: A collection of R functions by the
 Petersen Lab.”
-[doi:10.32614/CRAN.package.petersenlab](https://doi.org/10.32614/CRAN.package.petersenlab),
+[doi:10.32614/CRAN.package.petersenlab](https://doi.org/10.32614/CRAN.package.petersenlab).
 R package version 1.2.3, https://devpsylab.github.io/petersenlab/,
 <https://github.com/DevPsyLab/petersenlab>.
 

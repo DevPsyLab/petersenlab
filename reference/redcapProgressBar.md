@@ -30,6 +30,7 @@ sequence of numbers for the progress bar in REDCap.
 
 A progress bar in REDCap can be created using the following code:
 
+
       Progress:
       <div style="width:100%;border:0;margin:0;padding:0;background-color:
       #A9BAD1;text-align:center;"><div style="width:2%;border: 0;margin:0;
