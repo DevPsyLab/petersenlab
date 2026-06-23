@@ -90,6 +90,8 @@ personMonths(effortAcademic = percentEffortAcademic,
 
 }
 \seealso{
+\url{https://grants.nih.gov/news-events/nih-extramural-nexus-news/2026/06/what-is-a-person-month-how-do-i-calculate-it}
+\url{https://perma.cc/YHD6-B247}
 \url{https://web.archive.org/web/20250211141002/https://nexus.od.nih.gov/all/2015/05/27/how-do-you-convert-percent-effort-into-person-months/}
 }
 \concept{grants}
