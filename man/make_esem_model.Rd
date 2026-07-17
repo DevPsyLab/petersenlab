@@ -42,13 +42,15 @@ efa_syntax <- '
 '
 
 # Fit EFA Model
-mplusRotationArgs <- list(rstarts = 30,
-  row.weights = "none",
+mplusRotationArgs <- list(
+  "geomin",
+  rstarts = 30,
+  row_weights = "none",
   algorithm = "gpa",
   orthogonal = FALSE,
-  jac.init.rot = TRUE,
-  std.ov = TRUE, # row standard = correlation
-  geomin.epsilon = 0.0001)
+  std_ov = TRUE, # row standard = correlation
+  geomin_epsilon = 0.0001
+)
 
 efa_fit <- lavaan::sem(
   efa_syntax,
@@ -56,10 +58,9 @@ efa_fit <- lavaan::sem(
   information = "observed",
   missing = "ML",
   estimator = "MLR",
-  rotation = "geomin",
+  rotation = mplusRotationArgs,
   # mimic Mplus
-  meanstructure = TRUE,
-  rotation.args = mplusRotationArgs)
+  meanstructure = TRUE)
 
 # Extract Factor Loadings
 esem_loadings <- lavaan::parameterEstimates(

@@ -97,7 +97,7 @@ moderationFit <- lavaan::sem(
   data = states,
   missing = "ML",
   estimator = "MLR",
-  fixed.x = FALSE)
+  fixed_x = FALSE)
 
 # Pass model to function (unlabeled plot)
 semPlotInteraction(
