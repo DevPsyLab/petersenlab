@@ -99,13 +99,15 @@ are the names of the anchor item for each latent factor.</p></dd>
 <span class="r-in"><span><span class="st">'</span></span></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># Fit EFA Model</span></span></span>
-<span class="r-in"><span><span class="va">mplusRotationArgs</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>rstarts <span class="op">=</span> <span class="fl">30</span>,</span></span>
-<span class="r-in"><span>  row.weights <span class="op">=</span> <span class="st">"none"</span>,</span></span>
+<span class="r-in"><span><span class="va">mplusRotationArgs</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span></span></span>
+<span class="r-in"><span>  <span class="st">"geomin"</span>,</span></span>
+<span class="r-in"><span>  rstarts <span class="op">=</span> <span class="fl">30</span>,</span></span>
+<span class="r-in"><span>  row_weights <span class="op">=</span> <span class="st">"none"</span>,</span></span>
 <span class="r-in"><span>  algorithm <span class="op">=</span> <span class="st">"gpa"</span>,</span></span>
 <span class="r-in"><span>  orthogonal <span class="op">=</span> <span class="cn">FALSE</span>,</span></span>
-<span class="r-in"><span>  jac.init.rot <span class="op">=</span> <span class="cn">TRUE</span>,</span></span>
-<span class="r-in"><span>  std.ov <span class="op">=</span> <span class="cn">TRUE</span>, <span class="co"># row standard = correlation</span></span></span>
-<span class="r-in"><span>  geomin.epsilon <span class="op">=</span> <span class="fl">0.0001</span><span class="op">)</span></span></span>
+<span class="r-in"><span>  std_ov <span class="op">=</span> <span class="cn">TRUE</span>, <span class="co"># row standard = correlation</span></span></span>
+<span class="r-in"><span>  geomin_epsilon <span class="op">=</span> <span class="fl">0.0001</span></span></span>
+<span class="r-in"><span><span class="op">)</span></span></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="va">efa_fit</span> <span class="op">&lt;-</span> <span class="fu">lavaan</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/lavaan/man/sem.html" class="external-link">sem</a></span><span class="op">(</span></span></span>
 <span class="r-in"><span>  <span class="va">efa_syntax</span>,</span></span>
@@ -113,10 +115,11 @@ are the names of the anchor item for each latent factor.</p></dd>
 <span class="r-in"><span>  information <span class="op">=</span> <span class="st">"observed"</span>,</span></span>
 <span class="r-in"><span>  missing <span class="op">=</span> <span class="st">"ML"</span>,</span></span>
 <span class="r-in"><span>  estimator <span class="op">=</span> <span class="st">"MLR"</span>,</span></span>
-<span class="r-in"><span>  rotation <span class="op">=</span> <span class="st">"geomin"</span>,</span></span>
+<span class="r-in"><span>  rotation <span class="op">=</span> <span class="va">mplusRotationArgs</span>,</span></span>
 <span class="r-in"><span>  <span class="co"># mimic Mplus</span></span></span>
-<span class="r-in"><span>  meanstructure <span class="op">=</span> <span class="cn">TRUE</span>,</span></span>
-<span class="r-in"><span>  rotation.args <span class="op">=</span> <span class="va">mplusRotationArgs</span><span class="op">)</span></span></span>
+<span class="r-in"><span>  meanstructure <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></span>
+<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error:</span> lavaan-&gt;lav_options_check():  </span>
+<span class="r-err co"><span class="r-pr">#&gt;</span>    Some option(s) unknown: "" !</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># Extract Factor Loadings</span></span></span>
 <span class="r-in"><span><span class="va">esem_loadings</span> <span class="op">&lt;-</span> <span class="fu">lavaan</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/lavaan/man/parameterEstimates.html" class="external-link">parameterEstimates</a></span><span class="op">(</span></span></span>
@@ -126,12 +129,14 @@ are the names of the anchor item for each latent factor.</p></dd>
 <span class="r-in"><span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="va">efa</span> <span class="op">==</span> <span class="st">"efa1"</span><span class="op">)</span> <span class="op">|&gt;</span></span></span>
 <span class="r-in"><span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html" class="external-link">select</a></span><span class="op">(</span><span class="va">lhs</span>, <span class="va">rhs</span>, <span class="va">est</span><span class="op">)</span> <span class="op">|&gt;</span></span></span>
 <span class="r-in"><span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/rename.html" class="external-link">rename</a></span><span class="op">(</span>item <span class="op">=</span> <span class="va">rhs</span>, latent <span class="op">=</span> <span class="va">lhs</span>, loading <span class="op">=</span> <span class="va">est</span><span class="op">)</span></span></span>
+<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in eval(sc, envir = parent.frame()):</span> object 'efa_fit' not found</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># Specify Anchor Item for Each Latent Factor</span></span></span>
 <span class="r-in"><span><span class="va">anchors</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span>f1 <span class="op">=</span> <span class="st">"x3"</span>, f2 <span class="op">=</span> <span class="st">"x5"</span>, f3 <span class="op">=</span> <span class="st">"x7"</span><span class="op">)</span></span></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># Generate ESEM Syntax</span></span></span>
 <span class="r-in"><span><span class="va">esemModel_syntax</span> <span class="op">&lt;-</span> <span class="fu">make_esem_model</span><span class="op">(</span><span class="va">esem_loadings</span>, <span class="va">anchors</span><span class="op">)</span></span></span>
+<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error:</span> object 'esem_loadings' not found</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># Fit ESEM Model</span></span></span>
 <span class="r-in"><span><span class="fu">lavaan</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/lavaan/man/sem.html" class="external-link">sem</a></span><span class="op">(</span></span></span>
@@ -139,22 +144,7 @@ are the names of the anchor item for each latent factor.</p></dd>
 <span class="r-in"><span>  data <span class="op">=</span> <span class="va">HolzingerSwineford1939</span>,</span></span>
 <span class="r-in"><span>  missing <span class="op">=</span> <span class="st">"ML"</span>,</span></span>
 <span class="r-in"><span>  estimator <span class="op">=</span> <span class="st">"MLR"</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> lavaan 0.6-21 ended normally after 145 iterations</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   Estimator                                         ML</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   Optimization method                           NLMINB</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   Number of model parameters                        42</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   Number of observations                           301</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   Number of missing patterns                         1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Model Test User Model:</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                                               Standard      Scaled</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   Test Statistic                                22.897      23.828</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   Degrees of freedom                                12          12</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   P-value (Chi-square)                           0.029       0.021</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   Scaling correction factor                                  0.961</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     Yuan-Bentler correction (Mplus variant)                       </span>
+<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in eval(sc, parent.frame()):</span> object 'esemModel_syntax' not found</span>
 <span class="r-in"><span></span></span>
 </code></pre></div>
     </div>
@@ -167,7 +157,7 @@ are the names of the anchor item for each latent factor.</p></dd>
 </div>
 
 <div class="pkgdown-footer-right">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.2.0.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.2.1.</p>
 </div>
 
     </footer></div>

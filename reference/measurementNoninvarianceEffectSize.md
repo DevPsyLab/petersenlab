@@ -42,7 +42,7 @@ Other structural equation modeling:
 ``` r
 # Prepare Data
 library("lavaan")
-#> This is lavaan 0.6-21
+#> This is lavaan 0.7-2
 #> lavaan is FREE software! Please report any bugs.
 
 # Model
@@ -63,14 +63,14 @@ fit2 <- lavaan::cfa(
   HS.model,
   data = HolzingerSwineford1939,
   group = "school",
-  group.equal = "loadings")
+  group_equal = "loadings")
 
 # strong invariance
 fit3 <- lavaan::cfa(
   HS.model,
   data = HolzingerSwineford1939,
   group = "school",
-  group.equal = c("intercepts", "loadings"))
+  group_equal = c("intercepts", "loadings"))
 
 # model comparison tests
 lavaan::lavTestLRT(fit1, fit2, fit3)

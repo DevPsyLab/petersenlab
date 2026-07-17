@@ -88,7 +88,7 @@ comprehensive introduction. Routledge.</p>
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co"># Prepare Data</span></span></span>
 <span class="r-in"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="st"><a href="https://lavaan.ugent.be" class="external-link">"lavaan"</a></span><span class="op">)</span></span></span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> This is lavaan 0.6-21</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> This is lavaan 0.7-2</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> lavaan is FREE software! Please report any bugs.</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># Model</span></span></span>
@@ -109,14 +109,14 @@ comprehensive introduction. Routledge.</p>
 <span class="r-in"><span>  <span class="va">HS.model</span>,</span></span>
 <span class="r-in"><span>  data <span class="op">=</span> <span class="va">HolzingerSwineford1939</span>,</span></span>
 <span class="r-in"><span>  group <span class="op">=</span> <span class="st">"school"</span>,</span></span>
-<span class="r-in"><span>  group.equal <span class="op">=</span> <span class="st">"loadings"</span><span class="op">)</span></span></span>
+<span class="r-in"><span>  group_equal <span class="op">=</span> <span class="st">"loadings"</span><span class="op">)</span></span></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># strong invariance</span></span></span>
 <span class="r-in"><span><span class="va">fit3</span> <span class="op">&lt;-</span> <span class="fu">lavaan</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/lavaan/man/cfa.html" class="external-link">cfa</a></span><span class="op">(</span></span></span>
 <span class="r-in"><span>  <span class="va">HS.model</span>,</span></span>
 <span class="r-in"><span>  data <span class="op">=</span> <span class="va">HolzingerSwineford1939</span>,</span></span>
 <span class="r-in"><span>  group <span class="op">=</span> <span class="st">"school"</span>,</span></span>
-<span class="r-in"><span>  group.equal <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"intercepts"</span>, <span class="st">"loadings"</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-in"><span>  group_equal <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"intercepts"</span>, <span class="st">"loadings"</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># model comparison tests</span></span></span>
 <span class="r-in"><span><span class="fu">lavaan</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/lavaan/man/lavTestLRT.html" class="external-link">lavTestLRT</a></span><span class="op">(</span><span class="va">fit1</span>, <span class="va">fit2</span>, <span class="va">fit3</span><span class="op">)</span></span></span>
@@ -173,7 +173,7 @@ comprehensive introduction. Routledge.</p>
 </div>
 
 <div class="pkgdown-footer-right">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.2.0.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.2.1.</p>
 </div>
 
     </footer></div>
