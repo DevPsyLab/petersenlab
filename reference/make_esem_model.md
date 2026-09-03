@@ -80,8 +80,6 @@ efa_fit <- lavaan::sem(
   rotation = mplusRotationArgs,
   # mimic Mplus
   meanstructure = TRUE)
-#> Error: lavaan->lav_options_check():  
-#>    Some option(s) unknown: "" !
 
 # Extract Factor Loadings
 esem_loadings <- lavaan::parameterEstimates(
@@ -91,14 +89,12 @@ esem_loadings <- lavaan::parameterEstimates(
   dplyr::filter(efa == "efa1") |>
   dplyr::select(lhs, rhs, est) |>
   dplyr::rename(item = rhs, latent = lhs, loading = est)
-#> Error in eval(sc, envir = parent.frame()): object 'efa_fit' not found
 
 # Specify Anchor Item for Each Latent Factor
 anchors <- c(f1 = "x3", f2 = "x5", f3 = "x7")
 
 # Generate ESEM Syntax
 esemModel_syntax <- make_esem_model(esem_loadings, anchors)
-#> Error: object 'esem_loadings' not found
 
 # Fit ESEM Model
 lavaan::sem(
@@ -106,5 +102,20 @@ lavaan::sem(
   data = HolzingerSwineford1939,
   missing = "ML",
   estimator = "MLR")
-#> Error in eval(sc, parent.frame()): object 'esemModel_syntax' not found
+#> lavaan 0.7-2.3207 ended normally after 142 iterations
+#> 
+#>   Estimator                                         ML
+#>   Optimization method                           NLMINB
+#>   Number of model parameters                        42
+#> 
+#>   Number of observations                           301
+#>   Number of missing patterns                         1
+#> 
+#> Model Test User Model:
+#>                                               Standard      Scaled
+#>   Test Statistic                                22.897      23.641
+#>   Degrees of freedom                                12          12
+#>   P-value (Chi-square)                           0.029       0.023
+#>   Scaling correction factor                                  0.969
+#>     Yuan-Bentler correction (Mplus variant)                       
 ```
