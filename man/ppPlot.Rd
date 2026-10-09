@@ -4,11 +4,21 @@
 \alias{ppPlot}
 \title{PP Plot.}
 \usage{
-ppPlot(model)
+ppPlot(model, type = NULL)
 }
 \arguments{
 \item{model}{The model object of a linear regression model fit using the
 \code{lm()} function.}
+
+\item{type}{The type of residuals used. One of:
+\itemize{
+  \item \code{"deviance"}
+  \item \code{"spearman"}
+  \item \code{"response"}
+  \item \code{"working"}
+  \item \code{"partial"}
+  \item \code{"score"}; only available if fitting model with \code{rms} package
+}}
 }
 \value{
 Normal probability (P-P) plot.

@@ -10,6 +10,15 @@
 #'
 #' @param model The model object of a linear regression model fit using the
 #' \code{lm()} function.
+#' @param type The type of residuals used. One of:
+#' \itemize{
+#'   \item \code{"deviance"}
+#'   \item \code{"spearman"}
+#'   \item \code{"response"}
+#'   \item \code{"working"}
+#'   \item \code{"partial"}
+#'   \item \code{"score"}; only available if fitting model with \code{rms} package
+#' }
 #'
 #' @return
 #' Normal probability (P-P) plot.
@@ -37,9 +46,14 @@
 #' @seealso
 #' \url{https://www.r-bloggers.com/2009/12/r-tutorial-series-graphic-analysis-of-regression-assumptions/}
 
-ppPlot <- function(model){
+ppPlot <- function(model, type = NULL){
   unstandardizedPredicted <- predict(model)
-  unstandardizedResiduals <- resid(model)
+
+  if(!is.null(type)){
+    unstandardizedResiduals <- resid(model, type = type)
+  } else{
+    unstandardizedResiduals <- resid(model)
+  }
 
   #Get standardized values
   standardizedPredicted <- (unstandardizedPredicted - mean(unstandardizedPredicted, na.rm = TRUE)) / sd(unstandardizedPredicted, na.rm = TRUE)
