@@ -5,7 +5,7 @@ Normal Probability (P-P) Plot.
 ## Usage
 
 ``` r
-ppPlot(model)
+ppPlot(model, type = NULL)
 ```
 
 ## Arguments
@@ -14,6 +14,22 @@ ppPlot(model)
 
   The model object of a linear regression model fit using the
   [`lm()`](https://rdrr.io/r/stats/lm.html) function.
+
+- type:
+
+  The type of residuals used. One of:
+
+  - `"deviance"`
+
+  - `"spearman"`
+
+  - `"response"`
+
+  - `"working"`
+
+  - `"partial"`
+
+  - `"score"`; only available if fitting model with `rms` package
 
 ## Value
 

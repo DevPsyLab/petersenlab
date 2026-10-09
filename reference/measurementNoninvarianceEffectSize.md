@@ -42,7 +42,7 @@ Other structural equation modeling:
 ``` r
 # Prepare Data
 library("lavaan")
-#> This is lavaan 0.7-2.3207
+#> This is lavaan 0.7-3
 #> lavaan is FREE software! Please report any bugs.
 
 # Model
