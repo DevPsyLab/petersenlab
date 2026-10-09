@@ -14,7 +14,21 @@ authors:
 
 template:
   bootstrap: 5
+  light-switch: true
   math-rendering: katex
+  bslib:
+    base_font: {google: "Roboto"}
+    heading_font: {google: "Roboto Slab"}
+    code_font: {google: "JetBrains Mono"}
+
+navbar:
+  structure:
+    left: [reference]
+    right: [search, github, lightswitch]
+  components:
+    reference:
+      text: Functions
+      href: reference/index.html
 
 reference:
 - title: Accuracy of Judgments/Predictions
