@@ -198,14 +198,6 @@ reference:
   - imputationPRV
   - lmCombine
 
-- title: Multiple Regression
-  contents:
-  - lmCombine
-  - plot2WayInteraction
-  - ppPlot
-  - update_nested
-  - semPlotInteraction
-
 - title: Packages
   contents:
   - load_or_install
@@ -235,6 +227,14 @@ reference:
   contents:
   - lmeSummary
   - lm.beta.lmer
+
+- subtitle: Multiple Regression
+  contents:
+  - lmCombine
+  - plot2WayInteraction
+  - ppPlot
+  - update_nested
+  - semPlotInteraction
 
 - title: Simulation
   contents:
