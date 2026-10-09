@@ -278,19 +278,6 @@
 - [`lmCombine()`](https://devpsylab.github.io/petersenlab/reference/lmCombine.md)
   : Combine Results from Multiple Regression Imputation Models.
 
-## Multiple Regression
-
-- [`lmCombine()`](https://devpsylab.github.io/petersenlab/reference/lmCombine.md)
-  : Combine Results from Multiple Regression Imputation Models.
-- [`plot2WayInteraction()`](https://devpsylab.github.io/petersenlab/reference/plot2WayInteraction.md)
-  : Plot 2-way interaction.
-- [`ppPlot()`](https://devpsylab.github.io/petersenlab/reference/ppPlot.md)
-  : PP Plot.
-- [`update_nested()`](https://devpsylab.github.io/petersenlab/reference/update_nested.md)
-  : Update Nested Models in Hierarchical Regression.
-- [`semPlotInteraction()`](https://devpsylab.github.io/petersenlab/reference/semPlotInteraction.md)
-  : Plot interaction from SEM model.
-
 ## Packages
 
 - [`load_or_install()`](https://devpsylab.github.io/petersenlab/reference/load_or_install.md)
@@ -344,6 +331,19 @@
   : Summarize mixed effects model.
 - [`lm.beta.lmer()`](https://devpsylab.github.io/petersenlab/reference/lm.beta.lmer.md)
   : Obtain standardized regression coefficients from lmer model.
+
+### Multiple Regression
+
+- [`lmCombine()`](https://devpsylab.github.io/petersenlab/reference/lmCombine.md)
+  : Combine Results from Multiple Regression Imputation Models.
+- [`plot2WayInteraction()`](https://devpsylab.github.io/petersenlab/reference/plot2WayInteraction.md)
+  : Plot 2-way interaction.
+- [`ppPlot()`](https://devpsylab.github.io/petersenlab/reference/ppPlot.md)
+  : PP Plot.
+- [`update_nested()`](https://devpsylab.github.io/petersenlab/reference/update_nested.md)
+  : Update Nested Models in Hierarchical Regression.
+- [`semPlotInteraction()`](https://devpsylab.github.io/petersenlab/reference/semPlotInteraction.md)
+  : Plot interaction from SEM model.
 
 ## Simulation
 
