@@ -58,8 +58,6 @@ robust_load("https://osf.io/download/yx5h6/")
 
 # Example with limited retries
 robust_load("https://osf.io/download/yx5h6/", max_attempts = 4, delay = 1)
-#> Warning: URL 'https://files.osf.io/v1/resources/k9vw3/providers/osfstorage/66509785d835c410114cdd86': Timeout of 60 seconds was reached
-#> Attempt 1 failed: cannot open the connection to 'https://osf.io/download/yx5h6/'
 
 # Example of a failing load, wrapped safely to pass R CMD check
 try(
