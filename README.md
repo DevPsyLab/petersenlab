@@ -59,8 +59,6 @@ This work is licensed under [The MIT License][mit].
 
 [![MIT License][mit-image]][mit]
 
-[![MIT License](https://upload.wikimedia.org/wikipedia/commons/0/0b/License_icon-mit-2.svg)](https://opensource.org/licenses/MIT)
-
 [mit]: https://opensource.org/licenses/MIT
 [mit-image]: https://upload.wikimedia.org/wikipedia/commons/0/0b/License_icon-mit-2.svg
 [mit-shield]: https://img.shields.io/badge/License-MIT-blue.svg
