@@ -75,7 +75,7 @@ summary(model)
 #> 
 #> Standardized Within-Group Residuals:
 #>         Min          Q1         Med          Q3         Max 
-#> -3.08141704 -0.45675583  0.01552695  0.44704158  3.89437694 
+#> -3.08141705 -0.45675583  0.01552695  0.44704158  3.89437694 
 #> 
 #> Number of Observations: 108
 #> Number of Groups: 27 
