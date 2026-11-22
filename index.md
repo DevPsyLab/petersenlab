@@ -69,6 +69,3 @@ License](https://opensource.org/licenses/MIT).
 
 [![MIT
 License](https://upload.wikimedia.org/wikipedia/commons/0/0b/License_icon-mit-2.svg)](https://opensource.org/licenses/MIT)
-
-[![MIT
-License](https://upload.wikimedia.org/wikipedia/commons/0/0b/License_icon-mit-2.svg)](https://opensource.org/licenses/MIT)
